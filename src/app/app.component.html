@@ -1,17 +1,19 @@
 <!-- Toolbar -->
 <div class="gap"></div>
 <div class="toolbar">
-  <img alt="John Schellinger initials" src="/assets/js.svg" />
+  <img alt="John Schellinger initials" src="/assets/images/js.svg" />
   <nav>
     <ul>
-      <li><a href="#">About</a></li>
+      <li><a href="/about">About</a></li>
       <li><a href="#">Experience</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </div>
 
-<div class="content" role="main"></div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 <!-- Footer -->
 <footer>
@@ -37,5 +39,3 @@
     fill="#eee"
   />
 </svg>
-
-<router-outlet></router-outlet>

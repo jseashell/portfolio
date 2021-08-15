@@ -1,12 +1,3 @@
-.list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.item {
-  width: 100%;
-  height: 4rem;
-  border: 1px solid black;
+.elevator {
+  text-align: justify;
 }

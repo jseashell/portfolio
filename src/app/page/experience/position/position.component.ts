@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Position } from './position.model';
+import { Position } from '../../../model/position/position.model';
 
 @Component({
   selector: 'app-position',

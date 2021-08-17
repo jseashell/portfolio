@@ -1,5 +1,5 @@
 import { Company } from '../company/company.model';
-import { PositionType } from './position-type.model';
+import { PositionType } from '../position-type/position-type.model';
 
 export interface Position {
   title: string;

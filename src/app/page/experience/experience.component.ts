@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Position } from '../position/position.model';
-import positionsData from '../../assets/data/data.json';
+import { Position } from '../../model/position/position.model';
+import positionsData from '../../../assets/data/data.json';
 
 @Component({
   selector: 'app-experience',

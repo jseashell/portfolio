@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { AboutComponent } from './page/about/about.component';
+import { ContactComponent } from './page/contact/contact.component';
+import { ExperienceComponent } from './page/experience/experience.component';
 import { NgModule } from '@angular/core';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioComponent } from './page/portfolio/portfolio.component';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },

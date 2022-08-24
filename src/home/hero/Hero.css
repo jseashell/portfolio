@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  width: 412px;
+  font-size: 4em;
+}
+
+.hero h1 span {
+  color: var(--theme-primary);
+}
+
+.hero div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero div > * {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.hero div h2 {
+  width: 128px;
+  word-wrap: break-word;
+  text-align: end;
+}
+
+.hero div span {
+  font-size: 4em;
+  font-weight: bold;
+  color: var(--theme-primary);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    width: 250px;
+  }
+
+  .hero div h2,
+  .hero div span {
+    display: none;
+  }
+}

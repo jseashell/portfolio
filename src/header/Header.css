@@ -2,6 +2,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 button.mobile-menu {
@@ -16,7 +19,14 @@ button.mobile-menu > * {
   height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
+  header {
+    width: 100%;
+    background-color: var(--theme-primary);
+  }
+}
+
+@media only screen and (max-width: 450px) {
   header {
     position: sticky;
     flex-direction: column;

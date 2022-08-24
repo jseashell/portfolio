@@ -3,7 +3,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: max(1100px, 60vw);
+  width: 1100px;
 }
 
 ul {
@@ -92,15 +92,49 @@ ul li a:hover {
   border: 2px solid transparent;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   nav {
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--theme-primary);
-    border-top: 1px solid rgb(0, 0, 0, 0.4);
-    width: 100vw;
+    justify-content: flex-start;
+  }
+
+  ul {
+    padding: 0 10px;
+  }
+
+  ul li a {
+    padding: 0;
+  }
+
+  .active {
+    color: white;
+  }
+
+  .active::before {
+    border: 2px solid white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  .active::after {
+    border: 2px solid white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  .inactive {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    z-index: 999;
     position: fixed;
     top: 70px;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--theme-primary);
+    border-top: 1px solid rgb(0, 0, 0, 0.4);
     box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
   }
 
@@ -116,6 +150,7 @@ ul li a:hover {
   ul li a {
     font-size: 1.25em;
     color: white;
+    padding: 10px;
   }
 
   ul li a:hover {

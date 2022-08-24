@@ -7,6 +7,7 @@
 .hero h1 {
   width: 412px;
   font-size: 4em;
+  margin-bottom: 0;
 }
 
 .hero h1 span {
@@ -28,6 +29,7 @@
   width: 128px;
   word-wrap: break-word;
   text-align: end;
+  margin-bottom: 0;
 }
 
 .hero div span {
@@ -36,7 +38,7 @@
   color: var(--theme-primary);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 450px) {
   .hero {
     flex-direction: row;
   }

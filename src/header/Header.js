@@ -5,7 +5,7 @@ import { Inquire } from "./inquire/Inquire";
 import { NavBar } from "./navbar/NavBar";
 
 export function Header() {
-  const mediaQuery = "(max-width: 768px)";
+  const mediaQuery = "(max-width: 450px)";
 
   let [isMobile, setIsMobile] = useState(window.matchMedia(mediaQuery).matches);
 
@@ -26,7 +26,7 @@ export function Header() {
         {!isMobile && <NavBar open={true} />}
         {!isMobile && <Inquire size={30} />}
         {isMobile && (
-          <div class="mobile-header">
+          <div className="mobile-header">
             <button className="mobile-menu" onClick={toggleMenu}>
               {isMenuOpen ? <MdMenuOpen /> : <MdMenu />}
             </button>

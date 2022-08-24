@@ -1,0 +1,48 @@
+.pitch {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.elevator {
+  align-self: flex-start;
+  margin-top: 80px;
+}
+
+.mobile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.pfp {
+  max-width: 500px;
+  align-self: center;
+}
+
+.history {
+  margin-bottom: 100px;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 450px) {
+  .pitch {
+    flex-direction: column;
+  }
+
+  .mobile-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .pfp {
+    max-width: 250px;
+    align-self: flex-start;
+    order: 2;
+  }
+
+  .history {
+    width: min-content;
+    align-self: center;
+    order: 1;
+  }
+}

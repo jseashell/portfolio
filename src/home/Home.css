@@ -1,17 +1,13 @@
 .pitch {
-  display: flex;
   position: relative;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  margin: 80px 0;
 }
 
 .elevator {
   align-self: flex-start;
-  margin-top: 80px;
-}
-
-.mobile-container {
-  display: flex;
-  flex-direction: row;
 }
 
 .pfp {
@@ -24,25 +20,18 @@
   align-self: flex-end;
 }
 
+@media only screen and (max-width: 1000px) {
+}
+
 @media only screen and (max-width: 450px) {
   .pitch {
     flex-direction: column;
-  }
-
-  .mobile-container {
-    flex-direction: row;
-    justify-content: space-between;
+    margin: 20px 0;
+    position: relative;
   }
 
   .pfp {
-    max-width: 250px;
-    align-self: flex-start;
-    order: 2;
-  }
-
-  .history {
-    width: min-content;
-    align-self: center;
-    order: 1;
+    position: absolute;
+    width: 80%;
   }
 }

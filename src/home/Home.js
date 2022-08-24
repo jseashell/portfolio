@@ -11,10 +11,8 @@ export function Home() {
       <Hero />
       <div className="pitch">
         <Elevator className="elevator" />
-        <div className="mobile-container">
-          <Pfp className="pfp" />
-          <History className="history" />
-        </div>
+        <Pfp className="pfp" />
+        <History className="history" />
       </div>
     </React.Fragment>
   );

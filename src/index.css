@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 html {
-  --theme-background: rgb(248, 247, 242);
+  --theme-background: rgb(251 246 241);
   --theme-primary: rgb(111, 133, 118);
   --mobile-breakpoint: 450px;
 }

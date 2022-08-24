@@ -30,22 +30,38 @@
   border-radius: 30%;
 }
 
+@media only screen and (max-width: 1000px) {
+  .history {
+    width: 100%;
+  }
+
+  .history h3 {
+    margin: 1em;
+  }
+
+  .history .logos {
+    justify-content: space-around;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .history {
-    width: min-content;
-    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 220px;
   }
 
   .history h3 {
     font-size: 1.25em;
+    text-align: left;
   }
 
   .history .logos {
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
 
   .history .logos .image {
-    margin: 10px 0;
+    margin: 20px 0;
   }
 }

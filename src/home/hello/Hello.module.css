@@ -1,0 +1,14 @@
+.heading {
+  font-size: 4em;
+  margin: 0;
+}
+
+.name {
+  color: var(--theme-primary);
+}
+
+@media only screen and (max-width: 450px) {
+  .heading {
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.heading {
+  width: 128px;
+  word-wrap: break-word;
+  text-align: end;
+  margin: 0 10px;
+}
+
+.number {
+  font-size: 4em;
+  font-weight: bold;
+  color: var(--theme-primary);
+}

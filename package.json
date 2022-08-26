@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "description": "Professional portoflio website",
+  "description": "Professional and freelance portfolio website",
   "private": true,
   "author": "John Schellinger",
   "dependencies": {

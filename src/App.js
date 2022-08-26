@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import "./App.css";
+import styles from "./App.module.css";
 import { Header } from "./header/Header";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <React.StrictMode>
       <Header />
       <main>
-        <div className="outlet">
+        <div className={styles.outlet}>
           <Outlet />
         </div>
       </main>

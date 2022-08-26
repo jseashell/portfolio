@@ -1,6 +1,6 @@
 import React from "react";
 import { MdOutgoingMail } from "react-icons/md";
-import "./Inquire.css";
+import styles from "./Inquire.module.css";
 
 const email = process.env.INQUIRE_EMAIL || "INQUIRE_EMAIL";
 
@@ -18,7 +18,7 @@ export function Inquire(props) {
     <React.Fragment>
       <a
         href={"mailto:" + email}
-        className="inquire"
+        className={styles.inquire}
         target="_blank"
         rel="noreferrer noopener">
         INQUIRE <MdOutgoingMail size={props.size} />

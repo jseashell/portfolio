@@ -1,5 +1,5 @@
 import React from "react";
-import "./Showcase.css";
+import "./Showcase.module.css";
 
 export function Showcase() {
   return (

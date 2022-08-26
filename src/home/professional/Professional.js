@@ -1,15 +1,15 @@
 import React from "react";
-import "./History.css";
+import styles from "./Professional.module.css";
 
-export function History() {
+export function Professional(props) {
   return (
     <React.Fragment>
-      <div className="history">
-        <h3>History</h3>
-        <div className="logos">
+      <div className={props.className}>
+        <h3>Enterprise Software Professional</h3>
+        <div className={styles.logos}>
           <a
             title="Genesys"
-            className="image"
+            className={styles.image}
             href="https://genesys.com"
             target="_blank"
             rel="noreferrer noopener">
@@ -17,7 +17,7 @@ export function History() {
           </a>
           <a
             title="Orchard Software"
-            className="image"
+            className={styles.image}
             href="https://orchardsoft.com"
             target="_blank"
             rel="noreferrer noopener">
@@ -25,8 +25,8 @@ export function History() {
           </a>
           <a
             title="Air Force Institute of Technology"
-            className="image"
-            href="https://www.afit.edu/"
+            className={styles.image}
+            href="https://afit.edu"
             target="_blank"
             rel="noreferrer noopener">
             <img

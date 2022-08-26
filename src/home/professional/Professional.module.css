@@ -1,20 +1,13 @@
-.history {
-  width: 280px;
+.heading {
+  font-size: 1.1em;
 }
 
-.history h3 {
-  font-size: 1.5em;
-  text-align: center;
-  margin: 0;
-}
-
-.history .logos {
+.logos {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
-.history .logos .image {
+.image {
   width: 80px;
   height: 80px;
   background-color: white;
@@ -22,46 +15,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 5px;
 }
 
-.history .logos .image img {
+.image img {
   width: 70%;
   object-fit: cover;
   border-radius: 30%;
 }
 
 @media only screen and (max-width: 1000px) {
-  .history {
-    width: 100%;
-  }
-
-  .history h3 {
+  .heading {
     margin: 1em;
   }
 
-  .history .logos {
+  .logos {
     justify-content: space-around;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .history {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 220px;
-  }
-
-  .history h3 {
+  .heading {
     font-size: 1.25em;
     text-align: left;
   }
 
-  .history .logos {
+  .logos {
     justify-content: space-around;
   }
 
-  .history .logos .image {
+  .image {
     margin: 20px 0;
   }
 }

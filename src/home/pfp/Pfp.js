@@ -1,10 +1,14 @@
 import React from "react";
-import "./Pfp.css";
+import styles from "./Pfp.module.css";
 
-export function Pfp() {
+export function Pfp(props) {
   return (
-    <div className="pfp">
-      <img src={process.env.PUBLIC_URL + "/pfp_orange.png"} alt="Profile" />
+    <div className={props.className}>
+      <img
+        className={styles.image}
+        src={process.env.PUBLIC_URL + "/pfp.png"}
+        alt="Profile"
+      />
     </div>
   );
 }

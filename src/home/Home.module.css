@@ -5,6 +5,7 @@
     ". pfp pitch"
     "professional pfp .";
   margin: 50px 0 150px 0;
+  position: relative;
 }
 
 /* Debug outline */

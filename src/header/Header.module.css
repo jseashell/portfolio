@@ -1,7 +1,6 @@
 .toolbar {
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: 15px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;

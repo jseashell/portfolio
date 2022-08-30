@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import { Inquire } from "./inquire/Inquire";
 import { Logo } from "./logo/Logo";
@@ -25,7 +26,9 @@ export function Header() {
     <React.Fragment>
       <header className={styles.toolbar}>
         <div className={styles.container}>
-          <Logo />
+          <NavLink to="/" title="Home">
+            <Logo />
+          </NavLink>
           {!isMobile && <NavBar open={true} />}
           {!isMobile && <Inquire size={30} />}
           {isMobile && (

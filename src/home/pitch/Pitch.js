@@ -6,9 +6,7 @@ export function Pitch(props) {
     <React.Fragment>
       <div className={props.className}>
         <div className={styles.bubble}></div>
-        <p className={styles.message}>
-          I'd like to build your creative web designs
-        </p>
+        <p className={styles.message}>I'd like to develop your website</p>
       </div>
     </React.Fragment>
   );

@@ -7,7 +7,7 @@ import { Logo } from "./logo/Logo";
 import { NavBar } from "./navbar/NavBar";
 
 export function Header() {
-  const mediaQuery = "(max-width: 450px)";
+  const mediaQuery = "(max-width: 750px)";
 
   let [isMobile, setIsMobile] = useState(window.matchMedia(mediaQuery).matches);
 
@@ -24,7 +24,7 @@ export function Header() {
 
   return (
     <React.Fragment>
-      <header className={styles.toolbar}>
+      <header className={styles.header}>
         <div className={styles.container}>
           <NavLink to="/" title="Home">
             <Logo />
@@ -32,7 +32,7 @@ export function Header() {
           {!isMobile && <NavBar open={true} />}
           {!isMobile && <Inquire size={30} />}
           {isMobile && (
-            <div className={styles.mobileHeader}>
+            <div className={styles.mobileContainer}>
               <button className={styles.mobileMenu} onClick={toggleMenu}>
                 {isMenuOpen ? <MdMenuOpen /> : <MdMenu />}
               </button>

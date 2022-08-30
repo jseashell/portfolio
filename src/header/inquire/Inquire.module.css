@@ -23,6 +23,11 @@
   .inquire {
     color: white;
   }
+
+  .inquire:hover {
+    color: var(--theme-secondary);
+    outline: 1px solid var(--theme-secondary);
+  }
 }
 @media only screen and (max-width: 450px) {
   .inquire {

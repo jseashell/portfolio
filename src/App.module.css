@@ -8,9 +8,9 @@ main {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   .outlet {
-    width: 90%;
+    width: 700px;
   }
 }
 

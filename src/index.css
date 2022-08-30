@@ -5,7 +5,7 @@
 html {
   --theme-background: rgb(251 246 241);
   --theme-primary: rgb(111, 133, 118);
-  --mobile-breakpoint: 450px;
+  --theme-secondary: rgb(58, 69, 62);
 }
 
 body {

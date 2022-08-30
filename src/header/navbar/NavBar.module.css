@@ -104,6 +104,11 @@ ul li a:hover {
     padding: 0;
   }
 
+  ul li a:hover {
+    cursor: pointer;
+    color: var(--theme-secondary);
+  }
+
   .active {
     color: white;
   }

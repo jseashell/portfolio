@@ -52,10 +52,27 @@
   padding: 20px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
+  .pfp {
+    width: 450px;
+  }
+
+  .professional {
+    width: min-content;
+  }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1100px) {
+  .pfp {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .pfp {
+    width: 300px;
+  }
+
   .pitch {
     flex-direction: column;
     margin: 20px 0;

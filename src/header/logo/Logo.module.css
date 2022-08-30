@@ -6,6 +6,7 @@
 .image {
   width: 60px;
   height: 60px;
+  fill: black;
 }
 
 .container:hover,
@@ -14,8 +15,14 @@
   fill: var(--theme-primary);
 }
 
-@media only screen and (max-width: 1000) {
+@media only screen and (max-width: 1000px) {
   .image {
     fill: white;
+  }
+
+  .container:hover,
+  .image:hover {
+    cursor: pointer;
+    fill: var(--theme-secondary);
   }
 }

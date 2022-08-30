@@ -10,10 +10,21 @@
   word-wrap: break-word;
   text-align: end;
   margin: 0 10px;
+  font-size: 1.5em;
 }
 
 .number {
   font-size: 4em;
   font-weight: bold;
   color: var(--theme-primary);
+}
+
+@media only screen and (max-width: 1400px) {
+  .heading {
+    font-size: 1.25em;
+  }
+
+  .number {
+    font-size: 3.25em;
+  }
 }

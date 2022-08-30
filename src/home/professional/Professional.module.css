@@ -24,11 +24,17 @@
   border-radius: 30%;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   .heading {
-    margin: 1em;
+    font-size: 0.8em;
   }
 
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 1000px) {
   .logos {
     justify-content: space-around;
   }

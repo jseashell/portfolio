@@ -5,7 +5,7 @@ nav {
   align-items: center;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,20 +13,20 @@ ul {
   padding: 0;
 }
 
-ul li {
+nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-ul li a {
+nav ul li a {
   text-decoration: none;
   padding: 10px;
   display: flex;
   align-items: center;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   cursor: pointer;
   color: var(--theme-primary);
 }
@@ -96,15 +96,15 @@ ul li a:hover {
     justify-content: flex-start;
   }
 
-  ul {
+  nav ul {
     padding: 0 10px;
   }
 
-  ul li a {
+  nav ul li a {
     padding: 0;
   }
 
-  ul li a:hover {
+  nav ul li a:hover {
     cursor: pointer;
     color: var(--theme-secondary);
   }
@@ -142,22 +142,22 @@ ul li a:hover {
     box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
   }
 
-  ul {
+  nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  ul li {
+  nav ul li {
     justify-content: flex-start;
   }
 
-  ul li a {
+  nav ul li a {
     font-size: 1.25em;
     color: white;
     padding: 10px;
   }
 
-  ul li a:hover {
+  nav ul li a:hover {
     color: white;
   }
 

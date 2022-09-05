@@ -46,13 +46,6 @@
   grid-area: yearsExperience;
 }
 
-.skills {
-  background-color: white;
-  outline: 3px solid var(--theme-primary);
-  border-radius: 30px;
-  padding: 20px;
-}
-
 @media only screen and (max-width: 1400px) {
   .pfp {
     width: 450px;

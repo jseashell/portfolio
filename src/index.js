@@ -3,12 +3,10 @@ import "react-app-polyfill/stable";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
-import { Experience } from "./experience/Experience";
 import { Home } from "./home/Home";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Showcase } from "./showcase/Showcase";
-import { Social } from "./social/Social";
+import { Skills } from "./skills/Skills";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,9 +14,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="showcase" element={<Showcase />} />
-        <Route path="experience" element={<Experience />} />
-        <Route path="social" element={<Social />} />
+        <Route path="skills" element={<Skills />} />
       </Route>
     </Routes>
   </BrowserRouter>

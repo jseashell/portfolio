@@ -12,7 +12,6 @@ export function Frontend() {
         </div>
         <ul className={styles.htmlItems}>
           <li id="frontend-html-accessibility">Accessibility</li>
-          <li id="frontend-html-forms">Forms</li>
           <li id="frontend-html-input-validation">Input Validation</li>
           <li id="frontend-html-sematic-html">Semantic HTML</li>
         </ul>
@@ -20,7 +19,6 @@ export function Frontend() {
           start="frontend-html-title"
           end="frontend-html-accessibility"
         />
-        <DashConnector start="frontend-html-title" end="frontend-html-forms" />
         <DashConnector
           start="frontend-html-title"
           end="frontend-html-input-validation"
@@ -32,11 +30,8 @@ export function Frontend() {
         <div className={styles.cssTitle}>
           <h3 id="frontend-css-title">CSS</h3>
         </div>
-        <ul className={styles.cssItemsLeft}>
+        <ul className={styles.cssItems}>
           <li id="frontend-css-animation">Animation</li>
-          <li id="frontend-css-modules">Modules</li>
-        </ul>
-        <ul className={styles.cssItemsRight}>
           <li id="frontend-css-responsive">Responsive Layout</li>
           <li id="frontend-css-theming">Theming</li>
         </ul>
@@ -44,7 +39,6 @@ export function Frontend() {
           start="frontend-css-title"
           end="frontend-css-animation"
         />
-        <DashConnector start="frontend-css-title" end="frontend-css-modules" />
         <DashConnector
           start="frontend-css-title"
           end="frontend-css-responsive"

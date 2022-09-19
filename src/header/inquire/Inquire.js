@@ -2,8 +2,6 @@ import React from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import styles from "./Inquire.module.css";
 
-const email = process.env.INQUIRE_EMAIL || "INQUIRE_EMAIL";
-
 /**
  * Component representing the Inquire action to open a new
  * tab and send an email inquiry.
@@ -17,7 +15,7 @@ export function Inquire(props) {
   return (
     <React.Fragment>
       <a
-        href={"mailto:" + email}
+        href={"mailto:shellosoftware@gmail.com?subject=Website Inquiry"}
         className={styles.inquire}
         target="_blank"
         rel="noreferrer noopener">

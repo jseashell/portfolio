@@ -18,5 +18,7 @@
 @media only screen and (max-width: 1400px) {
   .message {
     max-width: 140px;
+    padding: 10px;
+    border-radius: 10px 10px 10px 5px;
   }
 }

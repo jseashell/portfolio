@@ -4,12 +4,10 @@
 
 .frontend {
   width: 100%;
-  display: grid;
-  grid-template-areas:
-    ". htmlTitle htmlItems"
-    "cssItemsLeft cssTitle cssItemsRight"
-    ". javascriptTitle javascriptItems"
-    "securityItemsLeft securityTitle securityItemsRight";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .htmlTitle,
@@ -19,21 +17,22 @@
   align-self: center;
   justify-self: center;
   width: min-content;
+  margin: 15px 0;
 }
 
 .htmlItems,
-.cssItemsLeft,
-.cssItemsRight,
+.cssItems,
 .javascriptItems,
 .securityItemsLeft,
 .securityItemsRight {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.cssItemsLeft,
+.htmlItems,
+.javascriptItems,
 .securityItemsLeft {
-  justify-self: flex-end;
   display: flex;
   align-items: flex-end;
 }
@@ -44,18 +43,20 @@
 
 .htmlItems {
   grid-area: htmlItems;
+  position: absolute;
+  top: 0;
+  left: 150px;
 }
 
 .cssTitle {
   grid-area: cssTitle;
 }
 
-.cssItemsLeft {
-  grid-area: cssItemsLeft;
-}
-
-.cssItemsRight {
-  grid-area: cssItemsRight;
+.cssItems {
+  grid-area: cssItems;
+  position: absolute;
+  top: 100px;
+  right: 150px;
 }
 
 .javascriptTitle {
@@ -64,6 +65,9 @@
 
 .javascriptItems {
   grid-area: javascriptItems;
+  position: absolute;
+  top: 240px;
+  left: 150px;
 }
 
 .securityTitle {
@@ -85,7 +89,7 @@
 .frontend ul {
   list-style-type: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 0;
 }
 
 .frontend h3 {

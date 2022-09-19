@@ -1,10 +1,7 @@
 .skills {
-  background-color: white;
-  outline: 3px solid var(--theme-primary);
-  border-radius: 30px;
-  padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
+  padding: 20px;
 }

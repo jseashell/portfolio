@@ -28,18 +28,8 @@ export function NavBar(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink to="showcase" className={navLinkClassName}>
-                SHOWCASE
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="experience" className={navLinkClassName}>
-                EXPERIENCE
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="social" className={navLinkClassName}>
-                SOCIAL
+              <NavLink to="skills" className={navLinkClassName}>
+                SKILLS
               </NavLink>
             </li>
           </ul>

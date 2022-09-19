@@ -4,7 +4,6 @@ import styles from "./Home.module.css";
 import { Pfp } from "./pfp/Pfp";
 import { Pitch } from "./pitch/Pitch";
 import { Professional } from "./professional/Professional";
-import { Skills } from "./skills/Skills";
 import { YearsExperience } from "./years-experience/YearsExperience";
 
 export function Home() {
@@ -17,7 +16,6 @@ export function Home() {
         <Professional className={styles.professional} />
         <Pitch className={styles.pitch} />
       </div>
-      <Skills />
     </React.Fragment>
   );
 }

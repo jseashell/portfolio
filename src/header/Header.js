@@ -7,7 +7,7 @@ import { Logo } from "./logo/Logo";
 import { NavBar } from "./navbar/NavBar";
 
 export function Header() {
-  const mediaQuery = "(max-width: 750px)";
+  const mediaQuery = "only screen and (max-width: 495px)";
 
   let [isMobile, setIsMobile] = useState(window.matchMedia(mediaQuery).matches);
 
@@ -18,6 +18,7 @@ export function Header() {
   useEffect(() => {
     const handler = (e) => {
       setIsMobile(e?.matches || false);
+      console.log(`js media match`);
     };
     window.matchMedia(mediaQuery).addEventListener("change", handler);
   }, []);
@@ -25,22 +26,33 @@ export function Header() {
   return (
     <React.Fragment>
       <header className={styles.header}>
-        <div className={styles.container}>
-          <NavLink to="/" title="Home">
-            <Logo />
-          </NavLink>
-          {!isMobile && <NavBar open={true} />}
-          {!isMobile && <Inquire size={30} />}
-          {isMobile && (
+        {!isMobile && (
+          <div className={styles.container}>
+            <NavLink to="/" title="Home">
+              <Logo />
+            </NavLink>
+            <NavBar open={true} />
+            <Inquire size={30} />
+          </div>
+        )}
+        {isMobile && (
+          <React.Fragment>
             <div className={styles.mobileContainer}>
-              <button className={styles.mobileMenu} onClick={toggleMenu}>
-                {isMenuOpen ? <MdMenuOpen /> : <MdMenu />}
-              </button>
-              <Inquire size={60} />
+              <NavLink to="/" title="Home">
+                <Logo />
+              </NavLink>
+              <div className={styles.mobileActions}>
+                <Inquire size={60} />
+                <button
+                  className={styles.mobileMenuButton}
+                  onClick={toggleMenu}>
+                  {isMenuOpen ? <MdMenuOpen /> : <MdMenu />}
+                </button>
+              </div>
             </div>
-          )}
-          {isMobile && <NavBar open={isMenuOpen} />}
-        </div>
+            <NavBar open={isMenuOpen} />
+          </React.Fragment>
+        )}
       </header>
     </React.Fragment>
   );

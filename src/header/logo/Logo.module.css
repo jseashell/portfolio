@@ -15,7 +15,7 @@
   fill: var(--theme-primary);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 495px) {
   .image {
     fill: white;
   }
@@ -23,6 +23,6 @@
   .container:hover,
   .image:hover {
     cursor: pointer;
-    fill: var(--theme-secondary);
+    fill: white;
   }
 }

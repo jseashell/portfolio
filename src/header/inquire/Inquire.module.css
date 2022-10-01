@@ -1,7 +1,6 @@
 .inquire {
   display: flex;
   align-items: center;
-  justify-self: flex-end;
   justify-content: space-between;
   width: 120px;
   text-decoration: none;
@@ -16,20 +15,13 @@
   text-decoration: none;
   color: var(--theme-primary);
   border-radius: 25px;
-  outline: 1px solid var(--theme-primary);
+  border: 1px solid var(--theme-primary);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1000px) {
-  .inquire {
-    color: white;
-  }
-
-  .inquire:hover {
-    color: var(--theme-secondary);
-    outline: 1px solid var(--theme-secondary);
-  }
-}
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 495px) {
   .inquire {
     padding: 0;
     color: white;
@@ -37,5 +29,6 @@
 
   .inquire:hover {
     color: white;
+    border: none;
   }
 }

@@ -1,42 +1,27 @@
 # Portfolio
 
-This is my portfolio site. It is a static site built using React
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
-## Installation
+## Development server
 
-```sh
-git clone git@github.com:jseashell/portfolio.git
-cd portfolio
-npm install
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Scripts
+## Code scaffolding
 
-In the project directory, you can run:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```sh
-# Build the app for production
-npm run build
+## Build
 
-# Launches the test runner in the interactive watch mode.
-npm test
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-# Runs the app in the development mode.
-npm start
-```
+## Running unit tests
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+## Running end-to-end tests
 
-## Environment
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-> TODO
+## Further help
 
-## Deployment
-
-> TODO
-
-## License
-
-This software is distributed under the terms of the [MIT License](/LICENSE).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

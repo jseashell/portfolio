@@ -1,0 +1,10 @@
+mat-card {
+  width: 28rem;
+  height: 32rem;
+  padding: 1rem;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  margin-bottom: 0.5rem;
+}

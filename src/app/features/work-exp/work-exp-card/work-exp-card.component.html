@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <img mat-card-avatar [src]="data.thumbnail" />
+    <mat-card-title>{{ data.title }}</mat-card-title>
+    <mat-card-subtitle>
+      <span class="mat-title-small">{{ data.company }}<mat-divider [vertical]="true"></mat-divider>Full-time</span>
+      <span class="mat-title-small">
+        {{ data.startDate | date: 'mediumDate' }} - {{ isPresent ? 'Present' : (data.endDate | date: 'mediumDate') }}
+        <mat-divider [vertical]="true"></mat-divider>
+        {{ duration }}
+      </span>
+      <span class="mat-title-small">{{ data.location }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ data.description }}
+    </p>
+  </mat-card-content>
+</mat-card>

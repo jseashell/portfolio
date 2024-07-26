@@ -1,0 +1,18 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 90rem;
+  margin: 2rem 0;
+}
+
+main:first-child {
+  margin-top: 7rem;
+}
+
+main > * {
+  margin-bottom: 5rem;
+}

@@ -1,0 +1,35 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.heading {
+  white-space: nowrap;
+  min-width: 50rem;
+  margin-left: 6rem;
+}
+
+span {
+  font-family: monospace;
+  padding: 5px;
+  border-right: 2px solid transparent;
+  animation: blink-border 0.7s infinite;
+}
+
+@keyframes blink-border {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+mat-card {
+  padding: 2rem;
+}

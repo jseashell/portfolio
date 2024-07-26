@@ -1,0 +1,9 @@
+<mat-grid-list cols="3" rowHeight="34rem">
+  @if (cards$ | async; as cards) {
+    @for (card of cards; track card) {
+      <mat-grid-tile>
+        <app-offerings-card [data]="card"></app-offerings-card>
+      </mat-grid-tile>
+    }
+  }
+</mat-grid-list>

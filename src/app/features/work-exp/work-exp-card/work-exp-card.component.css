@@ -1,0 +1,21 @@
+:host {
+  align-self: stretch;
+}
+
+mat-card {
+  width: 28rem;
+  height: 27rem;
+  padding: 1rem;
+}
+
+span {
+  display: flex;
+}
+
+span mat-divider {
+  margin: 0 0.5rem;
+}
+
+mat-card-content {
+  margin: 1rem 0;
+}

@@ -5,8 +5,14 @@
 }
 
 main {
-  width: 90rem;
-  margin: 2rem 0;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  main {
+      width: 700px;
+  }
 }
 
 main:first-child {

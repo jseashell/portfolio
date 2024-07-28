@@ -11,17 +11,6 @@ div.heading {
   margin-left: 6rem;
 }
 
-@media (max-width: 768px) and (min-width: 481px) {
-  :host {
-    flex-direction: column-reverse;
-  }
-  
-  div.heading {
-    margin-bottom: 2rem;
-    width: 100%
-  }
-}
-
 span {
   font-family: monospace;
   padding: 5px;

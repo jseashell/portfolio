@@ -15,8 +15,6 @@ import { HeroService } from './hero.service';
   styleUrl: './hero.component.css',
 })
 export class HeroComponent implements OnInit {
-  name = 'John Schellinger';
-
   private heroService = inject(HeroService);
   private subtitles = [
     'Software Developer.',

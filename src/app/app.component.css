@@ -6,7 +6,10 @@
 
 main {
   width: 90rem;
-  margin: 2rem 0;
+}
+
+section.hero {
+  position: relative;
 }
 
 @media only screen and (max-width: 1020px) and (min-width: 768px) {
@@ -14,25 +17,43 @@ main {
     width: 900;
   }
   
-  main:first-child {
-    margin-top: 2rem;
+  section.hero {
+    padding-top: 2rem;
+  }
+  
+  section.hero div.hero-bg {
+    position: absolute;
+    padding-top: 2rem;
+    background-color: black;
+    height: 28rem;
+    top:0;
+    right: 0;
+    left: 0;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 391px) {
   main {
     width: 700;
+    
   }
   
-  main:first-child {
-    margin-top: 2rem;
+  section.hero {
+    padding-top: 2rem;
+  }
+  
+  section.hero div.hero-bg {
+    z-index:-1;
+    position: absolute;
+    padding-top: 2rem;
+    background-color: black;
+    height: 25rem;
+    top:0;
+    right: 0;
+    left: 0;
   }
 }
 
-main:first-child {
-  margin-top: 7rem;
-}
-
-main > * {
+main section {
   margin-bottom: 5rem;
 }

@@ -11,6 +11,10 @@ div.heading {
   margin-left: 6rem;
 }
 
+span {
+  font-family: monospace;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 391px) {
   :host {
     flex-direction: column-reverse;
@@ -21,15 +25,15 @@ div.heading {
     margin-left: unset;
     width: 500px;
     margin-bottom: 2rem;
+    color: white !important;
   }
   
   mat-card {
-    width: 500px;
+      width: 500px;
   }
 }
 
 span {
-  font-family: monospace;
   padding: 5px;
   border-right: 2px solid transparent;
   animation: blink-border 0.7s infinite;

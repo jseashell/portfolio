@@ -17,7 +17,7 @@ div.heading {
   }
   
   div.heading {
-    min-width: unset;
+    width: 100%;
   }
 }
 

@@ -34,13 +34,13 @@ section.hero {
 
 @media only screen and (max-width: 768px) and (min-width: 391px) {
   main {
-    width: 700; 
+    width: 700px
   }
   
   section {
     padding: 0 2rem;
-  
   }
+  
   section.hero {
     padding-top: 2rem;
   }

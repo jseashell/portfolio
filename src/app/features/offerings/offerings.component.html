@@ -1,9 +1,24 @@
-<mat-grid-list cols="3" rowHeight="34rem">
-  @if (cards$ | async; as cards) {
-    @for (card of cards; track card) {
-      <mat-grid-tile>
-        <app-offerings-card [data]="card"></app-offerings-card>
-      </mat-grid-tile>
-    }
+@if (isMobile$ | async; as isMobile) {
+  @if(isMobile) {
+    <mat-tab-group>
+      @if (cards$ | async; as cards) {
+        @for (card of cards; track card) {
+          <mat-tab [label]="card.title" animationDuration="500ms">
+            <app-offerings-card [data]="card"></app-offerings-card>
+          </mat-tab>
+        }
+      }
+    </mat-tab-group>
   }
-</mat-grid-list>
+  @else {
+    <mat-grid-list [cols]="3" rowHeight="34rem">
+      @if (cards$ | async; as cards) {
+        @for (card of cards; track card) {
+          <mat-grid-tile>
+            <app-offerings-card [data]="card"></app-offerings-card>
+          </mat-grid-tile>
+        }
+      }
+    </mat-grid-list>
+  }
+}

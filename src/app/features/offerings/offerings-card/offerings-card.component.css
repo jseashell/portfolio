@@ -1,6 +1,13 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 mat-card {
-  width: 28rem;
-  height: 32rem;
+  width: calc(100% - 5rem);
+  height: calc(100% - 2rem);
   padding: 1rem;
 }
 

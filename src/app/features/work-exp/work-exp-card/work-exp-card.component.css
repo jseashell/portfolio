@@ -3,17 +3,26 @@
 }
 
 mat-card {
-  width: 28rem;
+  width: 25rem;
   height: 27rem;
   padding: 1rem;
+}
+
+mat-card-subtitle {
+  color: darkgrey;
 }
 
 span {
   display: flex;
 }
 
-span mat-divider {
+span div.dot {
+  height: 100%;
   margin: 0 0.5rem;
+}
+
+span div.dot::before {
+  content: '•';
 }
 
 mat-card-content {

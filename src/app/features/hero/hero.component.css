@@ -1,35 +1,40 @@
 :host {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 div.heading {
   white-space: nowrap;
-  min-width: 50rem;
   margin-left: 6rem;
+  color: white !important;
 }
 
+h1,
+h2,
 span {
-  font-family: monospace;
+  font-family: monospace !important;
+}
+
+mat-card {
+  width: 40rem;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 391px) {
   :host {
     flex-direction: column-reverse;
   }
-  
+
   div.heading {
     min-width: unset;
     margin-left: unset;
     width: 500px;
     margin-bottom: 2rem;
-    color: white !important;
   }
-  
+
   mat-card {
-      width: 500px;
+    width: 500px;
   }
 }
 
@@ -44,11 +49,20 @@ span {
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: white;
   }
   100% {
     border-color: transparent;
   }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a.anchor {
+  margin-top: 3px;
 }
 
 mat-card {

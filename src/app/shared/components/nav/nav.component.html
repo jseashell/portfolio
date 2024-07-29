@@ -1,0 +1,18 @@
+@if (isHome) {
+  <a mat-fab extended routerLink="/shop">
+    <mat-icon>store_front</mat-icon>
+    Shop
+  </a>
+  <a mat-fab extended routerLink="/portfolio">
+    <mat-icon>public</mat-icon>
+    Portfolio
+  </a>
+  <a mat-fab extended routerLink="/ask-a-question">
+    <mat-icon>message</mat-icon>
+    Ask a Question
+  </a>
+} @else {
+  <a mat-button routerLink="/shop">Shop</a>
+  <a mat-button routerLink="/portfolio">Portfolio</a>
+  <a mat-button routerLink="/ask-a-question">Ask a Question</a>
+}

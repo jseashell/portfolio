@@ -1,0 +1,8 @@
+@if (isHome) {
+  <app-toolbar-card></app-toolbar-card>
+}
+<header>
+  <app-toolbar-title [isHome]="isHome"></app-toolbar-title>
+  <app-nav [isHome]="isHome"></app-nav>
+</header>
+<div class="toolbar-bg"></div>

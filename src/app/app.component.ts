@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { RouterOutlet } from '@angular/router';
-import { HeroComponent } from './features/hero/hero.component';
-import { OfferingsComponent } from './features/offerings/offerings.component';
-import { ReviewsComponent } from './features/reviews/reviews.component';
-import { WorkExpComponent } from './features/work-exp/work-exp.component';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter, map, Observable } from 'rxjs';
+import { ToolbarComponent } from './features/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroComponent, MatCardModule, OfferingsComponent, ReviewsComponent, WorkExpComponent],
+  imports: [AsyncPipe, RouterOutlet, ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  private router = inject(Router);
+  isHome$!: Observable<boolean>;
+
+  ngOnInit(): void {
+    this.isHome$ = this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => this.router.url == '/home'),
+    );
+  }
+}

@@ -1,65 +1,10 @@
 :host {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+header,
 main {
-  position: relative;
-  width: 100%;
-  padding: 0 10rem;
-}
-
-main div.hero-bg {
-  position: absolute;
-  z-index: -1;
-  background-color: black;
-  height: 21rem;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-main section {
-  padding: 0 2rem;
-  margin: 5rem 0;
-}
-
-main section.hero {
-  margin-top: 10.25rem;
-}
-
-@media only screen and (max-width: 1020px) and (min-width: 768px) {
-  main {
-    width: 900px;
-  }
-
-  main div.hero-bg {
-    height: 30rem;
-  }
-
-  main section.hero {
-    padding-top: 2rem;
-  }
-}
-
-@media only screen and (max-width: 768px) and (min-width: 391px) {
-  main {
-    width: 700px;
-  }
-
-  main section.hero {
-    padding-top: 2rem;
-  }
-
-  main div.hero-bg {
-    z-index: -1;
-    position: absolute;
-    padding-top: 2rem;
-    background-color: black;
-    height: 25rem;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
+  width: 90rem;
 }

@@ -1,0 +1,17 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  padding: 1rem;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,31 @@
+:host {
+  color: white !important;
+}
+
+h1,
+h2,
+span {
+  font-family: monospace !important;
+}
+
+:host.home h1 {
+  margin: 0 !important;
+}
+
+span {
+  padding-right: 5px;
+  border-right: 2px solid transparent;
+  animation: blink-border 0.7s infinite;
+}
+
+@keyframes blink-border {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}

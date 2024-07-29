@@ -1,0 +1,50 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: margin 0.3s ease-in-out;
+}
+
+:host.home {
+  margin: 10rem 0 5rem;
+}
+
+:host:not(.home) {
+  margin: 0rem 0 5rem;
+}
+
+:host header {
+  width: 50rem;
+  display: flex;
+}
+
+:host.home header {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+:host:not(.home) header {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4rem;
+}
+
+:host:not(.home) div.toolbar-bg {
+  height: 4rem;
+}
+
+:host div.toolbar-bg {
+  position: absolute;
+  z-index: -1;
+  background-color: black;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+:host.home div.toolbar-bg {
+  height: 20rem;
+}

@@ -1,0 +1,33 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  padding: 1rem;
+}
+
+mat-card-subtitle {
+  color: darkgrey;
+}
+
+span {
+  display: flex;
+}
+
+span div.dot {
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+span div.dot::before {
+  content: '•';
+}
+
+mat-card-content {
+  margin: 1rem 0;
+}

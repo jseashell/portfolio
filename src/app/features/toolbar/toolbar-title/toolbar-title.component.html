@@ -1,0 +1,9 @@
+@if (isHome) {
+  <h1 class="mat-display-medium">Hi, my name is John Schellinger.</h1>
+  <h2 class="mat-display-small">
+    I am a <span>{{ subtitle$ | async }}</span
+    >.
+  </h2>
+} @else {
+  <h1 class="mat-display-small">John Schellinger</h1>
+}

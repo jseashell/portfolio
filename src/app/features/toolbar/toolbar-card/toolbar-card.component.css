@@ -1,4 +1,11 @@
 mat-card {
+  position: absolute;
   padding: 2rem;
   width: 36rem;
+  top: -264px;
+  transition: top 0.4s ease-in-out;
+}
+
+mat-card.visible {
+  top: 10.5rem;
 }

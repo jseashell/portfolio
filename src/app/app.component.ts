@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.isHome$ = this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
-      map(() => this.router.url == '/home'),
+      map(() => this.router.url == '/home' || this.router.url == '/'),
     );
   }
 }

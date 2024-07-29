@@ -1,6 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, HostBinding, inject, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { ToolbarTitleService } from './toolbar-title.service';
@@ -8,7 +9,7 @@ import { ToolbarTitleService } from './toolbar-title.service';
 @Component({
   selector: 'app-toolbar-title',
   standalone: true,
-  imports: [AsyncPipe, MatButtonModule, RouterModule],
+  imports: [AsyncPipe, MatButtonModule, MatIconModule, RouterModule],
   templateUrl: './toolbar-title.component.html',
   styleUrl: './toolbar-title.component.css',
 })
@@ -29,7 +30,6 @@ export class ToolbarTitleComponent implements OnInit {
     'Algorithmic Artist',
     'Integration Whisperer',
     'Creative Thinker',
-    'hoping you will click another page',
   ];
   subtitle$!: Observable<string>;
 

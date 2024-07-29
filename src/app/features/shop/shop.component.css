@@ -4,13 +4,23 @@ div {
   align-items: center;
 }
 
+div div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4rem;
+}
+
 img {
   width: 10rem;
   height: 10rem;
 }
 
+h2 {
+  margin-top: 7rem;
+}
+
 p {
   font-size: 22px;
-  margin: 4rem 0;
-  padding: 0 4rem;
+  margin: 2rem 0;
 }

@@ -2,8 +2,12 @@
 
 @for (card of cardsArr; track card) {
   <div>
-    <img [src]="card.icon" />
-    <h2 [id]="card.id">{{ card.title }}</h2>
+    <a [href]="card.noun" title="Open icon by The Noun Project in a new tab" target="_blank">
+      <img [src]="card.icon" />
+    </a>
+    <div>
+      <h2 [id]="card.id">{{ card.title }}</h2>
+      <p>{{ card.description }}</p>
+    </div>
   </div>
-  <p>{{ card.description }}</p>
 }

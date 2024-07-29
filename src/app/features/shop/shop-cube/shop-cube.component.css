@@ -1,0 +1,44 @@
+section {
+  margin: 0;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 3000px;
+}
+
+.cube {
+  width: 26rem;
+  height: 26rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.face {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  user-select: none;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(13rem);
+}
+.back {
+  transform: rotateY(180deg) translateZ(13rem);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(13rem);
+}
+.right {
+  transform: rotateY(90deg) translateZ(13rem);
+}
+.top {
+  transform: rotateX(90deg) translateZ(13rem);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(13rem);
+}

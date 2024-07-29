@@ -1,22 +1,9 @@
-<h3 class="mat-heading-large">Shop</h3>
-@if (isMobile) {
-  <mat-tab-group>
-    @if (cards$ | async; as cards) {
-      @for (card of cards; track card) {
-        <mat-tab [label]="card.title" animationDuration="500ms">
-          <app-shop-card [data]="card"></app-shop-card>
-        </mat-tab>
-      }
-    }
-  </mat-tab-group>
-} @else {
-  <mat-grid-list [cols]="3" rowHeight="24rem">
-    @if (cards$ | async; as cards) {
-      @for (card of cards; track card) {
-        <mat-grid-tile>
-          <app-shop-card [data]="card"></app-shop-card>
-        </mat-grid-tile>
-      }
-    }
-  </mat-grid-list>
+<app-shop-cube></app-shop-cube>
+
+@for (card of cardsArr; track card) {
+  <div>
+    <img [src]="card.icon" />
+    <h2 [id]="card.id">{{ card.title }}</h2>
+  </div>
+  <p>{{ card.description }}</p>
 }

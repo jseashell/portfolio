@@ -11,15 +11,17 @@ import { ShopService } from '../shop.service';
   styleUrl: './shop-cube.component.css',
 })
 export class ShopCubeComponent {
-  cards = inject(ShopService).cards;
+  @ViewChild('cube') private cube!: ElementRef;
   private isDragging = false;
-  private startX: any;
-  private startY: any;
+  private startX!: number;
+  private startY!: number;
   private currentX = 0;
   private currentY = 0;
-  @ViewChild('cube') private cube!: ElementRef;
+
+  cards = inject(ShopService).cards;
 
   @HostListener('document:mousedown', ['$event'])
+  @HostListener('document:touchstart', ['$event'])
   onMouseDown(event: any) {
     if (this.cube) {
       this.isDragging = true;
@@ -31,6 +33,7 @@ export class ShopCubeComponent {
   }
 
   @HostListener('document:mousemove', ['$event'])
+  @HostListener('document:touchmove', ['$event'])
   onMouseMove(event: any) {
     if (!this.isDragging) return;
 
@@ -46,6 +49,8 @@ export class ShopCubeComponent {
   }
 
   @HostListener('document:mouseup', ['$event'])
+  @HostListener('document:touchend', ['$event'])
+  @HostListener('document:touchcancel', ['$event'])
   onMouseUp() {
     if (this.cube) {
       this.isDragging = false;

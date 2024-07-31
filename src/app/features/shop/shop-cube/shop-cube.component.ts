@@ -22,11 +22,12 @@ export class ShopCubeComponent {
 
   @HostListener('document:mousedown', ['$event'])
   @HostListener('document:touchstart', ['$event'])
-  onMouseDown(event: any) {
+  onMouseDown(e: any) {
+    e?.preventDefault()
     if (this.cube) {
       this.isDragging = true;
-      this.startX = event.clientX;
-      this.startY = event.clientY;
+      this.startX = e.clientX;
+      this.startY = e.clientY;
 
       this.cube.nativeElement.style.transition = 'none'; // Disable transition while dragging
     }
@@ -35,6 +36,7 @@ export class ShopCubeComponent {
   @HostListener('document:mousemove', ['$event'])
   @HostListener('document:touchmove', ['$event'])
   onMouseMove(event: any) {
+    event?.preventDefault();
     if (!this.isDragging) return;
 
     if (this.cube) {
@@ -51,7 +53,8 @@ export class ShopCubeComponent {
   @HostListener('document:mouseup', ['$event'])
   @HostListener('document:touchend', ['$event'])
   @HostListener('document:touchcancel', ['$event'])
-  onMouseUp() {
+  onMouseUp(event: any) {
+    event?.preventDefault();
     if (this.cube) {
       this.isDragging = false;
       this.cube.nativeElement.style.transition = 'transform 0.5s'; // Re-enable transition

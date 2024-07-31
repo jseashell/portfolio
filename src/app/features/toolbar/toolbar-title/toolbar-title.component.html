@@ -1,9 +1,15 @@
-@if (isHome) {
-  <h1 class="mat-display-medium">Hi, my name is John Schellinger.</h1>
-  <h2 class="mat-display-small">
-    I am a <span>{{ subtitle$ | async }}</span
-    >.
-  </h2>
-} @else {
-  <a mat-button routerLink="/home">Home</a>
-}
+<h1
+  [ngClass]="{
+    'mat-title-medium': isMobile,
+    'mat-display-medium': !isMobile,
+  }"
+  >Hi, my name is John Schellinger.
+</h1>
+<h2
+  [ngClass]="{
+    'mat-title-small': isMobile,
+    'mat-display-small': !isMobile,
+  }"
+  >I am a <span>{{ subtitle$ | async }}</span
+  >.
+</h2>

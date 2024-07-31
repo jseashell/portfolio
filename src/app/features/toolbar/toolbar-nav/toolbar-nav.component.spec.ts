@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShopCubeComponent } from './shop-cube.component';
+import { ToolbarNavComponent } from './toolbar-nav.component';
 
-describe('ShopCubeComponent', () => {
-  let component: ShopCubeComponent;
-  let fixture: ComponentFixture<ShopCubeComponent>;
+describe('ToolbarNavComponent', () => {
+  let component: ToolbarNavComponent;
+  let fixture: ComponentFixture<ToolbarNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ShopCubeComponent]
+      imports: [ToolbarNavComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ShopCubeComponent);
+    fixture = TestBed.createComponent(ToolbarNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

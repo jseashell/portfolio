@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 import { AskAQuestionComponent } from './features/ask-a-question/ask-a-question.component';
 import { HomeComponent } from './features/home/home.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { OfferingsComponent } from './features/offerings/offerings.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
-import { ShopComponent } from './features/shop/shop.component';
 
 export const routes: Routes = [
   {
@@ -15,8 +15,8 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'shop',
-    component: ShopComponent,
+    path: 'offerings',
+    component: OfferingsComponent,
   },
   {
     path: 'portfolio',

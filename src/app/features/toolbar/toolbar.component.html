@@ -1,8 +1,8 @@
-@if (isHome) {
-  <app-toolbar-card></app-toolbar-card>
-}
-<header>
-  <app-toolbar-title [isHome]="isHome"></app-toolbar-title>
-  <app-nav [isHome]="isHome"></app-nav>
-</header>
+<div class="toolbar">
+  <header>
+    <app-toolbar-nav></app-toolbar-nav>
+  </header>
+  <app-toolbar-card [isHome]="isHome"></app-toolbar-card>
+  <app-toolbar-title></app-toolbar-title>
+</div>
 <div class="toolbar-bg"></div>

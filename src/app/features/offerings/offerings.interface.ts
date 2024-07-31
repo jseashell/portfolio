@@ -1,4 +1,4 @@
-export interface ServicesCard {
+export interface OfferingsCard {
   /** dom id */
   id: string;
   /** title/label/name */

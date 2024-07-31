@@ -1,16 +1,16 @@
 import { Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
-import { ShopCardComponent } from '../shop-card/shop-card.component';
-import { ShopService } from '../shop.service';
+import { OfferingsCardComponent } from '../offerings-card/offerings-card.component';
+import { OfferingsService } from '../offerings.service';
 
 @Component({
-  selector: 'app-shop-cube',
+  selector: 'app-offerings-cube',
   standalone: true,
-  imports: [ShopCardComponent],
-  providers: [ShopService],
-  templateUrl: './shop-cube.component.html',
-  styleUrl: './shop-cube.component.css',
+  imports: [OfferingsCardComponent],
+  providers: [OfferingsService],
+  templateUrl: './offerings-cube.component.html',
+  styleUrl: './offerings-cube.component.css',
 })
-export class ShopCubeComponent {
+export class OfferingsCubeComponent {
   @ViewChild('cube') private cube!: ElementRef;
   private isDragging = false;
   private startX!: number;
@@ -18,7 +18,7 @@ export class ShopCubeComponent {
   private currentX = 0;
   private currentY = 0;
 
-  cards = inject(ShopService).cards;
+  cards = inject(OfferingsService).cards;
 
   @HostListener('document:mousedown', ['$event'])
   @HostListener('document:touchstart', ['$event'])

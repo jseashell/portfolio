@@ -1,30 +1,32 @@
-import { NgClass } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  HostBinding,
+  inject,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { Subscription, tap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-toolbar-card',
   standalone: true,
-  imports: [MatCardModule, NgClass],
+  imports: [MatCardModule],
   templateUrl: './toolbar-card.component.html',
   styleUrl: './toolbar-card.component.css',
 })
-export class ToolbarCardComponent implements OnInit, OnDestroy {
-  private visibleSub!: Subscription;
-  isVisible = false;
+export class ToolbarCardComponent implements OnInit, OnChanges {
+  @HostBinding('class.visible') @Input() isHome!: boolean;
+  private cdr = inject(ChangeDetectorRef);
 
-  ngOnInit(): void {
-    this.visibleSub = timer(1)
-      .pipe(
-        tap(() => {
-          this.isVisible = true;
-        }),
-      )
-      .subscribe();
-  }
+  ngOnInit(): void {}
 
-  ngOnDestroy(): void {
-    this.visibleSub?.unsubscribe();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['isHome']?.currentValue) {
+      this.isHome = changes['isHome'].currentValue;
+      this.cdr.detectChanges();
+    }
   }
 }

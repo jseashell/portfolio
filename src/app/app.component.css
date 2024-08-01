@@ -6,7 +6,6 @@
 
 main {
   width: 90rem;
-  margin-top: 34rem;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 391px) {

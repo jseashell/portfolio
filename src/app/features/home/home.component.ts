@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+
+import { animate, style, transition, trigger } from '@angular/animations';
 import { WorkExpComponent } from './work-exp/work-exp.component';
 
 @Component({
@@ -7,5 +9,19 @@ import { WorkExpComponent } from './work-exp/work-exp.component';
   imports: [WorkExpComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: '0', transform: 'translateY(-100%)' }),
+        animate('.8s .8s ease-in', style({ opacity: '1', transform: 'translateY(0%)' })),
+      ]),
+      transition(':leave', [
+        style({ opacity: '1', transform: 'translateY(0%)' }),
+        animate('.8s ease-out', style({ opacity: '0', transform: 'translateY(-100%)' })),
+      ]),
+    ]),
+  ],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  @HostBinding('@fade') fade!: any;
+}

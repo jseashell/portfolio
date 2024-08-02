@@ -1,33 +1,31 @@
 import { Routes } from '@angular/router';
-import { AskAQuestionComponent } from './features/ask-a-question/ask-a-question.component';
 import { HomeComponent } from './features/home/home.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
-import { OfferingsComponent } from './features/offerings/offerings.component';
-import { PortfolioComponent } from './features/portfolio/portfolio.component';
+import { ServicesComponent } from './features/services/services.component';
+
+export enum Paths {
+  EMPTY = '',
+  HOME = 'home',
+  SERVICES = 'services',
+  NOT_FOUND = '**',
+}
 
 export const routes: Routes = [
   {
-    path: '',
+    path: Paths.EMPTY,
     component: HomeComponent,
   },
   {
-    path: 'home',
+    path: Paths.HOME,
     component: HomeComponent,
   },
   {
-    path: 'offerings',
-    component: OfferingsComponent,
+    path: Paths.SERVICES,
+    component: ServicesComponent,
   },
   {
-    path: 'portfolio',
-    component: PortfolioComponent,
-  },
-  {
-    path: 'ask-a-question',
-    component: AskAQuestionComponent,
-  },
-  {
-    path: '**',
+    // must be last
+    path: Paths.NOT_FOUND,
     component: NotFoundComponent,
   },
 ];

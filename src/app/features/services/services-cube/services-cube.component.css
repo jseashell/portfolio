@@ -1,6 +1,6 @@
 section {
-  margin: 0;
-  height: 40rem;
+  margin-bottom: 20rem;
+  height: 0;
   display: flex;
   justify-content: center;
   align-items: center;

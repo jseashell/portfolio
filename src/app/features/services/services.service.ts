@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { OfferingsCard } from './offerings.interface';
+import { ServicesCard } from './services.interface';
 
 @Injectable()
-export class OfferingsService {
-  get cards(): { [key: string]: OfferingsCard } {
+export class ServicesService {
+  get cards(): { [key: string]: ServicesCard } {
     return {
       left: {
         id: 'custom-api-dev',

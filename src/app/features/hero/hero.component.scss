@@ -1,0 +1,70 @@
+:host {
+  position: relative;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+}
+
+div.white-bar {
+  position: absolute;
+  width: 100%;
+  top: 72%;
+  height: 28%;
+  background-color: white;
+}
+
+div.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  width: 100%;
+
+  mat-card {
+    padding: 2rem;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  div.text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+    padding-left: 5rem;
+    z-index: 20;
+
+    h1,
+    h2,
+    span {
+      font-family: monospace !important;
+      white-space: nowrap;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h2 span {
+      padding-right: 5px;
+      border-right: 2px solid transparent;
+      animation: blink-border 0.7s infinite;
+    }
+
+    @keyframes blink-border {
+      0% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: unset;
+      }
+      100% {
+        border-color: transparent;
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ToolbarComponent } from './toolbar.component';
+import { ServicesCubeComponent } from './services-cube.component';
 
-describe('HeroComponent', () => {
-  let component: ToolbarComponent;
-  let fixture: ComponentFixture<ToolbarComponent>;
+describe('ServicesCubeComponent', () => {
+  let component: ServicesCubeComponent;
+  let fixture: ComponentFixture<ServicesCubeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToolbarComponent],
+      imports: [ServicesCubeComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ToolbarComponent);
+    fixture = TestBed.createComponent(ServicesCubeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

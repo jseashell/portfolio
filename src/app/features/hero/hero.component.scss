@@ -16,6 +16,21 @@ div.white-bar {
   background-color: #dddddd;
 }
 
+@media only screen and (max-width: 768px) {
+  :host {
+    height: 40rem;
+  }
+
+  div.title {
+    flex-direction: column-reverse;
+  }
+
+  mat-card {
+    width: 90%;
+    padding: 0;
+  }
+}
+
 div.title {
   display: flex;
   justify-content: space-between;

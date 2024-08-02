@@ -2,7 +2,12 @@
 <div class="title">
   <mat-card class="mat-elevation-z4">
     <mat-card-content>
-      <p class="mat-body-large">
+      <p
+        [ngClass]="{
+          'mat-body-large': (isMobile$ | async) == false,
+          'mat-body-small': (isMobile$ | async) == true,
+        }"
+      >
         Cutting-edge <span>web development</span>, piece-of-mind <span>technical consulting</span>, or seamless
         <span>integration</span> of complex systems, I bring a blend of technical expertise and creative problem-solving
         to every project. <span>Committed to quality</span>, I work closely with clients to ensure that every solution
@@ -13,10 +18,22 @@
   </mat-card>
   <div class="text">
     <div class="h1">
-      <h1 class="mat-display-medium">Hi, my name is <span class="name">John Schellinger</span>.</h1>
+      <h1
+        [ngClass]="{
+          'mat-display-medium': (isMobile$ | async) == false,
+          'mat-title-medium': (isMobile$ | async) == true,
+        }"
+      >
+        Hi, my name is <span class="name">John Schellinger</span>.</h1
+      >
     </div>
     <div class="h2">
-      <h2 class="mat-display-small">
+      <h2
+        [ngClass]="{
+          'mat-display-small': (isMobile$ | async) == false,
+          'mat-title-small': (isMobile$ | async) == true,
+        }"
+      >
         I am a <span>{{ subtitle$ | async }}</span
         >.
       </h2>

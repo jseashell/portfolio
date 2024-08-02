@@ -14,7 +14,7 @@ export class WorkExpService {
         endDate: new Date(),
         location: 'Indianapolis, IN',
         description:
-          'I am a Senior Software Engineer on the Innovations Operations team at Genesys, leader in Experience as a Service. My role is lead engineer responsible for designing and developing the Genesys Knowledge Network (https://know.genesys.com). The GKN is a comprehensive web experience for Genesys customers, partners, and employees that considers all digital touch points (web experience, communication, methods of engagement) of the Genesys journey.',
+          'I am a Senior Software Engineer on the Innovations Operations team at Genesys, leader in Experience as a Service. My role is lead engineer responsible for designing and developing the Genesys Knowledge Network, a comprehensive web experience for customers, partners, and employees that considers all digital touch points (web experience, communication, methods of engagement) of the Genesys journey.',
       },
       {
         title: 'Team Lead',

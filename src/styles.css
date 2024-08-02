@@ -3,9 +3,10 @@
 html,
 body {
   height: 100%;
-  /* background-color: #5d5f71; */
-  /* background-color: #59656f; */
+  background-color: #dddddd;
+  color: #1d1a31;
 }
+
 body {
   margin: 0 auto;
   font-family: Roboto, 'Helvetica Neue', sans-serif;

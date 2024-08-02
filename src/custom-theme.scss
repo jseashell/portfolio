@@ -15,7 +15,7 @@ $portfolio-theme: mat.define-theme(
   (
     color: (
       theme-type: light,
-      primary: mat.$green-palette,
+      primary: mat.$blue-palette,
       // $red-palette
       // $green-palette
       // $blue-palette
@@ -28,7 +28,7 @@ $portfolio-theme: mat.define-theme(
       // $azure-palette
       // $violet-palette
       // $rose-palette
-      tertiary: mat.$blue-palette,
+      tertiary: mat.$azure-palette,
     ),
     density: (
       scale: 0,

@@ -9,7 +9,7 @@ header {
   top: 0;
   z-index: 50;
   width: 100%;
-  background-color: black;
+  background-color: #1d1a31;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ header {
 
 app-hero {
   width: 100%;
-  background-color: black;
+  background-color: #1d1a31;
 }
 
 main {

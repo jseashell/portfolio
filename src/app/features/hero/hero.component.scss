@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: black;
+  background-color: #1d1a31;
 }
 
 div.white-bar {
@@ -13,7 +13,7 @@ div.white-bar {
   width: 100%;
   top: 72%;
   height: 28%;
-  background-color: white;
+  background-color: #dddddd;
 }
 
 div.title {
@@ -46,7 +46,10 @@ div.title {
     }
 
     h1 {
-      color: white;
+      color: #dddddd;
+    }
+    h2 {
+      color: #1d1a31;
     }
 
     h2 span {

@@ -1,1 +1,2 @@
-export * from './animations';
+export * from './directives';
+export * from './providers';

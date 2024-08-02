@@ -5,7 +5,7 @@
       <p
         [ngClass]="{
           'mat-body-large': (isMobile$ | async) == false,
-          'mat-body-small': (isMobile$ | async) == true,
+          'mat-body-medium': (isMobile$ | async) == true,
         }"
       >
         Cutting-edge <span>web development</span>, piece-of-mind <span>technical consulting</span>, or seamless
@@ -24,14 +24,14 @@
           'mat-title-medium': (isMobile$ | async) == true,
         }"
       >
-        Hi, my name is <span class="name">John Schellinger</span>.</h1
+        Hi, my name is<br /><span class="name mat-display-small">John Schellinger</span>.</h1
       >
     </div>
     <div class="h2">
       <h2
         [ngClass]="{
           'mat-display-small': (isMobile$ | async) == false,
-          'mat-title-small': (isMobile$ | async) == true,
+          'mat-title-medium': (isMobile$ | async) == true,
         }"
       >
         I am a <span>{{ subtitle$ | async }}</span

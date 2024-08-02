@@ -16,21 +16,6 @@ div.white-bar {
   background-color: #dddddd;
 }
 
-@media only screen and (max-width: 768px) {
-  :host {
-    height: 40rem;
-  }
-
-  div.title {
-    flex-direction: column-reverse;
-  }
-
-  mat-card {
-    width: 90%;
-    padding: 0;
-  }
-}
-
 div.title {
   display: flex;
   justify-content: space-between;
@@ -63,6 +48,7 @@ div.title {
     h1 {
       color: #dddddd;
     }
+
     h2 {
       color: #1d1a31;
     }
@@ -82,6 +68,38 @@ div.title {
       }
       100% {
         border-color: transparent;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :host {
+    height: 30rem;
+  }
+
+  div.white-bar {
+    top: 79%;
+    height: 21%;
+  }
+
+  div.title {
+    flex-direction: column-reverse;
+
+    mat-card {
+      width: 90%;
+      padding: 0;
+    }
+
+    div.text {
+      text-align: center;
+
+      h1 {
+        line-height: 30px;
+      }
+
+      h2 {
+        color: #dddddd;
       }
     }
   }

@@ -1,16 +1,16 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { AsyncPipe, NgClass } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { BehaviorSubject, map, Observable, switchMap, tap, timer } from 'rxjs';
+import { MobileObserver } from '@providers';
+import { BehaviorSubject, Observable, switchMap, tap, timer } from 'rxjs';
 import { HeroService } from './hero.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [AsyncPipe, MatCardModule, NgClass],
-  providers: [BreakpointObserver, HeroService],
+  providers: [HeroService, MobileObserver],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
   animations: [
@@ -41,11 +41,11 @@ export class HeroComponent implements OnInit {
     'Code Craftsman',
   ];
 
-  private bo = inject(BreakpointObserver);
+  private mobile = inject(MobileObserver);
   isMobile$!: Observable<boolean>;
 
   ngOnInit(): void {
-    this.isMobile$ = this.bo.observe('(max-width: 768px)').pipe(map((state) => state.matches));
+    this.isMobile$ = this.mobile.observe$;
 
     const defaultCssDuration = 800;
     timer(2 * defaultCssDuration)

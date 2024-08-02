@@ -1,34 +1,45 @@
-import { NgClass } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 import { Component, HostBinding, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { filter, tap } from 'rxjs';
-import { ToolbarCardComponent } from './toolbar-card/toolbar-card.component';
-import { ToolbarNavComponent } from './toolbar-nav/toolbar-nav.component';
-import { ToolbarTitleComponent } from './toolbar-title/toolbar-title.component';
-import { ToolbarTitleService } from './toolbar-title/toolbar-title.service';
+import { BehaviorSubject, filter, switchMap, tap, timer } from 'rxjs';
+import { ToolbarSubtitleService } from './toolbar-subtitle.service';
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [
-    MatButtonModule,
-    MatIconModule,
-    NgClass,
-    RouterModule,
-    ToolbarCardComponent,
-    ToolbarNavComponent,
-    ToolbarTitleComponent,
-  ],
-  providers: [ToolbarTitleService],
+  imports: [AsyncPipe, MatButtonModule, MatCardModule, MatIconModule, NgClass, RouterModule],
+  providers: [ToolbarSubtitleService],
   templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.css',
+  styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent implements OnInit {
   @HostBinding('class.expanded') expanded!: boolean;
   @HostBinding('class.collapsed') collapsed!: boolean;
   private router = inject(Router);
+
+  navColors = {
+    home: 'primary',
+    offerings: 'primary',
+    portfolio: 'primary',
+    askAQuestion: 'primary',
+  };
+
+  private toolbarSubtitleService = inject(ToolbarSubtitleService);
+  subtitle$ = new BehaviorSubject<string>('Software Engineer');
+  private subtitles = [
+    'Freelancer Developer',
+    'System Architect',
+    'Fullstack Engineer',
+    'Solutions Expert',
+    'Creative Thinker',
+    'Integration Whisperer',
+    'Software Specialist',
+    'Algorithmic Artist',
+    'Code Craftsman',
+  ];
 
   ngOnInit(): void {
     this.router.events
@@ -37,6 +48,15 @@ export class ToolbarComponent implements OnInit {
         tap(() => {
           this.expanded = this.router.url == '/home' || this.router.url == '/';
           this.collapsed = !this.expanded;
+        }),
+      )
+      .subscribe();
+
+    timer(1200)
+      .pipe(
+        switchMap(() => this.toolbarSubtitleService.typewriter$(this.subtitles)),
+        tap((subtitle: string) => {
+          this.subtitle$.next(subtitle);
         }),
       )
       .subscribe();

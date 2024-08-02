@@ -1,13 +1,48 @@
-<div class="toolbar">
-  <header>
-    <app-toolbar-nav></app-toolbar-nav>
-  </header>
-  <div class="title">
-    <app-toolbar-card></app-toolbar-card>
-    <app-toolbar-title></app-toolbar-title>
-  </div>
-</div>
 <div class="toolbar-bg">
   <div class="black"></div>
   <div class="white"></div>
+</div>
+
+<div class="toolbar">
+  <header>
+    <nav>
+      <a mat-button routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-button routerLink="/offerings">
+        <mat-icon>store_front</mat-icon>
+        Offerings
+      </a>
+      <a mat-button routerLink="/portfolio">
+        <mat-icon>public</mat-icon>
+        Portfolio
+      </a>
+      <a mat-button routerLink="/ask-a-question">
+        <mat-icon>message</mat-icon>
+        Ask a Question
+      </a>
+    </nav>
+    <div class="title">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-content>
+          <p class="mat-body-large">
+            Cutting-edge <b>web development</b>, piece-of-mind <b>technical consulting</b>, or seamless
+            <b>integration</b> of complex systems, I bring a blend of technical expertise and creative problem-solving
+            to every project. <b>Committed to quality</b>, I work closely with clients to ensure that every solution is
+            not only functional but also <b>enhances your business goals</b>. Let's turn your ideas into reality and
+            drive your success through technology.
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <div class="text">
+        <h1 class="mat-display-medium">Hi, my name is <span class="name">John Schellinger</span>.</h1>
+        <h2 class="mat-display-small">
+          I am a <span>{{ subtitle$ | async }}</span
+          >.
+        </h2>
+      </div>
+    </div>
+  </header>
 </div>

@@ -22,12 +22,13 @@ export class OfferingsCubeComponent {
 
   @HostListener('document:mousedown', ['$event'])
   @HostListener('document:touchstart', ['$event'])
-  onMouseDown(e: any) {
-    e?.preventDefault()
+  onMouseDown(event: any) {
+    event?.preventDefault();
+    event?.stopPropagation();
     if (this.cube) {
       this.isDragging = true;
-      this.startX = e.clientX;
-      this.startY = e.clientY;
+      this.startX = event.clientX;
+      this.startY = event.clientY;
 
       this.cube.nativeElement.style.transition = 'none'; // Disable transition while dragging
     }
@@ -37,6 +38,7 @@ export class OfferingsCubeComponent {
   @HostListener('document:touchmove', ['$event'])
   onMouseMove(event: any) {
     event?.preventDefault();
+    event?.stopPropagation();
     if (!this.isDragging) return;
 
     if (this.cube) {
@@ -55,6 +57,7 @@ export class OfferingsCubeComponent {
   @HostListener('document:touchcancel', ['$event'])
   onMouseUp(event: any) {
     event?.preventDefault();
+    event?.stopPropagation();
     if (this.cube) {
       this.isDragging = false;
       this.cube.nativeElement.style.transition = 'transform 0.5s'; // Re-enable transition

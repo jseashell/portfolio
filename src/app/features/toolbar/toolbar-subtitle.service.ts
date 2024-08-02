@@ -9,7 +9,7 @@ interface TypeParams {
 
 /** Credit: https://medium.com/@nikolovlyudmil/typewriter-animation-in-angular-17-f1c503058d41 */
 @Injectable()
-export class ToolbarTitleService {
+export class ToolbarSubtitleService {
   typewriter$(subtitles: string[]): Observable<string> {
     return from(subtitles).pipe(
       concatMap((subtitle) =>

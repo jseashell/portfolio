@@ -17,7 +17,6 @@ import { ToolbarSubtitleService } from './toolbar-subtitle.service';
 })
 export class ToolbarComponent implements OnInit {
   @HostBinding('class.expanded') expanded!: boolean;
-  @HostBinding('class.collapsed') collapsed!: boolean;
   private router = inject(Router);
 
   navColors = {
@@ -47,7 +46,6 @@ export class ToolbarComponent implements OnInit {
         filter((e) => e instanceof NavigationEnd),
         tap(() => {
           this.expanded = this.router.url == '/home' || this.router.url == '/';
-          this.collapsed = !this.expanded;
         }),
       )
       .subscribe();

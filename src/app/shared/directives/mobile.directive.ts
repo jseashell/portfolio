@@ -4,6 +4,7 @@ import { map, Subscription, tap } from 'rxjs';
 
 @Directive({
   selector: '[mobile]',
+  standalone: true,
 })
 export class MobileDirective implements OnInit, OnDestroy {
   private sub!: Subscription;

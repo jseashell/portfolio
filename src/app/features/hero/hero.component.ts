@@ -1,7 +1,8 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { AsyncPipe, NgClass } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, HostBinding, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MobileDirective } from '@directives';
 import { MobileObserver } from '@providers';
 import { BehaviorSubject, Observable, switchMap, tap, timer } from 'rxjs';
 import { HeroService } from './hero.service';
@@ -9,7 +10,7 @@ import { HeroService } from './hero.service';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [AsyncPipe, MatCardModule, NgClass],
+  imports: [AsyncPipe, MatCardModule, MobileDirective, NgClass],
   providers: [HeroService, MobileObserver],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
@@ -27,6 +28,9 @@ import { HeroService } from './hero.service';
   ],
 })
 export class HeroComponent implements OnInit {
+  @HostBinding('class.mobile') isMobile$!: Observable<boolean>;
+  private mobile = inject(MobileObserver);
+
   private toolbarSubtitleService = inject(HeroService);
   subtitle$ = new BehaviorSubject<string>('Software Engineer');
   private subtitles = [
@@ -40,9 +44,6 @@ export class HeroComponent implements OnInit {
     'Algorithmic Artist',
     'Code Craftsman',
   ];
-
-  private mobile = inject(MobileObserver);
-  isMobile$!: Observable<boolean>;
 
   ngOnInit(): void {
     this.isMobile$ = this.mobile.observe$;

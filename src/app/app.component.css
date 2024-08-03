@@ -26,5 +26,6 @@ main {
   width: 90rem;
 }
 
-@media only screen and (max-width: 768px) and (min-width: 391px) {
+main.mobile {
+  width: 90%;
 }

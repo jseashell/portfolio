@@ -8,7 +8,7 @@ export class MobileObserver {
 
   get observe$(): Observable<boolean> {
     return this.bo
-      .observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Handset])
+      .observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.HandsetPortrait])
       .pipe(map((state) => state.matches));
   }
 }

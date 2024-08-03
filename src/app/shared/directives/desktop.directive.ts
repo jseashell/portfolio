@@ -17,7 +17,7 @@ export class DesktopDirective implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sub = this.bo
-      .observe([Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge, Breakpoints.Web])
+      .observe([Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge, Breakpoints.Web, Breakpoints.Tablet])
       .pipe(
         map((state) => state.matches),
         tap((isDesktop) => {

@@ -11,8 +11,8 @@
 div.white-bar {
   position: absolute;
   width: 100%;
-  top: 72%;
-  height: 28%;
+  top: 67%;
+  height: 33%;
   background-color: #dddddd;
 }
 
@@ -24,6 +24,7 @@ div.title {
   width: 100%;
 
   mat-card {
+    width: 40%;
     padding: 2rem;
 
     span {
@@ -37,6 +38,7 @@ div.title {
     margin-right: 5rem;
     padding-left: 5rem;
     z-index: 20;
+    width: 60%;
 
     h1,
     h2,
@@ -73,34 +75,34 @@ div.title {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  :host {
-    height: 30rem;
+:host.mobile {
+  height: 30rem;
+}
+
+div.white-bar.mobile {
+  top: 79%;
+  height: 21%;
+}
+
+div.title.mobile {
+  flex-direction: column-reverse;
+  text-align: center;
+
+  mat-card {
+    width: 90%;
+    padding: 0;
   }
 
-  div.white-bar {
-    top: 79%;
-    height: 21%;
-  }
+  div.text {
+    text-align: center;
+    width: 100%;
 
-  div.title {
-    flex-direction: column-reverse;
-
-    mat-card {
-      width: 90%;
-      padding: 0;
+    h1 {
+      line-height: 30px;
     }
 
-    div.text {
-      text-align: center;
-
-      h1 {
-        line-height: 30px;
-      }
-
-      h2 {
-        color: #dddddd;
-      }
+    h2 {
+      color: #dddddd;
     }
   }
 }

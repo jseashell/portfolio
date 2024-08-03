@@ -1,7 +1,9 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { AfterViewInit, Component, inject } from '@angular/core';
+import { AsyncPipe, NgClass } from '@angular/common';
+import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
-import { filter, tap } from 'rxjs';
+import { MobileObserver } from '@providers';
+import { filter, Observable, tap } from 'rxjs';
 import { Paths } from './app.routes';
 import { HeroComponent } from './features/hero/hero.component';
 import { NavComponent } from './features/nav/nav.component';
@@ -9,7 +11,8 @@ import { NavComponent } from './features/nav/nav.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroComponent, NavComponent, RouterOutlet, RouterModule],
+  imports: [AsyncPipe, HeroComponent, NavComponent, NgClass, RouterOutlet, RouterModule],
+  providers: [MobileObserver],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -33,10 +36,17 @@ import { NavComponent } from './features/nav/nav.component';
     ]),
   ],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   headerState: 'visible' | 'hidden' = 'hidden';
   heroState: 'visible' | 'hidden' = 'hidden';
   private router = inject(Router);
+
+  private mobile = inject(MobileObserver);
+  isMobile$!: Observable<boolean>;
+
+  ngOnInit(): void {
+    this.isMobile$ = this.mobile.observe$;
+  }
 
   ngAfterViewInit(): void {
     this.router.events

@@ -1,14 +1,17 @@
-import { DatePipe } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { AsyncPipe, DatePipe, NgClass } from '@angular/common';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MobileObserver } from '@providers';
 import dayjs from 'dayjs';
+import { Observable } from 'rxjs';
 import { WorkExpCard } from './work-exp-card.interface';
 
 @Component({
   selector: 'app-work-exp-card',
   standalone: true,
-  imports: [MatCardModule, MatDividerModule, DatePipe],
+  imports: [AsyncPipe, DatePipe, MatCardModule, MatDividerModule, NgClass],
+  providers: [MobileObserver],
   templateUrl: './work-exp-card.component.html',
   styleUrl: './work-exp-card.component.css',
 })
@@ -18,7 +21,12 @@ export class WorkExpCardComponent implements OnInit {
   duration!: string;
   isPresent!: boolean;
 
+  private mobile = inject(MobileObserver);
+  isMobile$!: Observable<boolean>;
+
   ngOnInit(): void {
+    this.isMobile$ = this.mobile.observe$;
+
     const startDayjs = dayjs(this.data.startDate);
     const endDayjs = dayjs(this.data.endDate);
 

@@ -14,7 +14,7 @@ import { NavComponent } from './features/nav/nav.component';
   imports: [AsyncPipe, HeroComponent, NavComponent, NgClass, RouterOutlet, RouterModule],
   providers: [MobileObserver],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
   animations: [
     trigger('headerAnim', [
       state('hidden', style({ opacity: '0', transform: 'translateY(-100%)' })),

@@ -5,3 +5,20 @@
 <main [ngClass]="{ mobile: isMobile$ | async }">
   <router-outlet></router-outlet>
 </main>
+<footer>
+  <span>Home</span>
+  <ul>
+    <li>
+      <a routerLink="/home">Home</a>
+    </li>
+    <li>
+      <a routerLink="/home#experience">Experience</a>
+    </li>
+    <li>
+      <a routerLink="/home#ask-a-question">Ask a Question</a>
+    </li>
+    <li>
+      <a routerLink="/home#portfolio">Portfolio</a>
+    </li>
+  </ul>
+</footer>

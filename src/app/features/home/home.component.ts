@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 
 import { animate, style, transition, trigger } from '@angular/animations';
 import { AskAQuestionComponent } from './ask-a-question/ask-a-question.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 import { WorkExpComponent } from './work-exp/work-exp.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AskAQuestionComponent, WorkExpComponent],
+  imports: [AskAQuestionComponent, PortfolioComponent, WorkExpComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [

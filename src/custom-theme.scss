@@ -28,6 +28,13 @@ $portfolio-theme: mat.define-theme(
   )
 );
 
+// https://github.com/angular/components/issues/26094#issuecomment-1490245622
+@for $i from 0 through 24 {
+  .mat-mdc-card.mat-elevation-z#{$i} {
+    @include mat.elevation($i);
+  }
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.

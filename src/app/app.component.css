@@ -28,4 +28,5 @@ main {
 
 main.mobile {
   width: 90%;
+  max-width: 35rem;
 }

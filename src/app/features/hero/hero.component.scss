@@ -5,15 +5,15 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: #1d1a31;
+  background-color: var(--app-foreground);
 }
 
 div.white-bar {
   position: absolute;
   width: 100%;
-  top: 67%;
-  height: 33%;
-  background-color: #dddddd;
+  top: 72%;
+  height: 28%;
+  background-color: var(--app-background);
 }
 
 div.title {
@@ -48,11 +48,11 @@ div.title {
     }
 
     h1 {
-      color: #dddddd;
+      color: var(--app-background);
     }
 
     h2 {
-      color: #1d1a31;
+      color: var(--app-foreground);
     }
 
     h2 span {
@@ -81,12 +81,11 @@ div.title {
 
 div.white-bar.mobile {
   top: 79%;
-  height: 21%;
+  height: calc(21% + 1px); /* why */
 }
 
 div.title.mobile {
   flex-direction: column-reverse;
-  text-align: center;
 
   mat-card {
     width: 90%;
@@ -104,7 +103,7 @@ div.title.mobile {
     }
 
     h2 {
-      color: #dddddd;
+      color: var(--app-background);
     }
   }
 }

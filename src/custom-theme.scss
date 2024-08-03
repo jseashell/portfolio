@@ -16,19 +16,11 @@ $portfolio-theme: mat.define-theme(
     color: (
       theme-type: light,
       primary: mat.$blue-palette,
-      // $red-palette
-      // $green-palette
-      // $blue-palette
-      // $yellow-palette
-      // $cyan-palette
-      // $magenta-palette
-      // $orange-palette
-      // $chartreuse-palette
-      // $spring-green-palette
-      // $azure-palette
-      // $violet-palette
-      // $rose-palette
       tertiary: mat.$azure-palette,
+    ),
+    typography: (
+      brand-family: 'Inter',
+      bold-weight: 500,
     ),
     density: (
       scale: 0,

@@ -1,13 +1,19 @@
 @import 'material-icons/iconfont/material-icons.css';
 
-html,
-body {
+html {
   height: 100%;
-  background-color: #dddddd;
-  color: #1d1a31;
+}
+
+body {
+  --app-background: #dddddd;
+  --app-foreground: #1d1a31;
+
+  min-height: 100%;
+  background-color: var(--app-background);
+  color: var(--app-foreground);
 }
 
 body {
   margin: 0 auto;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Inter, Roboto, 'Helvetica Neue', sans-serif;
 }

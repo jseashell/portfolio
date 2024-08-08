@@ -2,24 +2,25 @@ import { Component } from '@angular/core';
 
 import { animate, style, transition, trigger } from '@angular/animations';
 import { AskAQuestionComponent } from './ask-a-question/ask-a-question.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { WorkExpComponent } from './work-exp/work-exp.component';
+import { heroSlide, heroSlideTiming } from './hero-slide.animation';
+import { HeroComponent } from './hero/hero.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AskAQuestionComponent, PortfolioComponent, WorkExpComponent],
+  imports: [AskAQuestionComponent, HeroComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
+    heroSlide,
     trigger('fade', [
       transition(':enter', [
-        style({ opacity: '0', transform: 'translateY(100%)' }),
-        animate('.8s .8s ease-in', style({ opacity: '1', transform: 'translateY(0%)' })),
+        style({ opacity: '0' }),
+        animate(`${heroSlideTiming}s ${2 * heroSlideTiming}s ease-in`, style({ opacity: '1' })),
       ]),
       transition(':leave', [
-        style({ opacity: '1', transform: 'translateY(0%)' }),
-        animate('.8s .8s ease-out', style({ opacity: '0', transform: 'translateY(-100%)' })),
+        style({ opacity: '1' }),
+        animate(`${heroSlideTiming}s ${heroSlideTiming}s ease-out`, style({ opacity: '0' })),
       ]),
     ]),
   ],

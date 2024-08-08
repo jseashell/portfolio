@@ -1,9 +1,36 @@
 :host {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-h3 {
-  margin: 5rem 0 3rem;
+div.hero-bg {
+  z-index: -1;
+  position: absolute;
+  height: 30rem;
+  width: 100%;
+  background-color: var(--app-foreground);
+
+  div.white-bar {
+    position: absolute;
+    width: 100%;
+    top: 77%;
+    height: 23%;
+    background-color: var(--app-background);
+  }
+}
+
+div.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.main * {
+  width: 90%;
+  max-width: 850px;
+}
+
+section {
+  margin-top: 1rem;
 }

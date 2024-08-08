@@ -1,0 +1,59 @@
+:host {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+div.title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+
+  div.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    h1,
+    h2,
+    span {
+      font-family: monospace !important;
+      white-space: nowrap;
+    }
+
+    h1,
+    h2 {
+      color: var(--app-background);
+    }
+
+    h2 span {
+      padding-right: 5px;
+      border-right: 2px solid transparent;
+      animation: blink-border 0.7s infinite;
+    }
+
+    @keyframes blink-border {
+      0% {
+        border-color: transparent;
+      }
+      50% {
+        border-color: unset;
+      }
+      100% {
+        border-color: transparent;
+      }
+    }
+  }
+
+  mat-card {
+    margin-top: 3rem;
+    padding: 1rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

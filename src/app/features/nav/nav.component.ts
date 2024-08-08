@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
-import { Paths } from 'src/app/app.routes';
+import { Path } from 'src/app/app.routes';
 
 @Component({
   selector: 'app-nav',
@@ -12,5 +12,5 @@ import { Paths } from 'src/app/app.routes';
   styleUrl: './nav.component.scss',
 })
 export class NavComponent {
-  pathsEnum = Paths;
+  pathEnum = Path;
 }

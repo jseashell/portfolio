@@ -1,8 +1,11 @@
-<h3 id="portfolio" [@fade] class="mat-heading-large">Portfolio</h3>
-<app-portfolio [@fade]></app-portfolio>
-
-<h3 id="ask-a-question" [@fade] class="mat-heading-large">Ask a Question</h3>
-<app-ask-a-question [@fade]></app-ask-a-question>
-
-<h3 id="experience" [@fade] class="mat-heading-large">Experience</h3>
-<app-work-exp [@fade]></app-work-exp>
+<div class="hero-bg" [@heroSlide]>
+  <div class="navy-bar"></div>
+  <div class="white-bar"></div>
+</div>
+<div class="main">
+  <app-hero [@heroSlide]></app-hero>
+  <section>
+    <h2 id="ask-a-question" [@fade] class="mat-title-large">Ask a Question</h2>
+    <app-ask-a-question [@fade]></app-ask-a-question>
+  </section>
+</div>

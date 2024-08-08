@@ -1,10 +1,14 @@
 <nav>
-  <a mat-button [routerLink]="'/' + pathsEnum.HOME">
+  <a mat-button [routerLink]="'/' + pathEnum.HOME">
     <mat-icon>home</mat-icon>
     Home
   </a>
-  <a mat-button [routerLink]="'/' + pathsEnum.SERVICES">
+  <a mat-button [routerLink]="'/' + pathEnum.PORTFOLIO">
     <mat-icon>store_front</mat-icon>
-    Services
+    Portfolio
+  </a>
+  <a mat-button [routerLink]="'/' + pathEnum.WORK_EXP">
+    <mat-icon>public</mat-icon>
+    Experience
   </a>
 </nav>

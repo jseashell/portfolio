@@ -21,8 +21,7 @@
     "module": "ES2022",
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@directives": ["src/app/shared/directives"],
-      "@providers": ["src/app/shared/providers"]
+      "@app/shared/*": ["src/app/shared/*"]
     }
   },
   "angularCompilerOptions": {

@@ -1,11 +1,11 @@
-service: portfolio
+service: johnschellinger-portfolio
 
 plugins:
   - serverless-s3-sync
   - serverless-cloudfront-invalidate # add as the last plugin
 
 custom:
-  bucketName: ${self:service}-${sls:stage}
+  bucketName: johnschellinger-${self:service}-${sls:stage}
   domainName: johnschellinger.com
   route53HostedZoneId: Z001660415PYPR7BX92GW
   cloudfrontHostedZoneId: Z2FDTNDATAQYW2

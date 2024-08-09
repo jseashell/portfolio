@@ -23,7 +23,6 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
-    "@fontsource/inter": "^5.0.20",
     "dayjs": "^1.11.12",
     "ngx-device-detector": "^8.0.0",
     "rxjs": "~7.8.0",
@@ -39,6 +38,9 @@
     "jest-preset-angular": "^14.1.1",
     "material-icons": "^1.13.12",
     "prettier": "^3.3.3",
+    "serverless": "^3.39.0",
+    "serverless-cloudfront-invalidate": "^1.12.2",
+    "serverless-s3-sync": "^3.3.0",
     "typescript": "~5.5.2"
   }
 }

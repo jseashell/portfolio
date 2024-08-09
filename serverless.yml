@@ -7,7 +7,7 @@ plugins:
 custom:
   bucketName: johnschellinger-${self:service}-${sls:stage}
   domainName: johnschellinger.com
-  route53HostedZoneId: Z001660415PYPR7BX92GW
+  route53HostedZoneId: Z0412067Z5SFHEXYC0KO
   cloudfrontHostedZoneId: Z2FDTNDATAQYW2
   s3Sync:
     - bucketName: ${self:custom.bucketName}

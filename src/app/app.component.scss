@@ -16,11 +16,7 @@ main {
   height: 100%;
 }
 
-mat-sidenav-container {
-  height: 100%;
-}
-
-.example-container {
+.container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -29,4 +25,18 @@ mat-sidenav-container {
   left: 0;
   right: 0;
   background-color: var(--app-background);
+}
+
+mat-sidenav-container {
+  height: calc(100% - 4rem); /* height of the toolbar */
+  background-color: var(--app-background);
+}
+
+mat-sidenav {
+  border-radius: 0 !important;
+}
+
+a {
+  display: flex;
+  align-items: center;
 }

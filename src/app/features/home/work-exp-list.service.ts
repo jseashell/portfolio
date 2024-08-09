@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { WorkExpListItem } from './work-exp-list-item/work-exp-list-item.interface';
+import { WorkExpAttributes } from './work-exp/work-exp.interface';
 
 @Injectable()
-export class WorkExpListService {
-  get cards$(): Observable<WorkExpListItem[]> {
+export class WorkExpService {
+  get data$(): Observable<WorkExpAttributes[]> {
     return of([
       {
-        title: 'Team Lead, Sr. SWE',
-        fragment: 'genesys-tl-sr-swe',
+        id: 'genesys-teamlead-sr-swe',
+        title: 'Team Lead, Sr. Software Engineer',
         company: 'Genesys',
         thumbnail: 'images/genesys.svg',
         startDate: new Date('2021-04-01'),
@@ -19,7 +19,7 @@ export class WorkExpListService {
       },
       {
         title: 'Team Lead',
-        fragment: 'orchard-tl',
+        id: 'orchard-teamlead',
         company: 'Orchard Software',
         thumbnail: 'images/orchard.svg',
         startDate: new Date('2019-09-01'),
@@ -30,7 +30,7 @@ export class WorkExpListService {
       },
       {
         title: 'Software Engineer',
-        fragment: 'orchard-swe',
+        id: 'orchard-swe',
         company: 'Orchard Software',
         thumbnail: 'images/orchard.svg',
         startDate: new Date('2016-03-01'),

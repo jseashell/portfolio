@@ -1,4 +1,5 @@
-export interface WorkExpListItem {
+export interface WorkExpAttributes {
+  id: string;
   title: string;
   company: string;
   thumbnail: string;
@@ -6,5 +7,4 @@ export interface WorkExpListItem {
   endDate: Date;
   location: string;
   description: string;
-  fragment: string;
 }

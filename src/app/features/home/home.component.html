@@ -4,5 +4,25 @@
 </div>
 <div class="main">
   <app-hero [@heroSlide]></app-hero>
-  <app-work-exp-list [@fade]></app-work-exp-list>
+  <section>
+    @if (data$ | async; as data) {
+      <h3 [@fade] class="mat-title-large">Work Experience</h3>
+      <div [@fade]>
+        <mat-accordion displayMode="flat">
+          @for (d of data; track $index; let i = $index) {
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <img [src]="d.thumbnail" width="24" height="24" />
+                  {{ d.title }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <app-work-exp [data]="d"></app-work-exp>
+              </ng-template>
+            </mat-expansion-panel>
+          }</mat-accordion
+      ></div>
+    }
+  </section>
 </div>

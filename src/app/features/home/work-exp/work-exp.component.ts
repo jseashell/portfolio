@@ -4,18 +4,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
 import dayjs from 'dayjs';
-import { WorkExpListItem } from './work-exp-list-item.interface';
+import { WorkExpAttributes } from './work-exp.interface';
 
 @Component({
-  selector: 'app-work-exp-list-item',
+  selector: 'app-work-exp',
   standalone: true,
   imports: [AsyncPipe, DatePipe, MatButtonModule, NgClass, RouterLink],
   providers: [DesktopService],
-  templateUrl: './work-exp-list-item.component.html',
-  styleUrl: './work-exp-list-item.component.css',
+  templateUrl: './work-exp.component.html',
+  styleUrl: './work-exp.component.css',
 })
-export class WorkExpListItemComponent implements OnInit {
-  @Input() data!: WorkExpListItem;
+export class WorkExpComponent implements OnInit {
+  @Input() data!: WorkExpAttributes;
 
   duration!: string;
   isPresent!: boolean;

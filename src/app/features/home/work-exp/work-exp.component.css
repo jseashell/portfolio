@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+span {
+  display: flex;
+}
+
+span div.dot {
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+span div.dot::before {
+  content: '•';
+}

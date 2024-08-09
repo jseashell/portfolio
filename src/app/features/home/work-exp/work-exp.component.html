@@ -1,0 +1,12 @@
+<div>
+  <span class="mat-title-small">{{ data.company }}<div class="dot"></div>Full-time</span>
+  <span class="mat-title-small">
+    {{ data.startDate | date: 'shortDate' }} - {{ isPresent ? 'Present' : (data.endDate | date: 'shortDate') }}
+    <div class="dot"></div>
+    {{ duration }}
+  </span>
+  <span class="mat-title-small">{{ data.location }}</span>
+  <p>
+    {{ data.description }}
+  </p>
+</div>

@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { animate, style, transition, trigger } from '@angular/animations';
+import { AsyncPipe } from '@angular/common';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 import { heroSlide, heroSlideTiming } from './hero-slide.animation';
 import { HeroComponent } from './hero/hero.component';
-import { WorkExpListComponent } from './work-exp-list/work-exp-list.component';
+import { WorkExpService } from './work-exp-list.service';
+import { WorkExpComponent } from './work-exp/work-exp.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, WorkExpListComponent],
+  imports: [AsyncPipe, HeroComponent, MatExpansionModule, MatListModule, WorkExpComponent],
+  providers: [WorkExpService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
@@ -25,4 +30,7 @@ import { WorkExpListComponent } from './work-exp-list/work-exp-list.component';
     ]),
   ],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  private workExpService = inject(WorkExpService);
+  data$ = this.workExpService.data$;
+}

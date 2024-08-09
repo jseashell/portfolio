@@ -1,20 +1,21 @@
 :host {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 div.hero-bg {
-  z-index: -1;
   position: absolute;
-  height: 30rem;
+  height: 30.7rem;
   width: 100%;
   background-color: var(--app-foreground);
 
   div.white-bar {
     position: absolute;
     width: 100%;
-    top: 77%;
-    height: 23%;
+    top: 75%;
+    height: 25%;
+
     background-color: var(--app-background);
   }
 }
@@ -22,15 +23,18 @@ div.hero-bg {
 div.main {
   display: flex;
   width: 100%;
+  height: 100%;
   align-items: center;
   flex-direction: column;
+  background-color: var(--app-background);
 }
 
 div.main * {
   width: 90%;
   max-width: 850px;
+  height: 100%;
 }
 
-section {
-  margin-top: 1rem;
+app-work-exp {
+  margin-top: 30.7rem;
 }

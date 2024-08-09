@@ -1,14 +1,35 @@
-<main>
-  <router-outlet></router-outlet>
-</main>
-<mat-toolbar>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon> </button
-  ><button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
+<div class="example-container">
+  <app-toolbar (toggle)="snav.toggle()"></app-toolbar>
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav mode="push" position="end">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home">
+          <mat-icon>home</mat-icon>
+          Home
+        </a>
+        <a mat-list-item routerLink="/portfolio">
+          <mat-icon>devices</mat-icon>
+          Portfolio
+        </a>
+        <a mat-list-item routerLink="/experience">
+          <mat-icon>public</mat-icon>
+          Experience
+        </a>
+        <a mat-list-item routerLink="skills">
+          <mat-icon>handyman</mat-icon>
+          Skills
+        </a>
+        <a mat-list-item routerLink="education">
+          <mat-icon>school</mat-icon>
+          Education
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <main>
+        <router-outlet (activate)="snav.toggle()"></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

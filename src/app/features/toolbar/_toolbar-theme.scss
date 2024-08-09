@@ -2,8 +2,9 @@
 @use '@angular/material' as mat;
 
 @mixin color($theme) {
-  a {
-    color: mat.get-theme-color($theme, primary, 50);
+  mat-toolbar {
+    background-color: var(--app-foreground);
+    color: white;
   }
 }
 

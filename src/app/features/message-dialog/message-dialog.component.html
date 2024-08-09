@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Ask a Question</h2>
+<mat-dialog-content>
+  <form [formGroup]="questionForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <mat-label>Subject</mat-label>
+      <input matInput type="text" formControlName="subject" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ask a Question...</mat-label>
+      <input matInput type="textarea" formControlName="body" placeholder="Ex. Hi, I have an opportunity with..." />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button type="submit" [disabled]="!questionForm.valid" mat-dialog-close>Submit</button>
+</mat-dialog-actions>

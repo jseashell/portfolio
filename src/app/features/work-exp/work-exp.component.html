@@ -1,9 +1,0 @@
-<mat-grid-list [cols]="(isDesktop$ | async) ? 3 : 1" [rowHeight]="(isDesktop$ | async) ? '25rem' : '29rem'">
-  @if (cards$ | async; as cards) {
-    @for (card of cards; track card) {
-      <mat-grid-tile>
-        <app-work-exp-card [data]="card"></app-work-exp-card>
-      </mat-grid-tile>
-    }
-  }
-</mat-grid-list>

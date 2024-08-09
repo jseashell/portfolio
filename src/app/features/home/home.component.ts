@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 import { animate, style, transition, trigger } from '@angular/animations';
-import { AskAQuestionComponent } from './ask-a-question/ask-a-question.component';
 import { heroSlide, heroSlideTiming } from './hero-slide.animation';
 import { HeroComponent } from './hero/hero.component';
+import { WorkExpListComponent } from './work-exp-list/work-exp-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AskAQuestionComponent, HeroComponent],
+  imports: [HeroComponent, WorkExpListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [

@@ -1,4 +1,4 @@
-export interface WorkExpCard {
+export interface WorkExpListItem {
   title: string;
   company: string;
   thumbnail: string;
@@ -6,4 +6,5 @@ export interface WorkExpCard {
   endDate: Date;
   location: string;
   description: string;
+  fragment: string;
 }

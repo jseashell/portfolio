@@ -1,21 +1,21 @@
 import { AsyncPipe, DatePipe, NgClass } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
 import dayjs from 'dayjs';
-import { WorkExpCard } from './work-exp-card.interface';
+import { WorkExpListItem } from './work-exp-list-item.interface';
 
 @Component({
-  selector: 'app-work-exp-card',
+  selector: 'app-work-exp-list-item',
   standalone: true,
-  imports: [AsyncPipe, DatePipe, MatCardModule, MatDividerModule, NgClass],
+  imports: [AsyncPipe, DatePipe, MatButtonModule, NgClass, RouterLink],
   providers: [DesktopService],
-  templateUrl: './work-exp-card.component.html',
-  styleUrl: './work-exp-card.component.css',
+  templateUrl: './work-exp-list-item.component.html',
+  styleUrl: './work-exp-list-item.component.css',
 })
-export class WorkExpCardComponent implements OnInit {
-  @Input() data!: WorkExpCard;
+export class WorkExpListItemComponent implements OnInit {
+  @Input() data!: WorkExpListItem;
 
   duration!: string;
   isPresent!: boolean;

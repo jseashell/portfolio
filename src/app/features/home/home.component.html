@@ -10,7 +10,7 @@
       <div [@fade]>
         <mat-accordion displayMode="flat">
           @for (d of data; track $index; let i = $index) {
-            <mat-expansion-panel>
+            <mat-expansion-panel [expanded]="i == 0">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <img [src]="d.thumbnail" width="24" height="24" />

@@ -6,8 +6,9 @@
 mat-tab-group {
   height: 40rem;
 }
+
 mat-tab {
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
 div.thumbnail {
@@ -27,4 +28,5 @@ h4 {
 
 p {
   max-width: 50rem;
+  padding: 1rem;
 }

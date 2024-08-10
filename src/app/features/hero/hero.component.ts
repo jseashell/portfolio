@@ -3,7 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { DesktopService } from '@app/shared/services';
 import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
-import { heroSlide } from '../hero-slide.animation';
+import { heroSlide } from './hero-slide';
 import { HeroService } from './hero.service';
 
 @Component({

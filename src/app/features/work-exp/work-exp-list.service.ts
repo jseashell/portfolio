@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { WorkExpAttributes } from './work-exp/work-exp.interface';
+import { WorkExpAttributes } from './work-exp.interface';
 
 @Injectable()
 export class WorkExpService {

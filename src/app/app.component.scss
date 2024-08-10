@@ -1,42 +1,46 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   height: 100%;
-}
-
-app-hero {
-  width: 100%;
-  background-color: var(--app-foreground);
 }
 
 main {
   width: 100%;
-  height: 100%;
-}
-
-.container {
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--app-background);
-}
-
-mat-sidenav-container {
-  height: calc(100% - 4rem); /* height of the toolbar */
-  background-color: var(--app-background);
-}
-
-mat-sidenav {
-  border-radius: 0 !important;
-}
-
-a {
-  display: flex;
   align-items: center;
+}
+
+div.hero-bg {
+  position: absolute;
+  height: 30.7rem;
+  width: 100%;
+  background-color: var(--app-foreground);
+
+  div.white-bar {
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    height: 25%;
+
+    background-color: var(--app-background);
+  }
+}
+
+app-hero {
+  width: 90%;
+  background-color: var(--app-foreground);
+}
+
+section {
+  width: 90%;
+  margin-top: 3rem;
+}
+
+app-portfolio {
+  width: 100%;
+}
+
+mat-panel-title img {
+  margin-right: 0.5rem;
 }

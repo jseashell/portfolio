@@ -1,32 +1,57 @@
 <mat-tab-group>
-  <mat-tab label="K. Lyrics">
-    <img src="/images/kdot-lyrics.webp" />
+  <mat-tab label="Work">
+    <div class="thumbnail">
+      <img src="/images/gkn.webp" />
+    </div>
     <p>
-      Random Kendrick Lamar lyrics at the click of a button. This web app is written with Angular. It is deployed with
-      AWS S3 + Cloudfront.
+      This is the site I maintain professionally. It is an all-in-one access point to Genesys resources. Prospects,
+      customers, partners, and employees alike can browse the library of product-specific information and discussions,
+      at Genesys products.
     </p>
     <mat-chip-set>
-      <mat-chip>Angular</mat-chip>
-      <mat-chip>Amazon S3</mat-chip>
-      <mat-chip>Amazon Cloudfront</mat-chip>
+      <mat-chip>AWS</mat-chip>
+      <mat-chip>Amplify</mat-chip>
+      <mat-chip>Lambda</mat-chip>
       <mat-chip>Serverless</mat-chip>
     </mat-chip-set>
-    <a mat-button class="mat-title-large" href="https://kdotlyrics.com">
+    <a mat-button class="mat-title-medium" href="https://know.genesys.com">
       Visit<mat-icon iconPositionEnd>open_in_new</mat-icon>
     </a>
   </mat-tab>
-  <mat-tab label="Lyrics DB Seeder">
-    <img src="/images/lyrics-db-seeder.webp" />
+  <mat-tab label="kdot-lyrics">
+    <img src="/images/kdot-lyrics.webp" />
     <p>
-      Offline program to seed AWS DynamoDB with lyrics from a given artist. This services calls an API for song
-      information, then utilizes a scraper to gather lyrics.
+      Random Kendrick Lamar lyrics at the click of a button. This web app is written with Angular. An offline program
+      seeds AWS DynamoDB with the lyrics. This program calls an API for song information, then utilizes a scraper to
+      gather lyrics.
     </p>
     <mat-chip-set>
+      <mat-chip>Angular</mat-chip>
+      <mat-chip>AWS</mat-chip>
       <mat-chip>Golang</mat-chip>
-      <mat-chip>Amazon DynamoDB</mat-chip>
+      <mat-chip>Serverless</mat-chip>
+      <mat-chip>Web Scraping</mat-chip>
     </mat-chip-set>
-    <a mat-button class="mat-title-large" href="https://github.com/jseashell/lyrics-db-seeder">
+    <a mat-button class="mat-title-medium" href="https://kdotlyrics.com">
       Visit<mat-icon iconPositionEnd>open_in_new</mat-icon>
+    </a>
+    <a mat-button class="mat-title-medium" href="https://github.com/jseashell/kdot-lyrics">
+      Github<mat-icon iconPositionEnd>open_in_new</mat-icon>
+    </a>
+  </mat-tab>
+  <mat-tab label="ezmc-cli">
+    <img src="/images/ezmc-cli.webp" />
+    <p>
+      Server management CLI for self-hosting Minecraft Java Edition in your AWS account. This CLI is a wrapper around
+      the <a href="https://github.com/itzg/docker-minecraft-server">itzg/minecraft-server</a> Docker image and the AWS
+      SDK.
+    </p>
+    <mat-chip-set>
+      <mat-chip>AWS</mat-chip>
+      <mat-chip>JavaScript</mat-chip>
+    </mat-chip-set>
+    <a mat-button class="mat-title-medium" href="https://github.com/jseashell/ezmc-cli">
+      Github<mat-icon iconPositionEnd>open_in_new</mat-icon>
     </a>
   </mat-tab>
 </mat-tab-group>

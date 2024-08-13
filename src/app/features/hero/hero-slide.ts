@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 
-export const heroSlideTiming = 0.8;
+export const heroSlideTiming = 0.6;
 
 export const heroSlide = trigger('heroSlide', [
   transition(':enter', [

@@ -7,19 +7,16 @@ mat-tab-group {
   height: 40rem;
 }
 
-mat-tab {
-  padding: 2rem;
-}
-
 div.thumbnail {
-  width: 160px;
-  height: 90px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  padding: 0.5rem;
 }
 
 img {
   width: 100%;
+  height: auto;
+  margin: 1rem 0;
   border-radius: 12px;
 }
 

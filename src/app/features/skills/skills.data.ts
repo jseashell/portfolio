@@ -9,29 +9,13 @@ export const skills = [
     description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My expertise is particularly extensive with AWS Lambda functions, where I've built and optimized numerous serverless applications, integrating them seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to Elastic Container Service, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p>`,
   },
   {
-    name: 'HTML',
-    description:
-      "I have a expert understanding of building and structuring web pages using HTML5. I have extensive experience in creating and styling content, ensuring semantic markup and accessibility standards are met. I also have experience integrating with a headless CMS, enabling content managers to make updates without code changes. Additionally, I've worked with modern frameworks and templating engines to streamline the creation of dynamic HTML content, ensuring efficient and maintainable code.",
-  },
-  {
     name: 'CSS',
     description:
       "Having a solid foundation in CSS, I have a strong grasp of designing and styling web pages to create visually appealing and responsive layouts. My extensive experience includes working with CSS3 features, such as Flexbox and Grid, to build complex, multi-column layouts and ensure content adapts smoothly across different screen sizes. I've also had some exposure to pre-processors like SASS and LESS, which have helped me write more maintainable and efficient stylesheets. Additionally, I've utilized CSS frameworks like Bootstrap and Tailwind to accelerate development and maintain design consistency across projects.",
   },
   {
-    name: 'JavaScript',
-    description:
-      "With a comprehensive understanding of JavaScript, I have developed a robust skill set in creating dynamic and interactive web applications. My extensive experience includes working with both ES6+ syntax and older JavaScript standards, allowing me to write clean, efficient, and maintainable code. I've also had some exposure to JavaScript frameworks and libraries such as React and Angular, which have enabled me to build complex user interfaces with ease. Additionally, I have experience with asynchronous programming, using Promises and async/await to handle API requests and other asynchronous tasks efficiently.",
-  },
-  {
-    name: 'Typescript',
-    description:
-      "With a strong background in TypeScript, I have honed my ability to write robust and scalable applications. My extensive experience includes leveraging TypeScript's static typing to catch errors early and improve code quality, as well as utilizing advanced features like generics and type inference to build flexible and maintainable codebases. I've also had some exposure to integrating TypeScript with popular frameworks such as React, Angular, and Node.js, which has enhanced the reliability and scalability of the projects I've worked on. Additionally, I've used TypeScript to streamline complex codebases, making collaboration easier and reducing the likelihood of runtime errors.",
-  },
-  {
-    name: 'Serverless Framework',
-    description:
-      'As an expert in the Serverless Framework for Node.js, I possess a deep mastery of building and deploying serverless applications with efficiency and precision. My extensive experience includes architecting complex, scalable applications by leveraging AWS services such as Lambda, API Gateway, DynamoDB, and S3, all orchestrated through the Serverless Framework. I excel in writing custom plugins, optimizing deployment pipelines, and managing multi-stage environments, ensuring seamless and automated CI/CD processes. Additionally, I am proficient in configuring and managing Infrastructure as Code (IaC) using YAML, allowing me to maintain clean, version-controlled, and reproducible serverless environments. My expertise also extends to integrating serverless applications with monitoring and logging tools, ensuring high reliability and performance in production.',
+    name: 'Docker',
+    description: '',
   },
   {
     name: 'Git',
@@ -39,9 +23,14 @@ export const skills = [
       'I am highly experienced with Git, As an ex pert in the Serverless Framework for Node.js, I possess a deep mastery of building and deploying serverless applications with efficiency and precision. My extensive experience includes architecting complex, scalable applications by leveraging AWS services such as Lambda, API Gateway, DynamoDB, and S3, all orchestrated through the Serverless Framework. I excel in writing custom plugins, optimizing deployment pipelines, and managing multi-stage environments, ensuring seamless and automated CI/CD processes. Additionally, I am proficient in configuring and managing Infrastructure as Code (IaC) using YAML, allowing me to maintain clean, version-controlled, and reproducible serverless environments. My expertise also extends to integrating serverless applications with monitoring and logging tools, ensuring high reliability and performance in production.',
   },
   {
-    name: 'Single Sign-On',
+    name: 'HTML',
     description:
-      'Over the course of my career I have built an in-depth knowledge of implementing and managing secure, seamless authentication across multiple applications. My expertise includes configuring SSO solutions using industry-standard protocols like SAML, OAuth, and OpenID Connect, enabling users to authenticate with a single set of credentials across different platforms. I am proficient in integrating SSO with identity providers such as Okta, Azure AD, and AWS Cognito, ensuring robust and scalable authentication mechanisms. Additionally, I have extensive experience in setting up federated identity systems, managing role-based access controls, and ensuring compliance with security best practices. My skills also include troubleshooting SSO implementations, optimizing user experience, and enhancing security by implementing MFA alongside SSO solutions.',
+      "I have a expert understanding of building and structuring web pages using HTML5. I have extensive experience in creating and styling content, ensuring semantic markup and accessibility standards are met. I also have experience integrating with a headless CMS, enabling content managers to make updates without code changes. Additionally, I've worked with modern frameworks and templating engines to streamline the creation of dynamic HTML content, ensuring efficient and maintainable code.",
+  },
+  {
+    name: 'JavaScript',
+    description:
+      "With a comprehensive understanding of JavaScript, I have developed a robust skill set in creating dynamic and interactive web applications. My extensive experience includes working with both ES6+ syntax and older JavaScript standards, allowing me to write clean, efficient, and maintainable code. I've also had some exposure to JavaScript frameworks and libraries such as React and Angular, which have enabled me to build complex user interfaces with ease. Additionally, I have experience with asynchronous programming, using Promises and async/await to handle API requests and other asynchronous tasks efficiently.",
   },
   {
     name: 'JWT',
@@ -57,5 +46,24 @@ export const skills = [
     name: 'Node.js',
     description:
       'As a senior Node.js programmer, I have extensive experience in building and optimizing scalable and high-performance applications using Node.js. I am highly proficient in leveraging modern JavaScript features, including async/await, to handle asynchronous operations efficiently and improve code readability. My expertise includes working with the fs module to manage file system interactions, enabling seamless file read/write operations and stream handling. In addition, I am adept at using NestJS, a progressive Node.js framework, to build well-structured and modular applications. I employ common design patterns such as routes, guards, controllers, and services to establish clear separation of concerns and enhance code organization. My senior-level experience includes mentoring junior developers, conducting code reviews, and leading complex projects from conception through to deployment, all while adhering to best practices and ensuring high code quality.',
+  },
+  {
+    name: 'React',
+    description: '',
+  },
+  {
+    name: 'Serverless Framework',
+    description:
+      'As an expert in the Serverless Framework for Node.js, I possess a deep mastery of building and deploying serverless applications with efficiency and precision. My extensive experience includes architecting complex, scalable applications by leveraging AWS services such as Lambda, API Gateway, DynamoDB, and S3, all orchestrated through the Serverless Framework. I excel in writing custom plugins, optimizing deployment pipelines, and managing multi-stage environments, ensuring seamless and automated CI/CD processes. Additionally, I am proficient in configuring and managing Infrastructure as Code (IaC) using YAML, allowing me to maintain clean, version-controlled, and reproducible serverless environments. My expertise also extends to integrating serverless applications with monitoring and logging tools, ensuring high reliability and performance in production.',
+  },
+  {
+    name: 'Single Sign-On',
+    description:
+      'Over the course of my career I have built an in-depth knowledge of implementing and managing secure, seamless authentication across multiple applications. My expertise includes configuring SSO solutions using industry-standard protocols like SAML, OAuth, and OpenID Connect, enabling users to authenticate with a single set of credentials across different platforms. I am proficient in integrating SSO with identity providers such as Okta, Azure AD, and AWS Cognito, ensuring robust and scalable authentication mechanisms. Additionally, I have extensive experience in setting up federated identity systems, managing role-based access controls, and ensuring compliance with security best practices. My skills also include troubleshooting SSO implementations, optimizing user experience, and enhancing security by implementing MFA alongside SSO solutions.',
+  },
+  {
+    name: 'Typescript',
+    description:
+      "With a strong background in TypeScript, I have honed my ability to write robust and scalable applications. My extensive experience includes leveraging TypeScript's static typing to catch errors early and improve code quality, as well as utilizing advanced features like generics and type inference to build flexible and maintainable codebases. I've also had some exposure to integrating TypeScript with popular frameworks such as React, Angular, and Node.js, which has enhanced the reliability and scalability of the projects I've worked on. Additionally, I've used TypeScript to streamline complex codebases, making collaboration easier and reducing the likelihood of runtime errors.",
   },
 ].sort((a, b) => a.name.localeCompare(b.name));

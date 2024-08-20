@@ -3,8 +3,9 @@
   justify-content: center;
 }
 
-mat-tab-group {
-  height: 40rem;
+div.links,
+mat-chip-set {
+  margin-left: 1rem;
 }
 
 div.thumbnail {
@@ -14,9 +15,9 @@ div.thumbnail {
 }
 
 img {
-  width: 100%;
-  height: auto;
-  margin: 1rem 0;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  box-sizing: border-box;
   border-radius: 12px;
 }
 
@@ -26,5 +27,5 @@ h4 {
 
 p {
   max-width: 50rem;
-  padding: 1rem;
+  padding: 0 1rem;
 }

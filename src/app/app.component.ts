@@ -7,13 +7,22 @@ import { DesktopService } from '@app/shared/services';
 import { heroSlide, heroSlideTiming } from './features/hero/hero-slide';
 import { HeroComponent } from './features/hero/hero.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
+import { SkillsComponent } from './features/skills/skills.component';
 import { WorkExpService } from './features/work-exp/work-exp-list.service';
 import { WorkExpComponent } from './features/work-exp/work-exp.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AsyncPipe, HeroComponent, MatExpansionModule, WorkExpComponent, PortfolioComponent],
+  imports: [
+    RouterOutlet,
+    AsyncPipe,
+    HeroComponent,
+    MatExpansionModule,
+    WorkExpComponent,
+    PortfolioComponent,
+    SkillsComponent,
+  ],
   providers: [DesktopService, WorkExpService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

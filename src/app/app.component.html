@@ -5,13 +5,21 @@
 
 <main>
   <app-hero [@heroSlide]></app-hero>
-  <section>
+  <section class="portfolio" [@fade]>
+    <h3 class="mat-title-large">Skills</h3>
+    <app-skills></app-skills>
+  </section>
+  <section class="portfolio" [@fade]>
+    <h3 class="mat-title-large">Portfolio</h3>
+    <app-portfolio></app-portfolio>
+  </section>
+  <section [@fade]>
     @if (data$ | async; as data) {
-      <h3 [@fade] class="mat-title-large">Work Experience</h3>
-      <div [@fade]>
-        <mat-accordion displayMode="flat">
+      <h3 class="mat-title-large">Work Experience</h3>
+      <div>
+        <mat-accordion multi>
           @for (d of data; track $index; let i = $index) {
-            <mat-expansion-panel [expanded]="i == 0">
+            <mat-expansion-panel [expanded]="true">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <img [src]="d.thumbnail" width="24" height="24" />
@@ -25,9 +33,5 @@
           }</mat-accordion
       ></div>
     }
-  </section>
-  <section class="portfolio">
-    <h3 [@fade] class="mat-title-large">Portfolio</h3>
-    <app-portfolio></app-portfolio>
   </section>
 </main>

@@ -1,5 +1,9 @@
-<mat-chip-set>
+<ul>
   @for (skill of skills; track $index) {
-    <mat-chip (click)="openDialog(skill)">{{ skill.name }}</mat-chip>
+    <li>
+      <button mat-raised-button (click)="openDialog(skill)">
+        {{ skill.name }}
+      </button>
+    </li>
   }
-</mat-chip-set>
+</ul>

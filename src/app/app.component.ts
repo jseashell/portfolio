@@ -7,6 +7,7 @@ import { DesktopService } from '@app/shared/services';
 import { heroSlide, heroSlideTiming } from './features/hero/hero-slide';
 import { HeroComponent } from './features/hero/hero.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
+import { skillsSlide } from './features/skills/skills-slide';
 import { SkillsComponent } from './features/skills/skills.component';
 import { WorkExpService } from './features/work-exp/work-exp-list.service';
 import { WorkExpComponent } from './features/work-exp/work-exp.component';
@@ -28,12 +29,16 @@ import { WorkExpComponent } from './features/work-exp/work-exp.component';
   styleUrl: './app.component.scss',
   animations: [
     heroSlide,
+    skillsSlide,
     trigger('fade', [
       transition(':enter', [
-        style({ opacity: '0' }),
-        animate(`${heroSlideTiming}s ${2 * heroSlideTiming}s ease-in`, style({ opacity: '1' })),
+        style({ transform: 'translateY(100%)' }),
+        animate(`${2 * heroSlideTiming}s ${2 * heroSlideTiming}s ease-in`, style({ transform: 'translateY(0%)' })),
       ]),
-      transition(':leave', [style({ opacity: '1' }), animate(`${heroSlideTiming}s ease-out`, style({ opacity: '0' }))]),
+      transition(':leave', [
+        style({ opacity: '1' }),
+        animate(`${2 * heroSlideTiming}s ease-out`, style({ opacity: '0', transform: 'translateY(100%)' })),
+      ]),
     ]),
   ],
 })

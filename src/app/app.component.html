@@ -5,15 +5,12 @@
 
 <main>
   <app-hero [@heroSlide]></app-hero>
-  <section class="portfolio" [@fade]>
-    <h3 class="mat-title-large">Skills</h3>
+  <section id="skills" [@skillsSlide]>
     <app-skills></app-skills>
   </section>
-  <section class="portfolio" [@fade]>
+  <section [@fade]>
     <h3 class="mat-title-large">Portfolio</h3>
     <app-portfolio></app-portfolio>
-  </section>
-  <section [@fade]>
     @if (data$ | async; as data) {
       <h3 class="mat-title-large">Work Experience</h3>
       <div>

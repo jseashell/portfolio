@@ -1,0 +1,28 @@
+<section>
+  <h1 class="mat-display-small">Contact</h1>
+  <p>How can I help you? Ask me a question, leave me a suggestion, or reach out for to connect.</p>
+</section>
+<section>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="questionForm" (ngSubmit)="submit()">
+        <mat-form-field>
+          <mat-label>Subject</mat-label>
+          <input matInput type="text" formControlName="subject" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Ask a Question...</mat-label>
+          <textarea matInput formControlName="body" placeholder="Ex. Hi, I have an opportunity with..."></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button e>Cancel</button>
+      <button mat-button type="submit" [disabled]="!questionForm.valid">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

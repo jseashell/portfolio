@@ -1,8 +1,10 @@
 :host {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--app-background);
   padding: 3.5rem 0;
   box-sizing: border-box;
 }
@@ -27,4 +29,8 @@ span div.dot::before {
 
 mat-panel-title img {
   margin-right: 0.5rem;
+}
+
+p {
+  padding: 0 1rem;
 }

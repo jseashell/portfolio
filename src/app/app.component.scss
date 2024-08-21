@@ -42,6 +42,10 @@ mat-sidenav-content mat-toolbar:not(.home) mat-icon {
   color: var(--app-foreground);
 }
 
+mat-sidenav {
+  width: 15rem;
+}
+
 mat-sidenav mat-toolbar {
   top: 0;
   width: 100%;

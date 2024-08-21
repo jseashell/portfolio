@@ -16,8 +16,9 @@ div.title {
   div.text {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    padding-left: 2rem;
 
     h1,
     h2,

@@ -3,6 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 5rem 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 90%;
+  max-width: 900px;
 }
 
 span {
@@ -16,4 +23,8 @@ span div.dot {
 
 span div.dot::before {
   content: '•';
+}
+
+mat-panel-title img {
+  margin-right: 0.5rem;
 }

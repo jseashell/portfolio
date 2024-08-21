@@ -1,0 +1,50 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--app-background);
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
+
+div.hero-bg {
+  position: absolute;
+  height: 30.7rem;
+  width: 100%;
+  background-color: var(--app-foreground);
+}
+
+div.hero-bg div.white-bar {
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  height: 25%;
+  background-color: var(--app-background);
+}
+
+app-hero {
+  width: 90%;
+  max-width: 900px;
+}
+
+section {
+  width: 90%;
+  max-width: 900px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+li {
+  margin: 0.25rem;
+}

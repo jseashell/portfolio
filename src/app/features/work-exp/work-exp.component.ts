@@ -1,28 +1,32 @@
 import { AsyncPipe, DatePipe, NgClass } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { RouterLink } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
 import dayjs from 'dayjs';
+import { WorkExpService } from './work-exp-list.service';
 import { WorkExpAttributes } from './work-exp.interface';
 
 @Component({
   selector: 'app-work-exp',
   standalone: true,
-  imports: [AsyncPipe, DatePipe, MatButtonModule, NgClass, RouterLink],
-  providers: [DesktopService],
+  imports: [AsyncPipe, DatePipe, MatButtonModule, MatExpansionModule, NgClass, RouterLink],
+  providers: [DesktopService, WorkExpService],
   templateUrl: './work-exp.component.html',
   styleUrl: './work-exp.component.css',
 })
-export class WorkExpComponent implements OnInit {
+export class WorkExpComponent {
   @Input() data!: WorkExpAttributes;
 
-  duration!: string;
   isPresent!: boolean;
 
-  ngOnInit(): void {
-    const startDayjs = dayjs(this.data.startDate);
-    const endDayjs = dayjs(this.data.endDate);
+  private workExpService = inject(WorkExpService);
+  data$ = this.workExpService.data$;
+
+  duration(d: WorkExpAttributes) {
+    const startDayjs = dayjs(d.startDate);
+    const endDayjs = dayjs(d.endDate);
 
     this.isPresent = endDayjs.isSame(dayjs(), 'month');
 
@@ -32,12 +36,14 @@ export class WorkExpComponent implements OnInit {
       const remainingMonths = numMonths % 12;
 
       if (numYears === 0) {
-        this.duration = remainingMonths + ' mos';
+        return remainingMonths + ' mos';
       } else if (remainingMonths === 0) {
-        this.duration = numYears + ' yrs';
+        return numYears + ' yrs';
       } else {
-        this.duration = numYears + ' yrs ' + remainingMonths + ' mos';
+        return numYears + ' yrs ' + remainingMonths + ' mos';
       }
+    } else {
+      return startDayjs.diff(endDayjs, 'days') + ' days';
     }
   }
 }

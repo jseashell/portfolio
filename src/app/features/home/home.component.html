@@ -1,0 +1,16 @@
+<div class="hero-bg" [@heroSlide]>
+  <div class="navy-bar"></div>
+  <div class="white-bar"></div>
+</div>
+<app-hero [@heroSlide]></app-hero>
+<section id="skills">
+  <ul>
+    @for (skill of skills; track $index; let i = $index) {
+      <li [@skillSlide]>
+        <button mat-raised-button (click)="openDialog(skill)">
+          {{ skill.name }}
+        </button>
+      </li>
+    }
+  </ul>
+</section>

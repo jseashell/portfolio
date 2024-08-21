@@ -17,7 +17,6 @@ div.title {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 100%;
     padding-left: 2rem;
 
     h1,
@@ -30,6 +29,7 @@ div.title {
     h1,
     h2 {
       color: var(--app-background);
+      margin: 0;
     }
 
     h2 span {
@@ -52,7 +52,7 @@ div.title {
   }
 
   mat-card {
-    margin-top: 3rem;
+    margin-top: 4rem;
     padding: 1rem;
 
     span {

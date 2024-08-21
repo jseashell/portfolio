@@ -1,6 +1,5 @@
 <section>
   @if (data$ | async; as data) {
-    <h3 class="mat-title-large">Work Experience</h3>
     <div>
       <mat-accordion multi>
         @for (d of data; track $index; let i = $index) {

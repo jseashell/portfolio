@@ -1,6 +1,6 @@
 <mat-sidenav-container>
   <mat-sidenav-content>
-    <mat-toolbar>
+    <mat-toolbar [ngClass]="{ home: (isHome$ | async) == true }">
       <button mat-icon-button (click)="snav.toggle()" aria-label="Open side nav">
         <mat-icon>menu</mat-icon>
       </button>

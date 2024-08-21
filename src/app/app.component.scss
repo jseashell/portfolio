@@ -1,6 +1,7 @@
 :host {
   width: 100%;
   height: 100%;
+  background-color: var(--app-background);
 }
 
 mat-sidenav-container {
@@ -14,6 +15,10 @@ main {
   margin: 0 auto;
 }
 
+mat-sidenav-content {
+  background-color: var(--app-background);
+}
+
 mat-sidenav-content mat-toolbar {
   position: absolute;
   top: 0;
@@ -25,8 +30,16 @@ mat-sidenav-content mat-toolbar {
   background-color: var(--app-foreground);
 }
 
+mat-sidenav-content mat-toolbar:not(.home) {
+  background-color: var(--app-background);
+}
+
 mat-sidenav-content mat-toolbar mat-icon {
   color: var(--app-background);
+}
+
+mat-sidenav-content mat-toolbar:not(.home) mat-icon {
+  color: var(--app-foreground);
 }
 
 mat-sidenav mat-toolbar {

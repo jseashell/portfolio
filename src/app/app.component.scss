@@ -3,46 +3,13 @@
   height: 100%;
 }
 
+mat-sidenav-container {
+  width: 100%;
+  height: 100%;
+}
+
 main {
   width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
   margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-div.hero-bg {
-  position: absolute;
-  height: 30.7rem;
-  width: 100%;
-  background-color: var(--app-foreground);
-
-  div.white-bar {
-    position: absolute;
-    width: 100%;
-    top: 75%;
-    height: 25%;
-
-    background-color: var(--app-background);
-  }
-}
-
-app-hero {
-  width: 90%;
-  background-color: var(--app-foreground);
-}
-
-section {
-  width: 90%;
-  margin-top: 3rem;
-}
-
-app-portfolio {
-  width: 100%;
-}
-
-mat-panel-title img {
-  margin-right: 0.5rem;
 }

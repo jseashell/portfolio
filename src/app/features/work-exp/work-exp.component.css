@@ -17,3 +17,7 @@ span div.dot {
 span div.dot::before {
   content: '•';
 }
+
+mat-panel-title img {
+  margin-right: 0.5rem;
+}

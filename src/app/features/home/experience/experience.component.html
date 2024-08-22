@@ -1,0 +1,27 @@
+@if (data$ | async; as data) {
+  <mat-accordion multi>
+    @for (attrs of data; track $index; let i = $index) {
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img [src]="attrs.thumbnail" width="24" height="24" />
+            {{ attrs.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div>
+          <span class="mat-title-small">{{ attrs.company }}<div class="dot"></div>Full-time</span>
+          <span class="mat-title-small">
+            {{ attrs.startDate | date: 'mediumDate' }} -
+            {{ isPresent ? 'Present' : (attrs.endDate | date: 'mediumDate') }}
+            <div class="dot"></div>
+            {{ duration(attrs) }}
+          </span>
+          <span class="mat-title-small">{{ attrs.location }}</span>
+          <p>
+            {{ attrs.description }}
+          </p>
+        </div>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+}

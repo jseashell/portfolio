@@ -50,7 +50,7 @@ export class AppComponent {
   private desktopService = inject(DesktopService);
   isDesktop$ = this.desktopService.isDesktop$;
 
-  heroState: 'opened' | 'closed' = 'closed';
+  heroState: 'opened' | 'closed' = 'opened';
   private router = inject(Router);
   isHome$ = this.router.events.pipe(
     filter((e) => e instanceof NavigationEnd),

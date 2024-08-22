@@ -1,0 +1,7 @@
+<ul>
+  @for (skill of skills; track $index; let i = $index) {
+    <li>
+      <app-skill-button [skill]="skill"></app-skill-button>
+    </li>
+  }
+</ul>

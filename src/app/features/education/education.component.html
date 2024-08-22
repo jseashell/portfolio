@@ -1,0 +1,25 @@
+<section [@postHeroFade]>
+  <h1 class="mat-display-small">Education</h1>
+</section>
+<section>
+  @if (educationService.data$ | async; as data) {
+    <mat-grid-list cols="1">
+      @for (attrs of data; track $index; let i = $index) {
+        <mat-card>
+          <img mat-card-image [src]="attrs.thumbnail" alt="University of Dayton logo" />
+          <mat-card-title>
+            {{ attrs.title }}
+          </mat-card-title>
+          <div>
+            <span class="mat-title-small">{{ attrs.school }}</span>
+            <span class="mat-title-small">
+              {{ attrs.location }}
+              <div class="dot"></div>
+              {{ attrs.graduationDate.format('MMM YYYY') }}
+            </span>
+          </div>
+        </mat-card>
+      }
+    </mat-grid-list>
+  }
+</section>

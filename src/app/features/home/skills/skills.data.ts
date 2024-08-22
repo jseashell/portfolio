@@ -2,7 +2,7 @@ export const skills = [
   {
     name: 'Accessibility',
     description:
-      '<p>I am passionate about creating <b>accessible</b> and <b>inclusive</b> digital experiences. I have a solid track record of building web applications that are not only visually appealing but also compliant with <b>WCAG</b> standards.</p><p>By employing best practices in <b>semantic HTML</b>, <b>ARIA roles</b>, and <b>responsive design</b>, I strive to make the web a more accessible place for everyone.</p>',
+      '<p>I am passionate about creating <b>accessible</b> and <b>inclusive</b> digital experiences. I have a solid track record of building web applications that are not only <b>visually appealing</b> but also <b>compliant with WCAG standards</b>.</p><p>By employing best practices in <b>semantic HTML</b>, <b>ARIA roles</b>, and <b>responsive design</b>, I strive to make the web a more accessible place for everyone.</p>',
   },
   {
     name: 'Angular',
@@ -11,17 +11,7 @@ export const skills = [
   },
   {
     name: 'AWS',
-    description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My expertise is particularly extensive with <b>Lambda</b> functions, where I've built and optimized numerous serverless applications by integrating seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to <b>ECS</b>, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p><p>Lastly, I employ the use of <b>Secrets Manager</b>, <b>CloudWatch</b>, and <b>Route 53</b> in every application.`,
-  },
-  {
-    name: 'CMS',
-    description:
-      "<p>I have practical application experience with both <b>traditional</b> and <b>headless CMS</b> solutions. I've successfully set up and managed numerous <b>WordPress</b> sites, optimizing them for <b>performance</b>, <b>security</b>, and <b>scalability</b>.</p><p>Beyond the traditional setup, I lean toward the modern development practice of creating a <b>content backend</b> while delivering component-driven front-ends through <b>SSR</b> frameworks like <b>Angular Universal</b> and <b>Next.js</b>.",
-  },
-  {
-    name: 'CSS',
-    description:
-      '<p>I specialize in creating <b>responsive</b>, visually appealing web pages using modern techniques like <b>Flexbox</b> and <b>Grid</b>. I excel at crafting clean, <b>maintainable</b> stylesheets and optimizing them for performance to ensure fast, seamless user experiences.</p>',
+    description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My experience is particularly extensive with <b>Lambda</b> functions, where I've built and optimized numerous serverless applications by integrating seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to <b>ECS</b>, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p><p>Lastly, I employ the use of <b>Secrets Manager</b>, <b>CloudWatch</b>, and <b>Route 53</b> in every application.`,
   },
   {
     name: 'Git',
@@ -34,9 +24,14 @@ export const skills = [
       '<p>I have a solid foundation in developing <b>Go</b> code for <b>Lambda-based microservices</b> to ensure highly performant runtimes and <b>fast cold starts</b>.</p><p>I strive to build efficient, scalable backend systems regardless of integrating with a third party service or a database. I find Golang to be elegant for handling <b>asynchronous</b> workflows processing <b>big data</b>.</p>',
   },
   {
-    name: 'HTML',
+    name: 'HTML/CSS',
     description:
-      "<p>I have a expert understanding of building and structuring web pages using <b>HTML5</b>. I have comprehensive experience in creating and styling content, ensuring <b>semantic markup</b> and <b>accessibility</b> standards are met.</p><p>I also have experience integrating with a <b>headless CMS</b>, enabling content managers to make updates without code changes.</p><p>Finally, I've worked with <b>modern frameworks</b> and <b>templating engines</b> to streamline the creation of <b>dynamic</b> HTML content, ensuring efficient and maintainable code.</p>",
+      "<p>I have a expert understanding of building and structuring web pages using <b>HTML5</b>. I have comprehensive experience in creating and styling content, ensuring <b>semantic markup</b> and <b>accessibility</b> standards are met.</p><p>I also have experience integrating with a <b>headless CMS</b>, enabling content managers to make updates without code changes.</p><p>Finally, I've worked with <b>modern frameworks</b> and <b>templating engines</b> to streamline the creation of <b>dynamic</b> HTML content, ensuring efficient and maintainable code.</p><p>I specialize in creating <b>responsive</b>, visually appealing web pages using modern techniques like <b>Flexbox</b> and <b>Grid</b>. I excel at crafting clean, <b>maintainable</b> stylesheets and optimizing them for performance to ensure fast, seamless user experiences.</p>",
+  },
+  {
+    name: 'Java',
+    description:
+      '<p>I have enterprise medtech experience developing a <b>Java-based</b> message broker and <b>ETL</b> service. Although I have not worked with a Java server in some years, my grasp of <b>design patterns</b> and <b>object-oriented programming</b> skills have carried through to my <b>Node.js</b> development. I am comfortable with both <b>inheritance</b> and <b>composition</b>. I have experience implementing the <b>REST</b> standard and <b>SOAP</b> protocol. I utilize  optimization practices like <b>thread-safe locking</b> and <b>singleton</b> architecture.</p>',
   },
   {
     name: 'JS/TS',

@@ -1,10 +1,12 @@
 <section id="skills" [@postHeroFade]>
   <h2 class="mat-headline-large">Skills</h2>
-  <ul>
-    @for (skill of skills; track $index; let i = $index) {
-      <li>
-        <app-skill-button [skill]="skill"></app-skill-button>
-      </li>
-    }
-  </ul>
+  <app-skills></app-skills>
+</section>
+<section id="experience" [@postHeroFade]>
+  <h2 class="mat-headline-large">Experience</h2>
+  <p>
+    I make a living with web dev. Initially in my career, I began as a back-end software engineer at a medtech company.
+    Today, I am a full-stack engineer working on the support site for a telecom SaaS.
+  </p>
+  <app-experience></app-experience>
 </section>

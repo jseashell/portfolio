@@ -3,12 +3,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-skills-dialog',
+  selector: 'app-skill-dialog',
   standalone: true,
   imports: [MatButtonModule, MatDialogModule],
-  templateUrl: './skills-dialog.component.html',
-  styleUrl: './skills-dialog.component.css',
+  templateUrl: './skill-dialog.component.html',
+  styleUrl: './skill-dialog.component.css',
 })
-export class SkillsDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+export class SkillDialogComponent {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { name: string; description: string }) {}
 }

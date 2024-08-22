@@ -3,46 +3,8 @@
   <ul>
     @for (skill of skills; track $index; let i = $index) {
       <li>
-        <button mat-raised-button (click)="openDialog(skill)">
-          {{ skill.name }}
-        </button>
+        <app-skill-button [skill]="skill"></app-skill-button>
       </li>
     }
   </ul>
-</section>
-<section id="experience" [@postHeroFade]>
-  <h2 class="mat-headline-large">Experience</h2>
-  <p>
-    I make a living with web dev. Initially in my career, I began as a back-end software engineer at a medtech company.
-    Today, I am a full-stack engineer working on the support site for a telecom SaaS.
-  </p>
-  @if (data$ | async; as data) {
-    <div>
-      <mat-accordion multi>
-        @for (attrs of data; track $index; let i = $index) {
-          <mat-expansion-panel [expanded]="true">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <img [src]="attrs.thumbnail" width="24" height="24" />
-                {{ attrs.title }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div>
-              <span class="mat-title-small">{{ attrs.company }}<div class="dot"></div>Full-time</span>
-              <span class="mat-title-small">
-                {{ attrs.startDate | date: 'shortDate' }} -
-                {{ isPresent ? 'Present' : (attrs.endDate | date: 'shortDate') }}
-                <div class="dot"></div>
-                {{ duration(attrs) }}
-              </span>
-              <span class="mat-title-small">{{ attrs.location }}</span>
-              <p>
-                {{ attrs.description }}
-              </p>
-            </div>
-          </mat-expansion-panel>
-        }
-      </mat-accordion>
-    </div>
-  }
 </section>

@@ -16,11 +16,6 @@ h1 {
   text-align: left;
 }
 
-p {
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
 form {
   display: flex;
   flex-direction: column;

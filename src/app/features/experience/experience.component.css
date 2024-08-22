@@ -11,19 +11,23 @@ section {
   max-width: 900px;
 }
 
-div.thumbnail {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+span {
+  display: flex;
 }
 
-img {
-  margin: 1rem;
-  width: calc(100% - 2rem);
-  box-sizing: border-box;
-  border-radius: 12px;
+span div.dot {
+  height: 100%;
+  margin: 0 0.5rem;
 }
 
-h4 {
-  color: var(--app-foreground);
+span div.dot::before {
+  content: '•';
+}
+
+mat-panel-title img {
+  margin-right: 0.5rem;
+}
+
+p {
+  margin-top: 1rem;
 }

@@ -30,17 +30,17 @@ mat-sidenav-content mat-toolbar {
   background-color: var(--app-foreground);
 }
 
-mat-sidenav-content mat-toolbar:not(.home) {
-  background-color: var(--app-background);
-}
+// mat-sidenav-content mat-toolbar:not(.home) {
+//   background-color: var(--app-background);
+// }
 
 mat-sidenav-content mat-toolbar mat-icon {
   color: var(--app-background);
 }
 
-mat-sidenav-content mat-toolbar:not(.home) mat-icon {
-  color: var(--app-foreground);
-}
+// mat-sidenav-content mat-toolbar:not(.home) mat-icon {
+//   color: var(--app-foreground);
+// }
 
 mat-sidenav {
   width: 15rem;

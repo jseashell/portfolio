@@ -1,4 +1,4 @@
-export interface WorkExpAttributes {
+export interface ExperienceAttributes {
   id: string;
   title: string;
   company: string;

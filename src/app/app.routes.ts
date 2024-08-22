@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { ContactComponent } from './features/contact/contact.component';
+import { ExperienceComponent } from './features/experience/experience.component';
 import { HomeComponent } from './features/home/home.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
-import { WorkExpComponent } from './features/work-exp/work-exp.component';
 
 export const routes: Routes = [
   {
@@ -20,7 +20,7 @@ export const routes: Routes = [
   },
   {
     path: 'experience',
-    component: WorkExpComponent,
+    component: ExperienceComponent,
   },
   {
     path: 'contact',

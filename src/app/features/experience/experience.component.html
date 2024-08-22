@@ -9,24 +9,25 @@
   @if (data$ | async; as data) {
     <div>
       <mat-accordion multi>
-        @for (d of data; track $index; let i = $index) {
+        @for (attrs of data; track $index; let i = $index) {
           <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                <img [src]="d.thumbnail" width="24" height="24" />
-                {{ d.title }}
+                <img [src]="attrs.thumbnail" width="24" height="24" />
+                {{ attrs.title }}
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div>
-              <span class="mat-title-small">{{ d.company }}<div class="dot"></div>Full-time</span>
+              <span class="mat-title-small">{{ attrs.company }}<div class="dot"></div>Full-time</span>
               <span class="mat-title-small">
-                {{ d.startDate | date: 'shortDate' }} - {{ isPresent ? 'Present' : (d.endDate | date: 'shortDate') }}
+                {{ attrs.startDate | date: 'shortDate' }} -
+                {{ isPresent ? 'Present' : (attrs.endDate | date: 'shortDate') }}
                 <div class="dot"></div>
-                {{ duration(d) }}
+                {{ duration(attrs) }}
               </span>
-              <span class="mat-title-small">{{ d.location }}</span>
+              <span class="mat-title-small">{{ attrs.location }}</span>
               <p>
-                {{ d.description }}
+                {{ attrs.description }}
               </p>
             </div>
           </mat-expansion-panel>

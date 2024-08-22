@@ -5,26 +5,26 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { RouterLink } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
 import dayjs from 'dayjs';
-import { WorkExpService } from './work-exp-list.service';
-import { WorkExpAttributes } from './work-exp.interface';
+import { ExperienceAttributes } from './experience.interface';
+import { ExperienceService } from './experience.service';
 
 @Component({
-  selector: 'app-work-exp',
+  selector: 'app-experience',
   standalone: true,
   imports: [AsyncPipe, DatePipe, MatButtonModule, MatExpansionModule, NgClass, RouterLink],
-  providers: [DesktopService, WorkExpService],
-  templateUrl: './work-exp.component.html',
-  styleUrl: './work-exp.component.css',
+  providers: [DesktopService, ExperienceService],
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.css',
 })
-export class WorkExpComponent {
-  @Input() data!: WorkExpAttributes;
+export class ExperienceComponent {
+  @Input() data!: ExperienceAttributes;
 
   isPresent!: boolean;
 
-  private workExpService = inject(WorkExpService);
-  data$ = this.workExpService.data$;
+  private experienceService = inject(ExperienceService);
+  data$ = this.experienceService.data$;
 
-  duration(d: WorkExpAttributes) {
+  duration(d: ExperienceAttributes) {
     const startDayjs = dayjs(d.startDate);
     const endDayjs = dayjs(d.endDate);
 

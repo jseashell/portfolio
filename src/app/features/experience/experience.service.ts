@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { WorkExpAttributes } from './work-exp.interface';
+import { ExperienceAttributes } from './experience.interface';
 
 @Injectable()
-export class WorkExpService {
-  get data$(): Observable<WorkExpAttributes[]> {
+export class ExperienceService {
+  get data$(): Observable<ExperienceAttributes[]> {
     return of([
       {
         id: 'genesys-teamlead-sr-swe',

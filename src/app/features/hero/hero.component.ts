@@ -3,7 +3,6 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { DesktopService } from '@app/shared/services';
 import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
-import { heroSlide } from './hero-slide';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -13,7 +12,6 @@ import { HeroService } from './hero.service';
   providers: [HeroService, DesktopService],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
-  animations: [heroSlide],
 })
 export class HeroComponent implements OnInit {
   private desktopService = inject(DesktopService);

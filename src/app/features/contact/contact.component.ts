@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { postHeroFade } from '@app/shared/animations';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
   imports: [FormsModule, ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
+  animations: [postHeroFade],
 })
 export class ContactComponent {
   questionForm = new FormGroup({

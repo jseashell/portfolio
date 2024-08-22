@@ -4,14 +4,31 @@
   display: flex;
   justify-content: center;
   border-radius: 0 0 12px 12px; /* bottom of the card */
-  z-index: 50;
+  z-index: 40;
+}
+
+div.hero-bg {
+  position: absolute;
+  z-index: -1;
+  height: 21.5rem;
+  width: 100%;
+  background-color: var(--app-foreground);
+}
+
+div.hero-bg div.white-bar {
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  height: 25%;
+  background-color: var(--app-background);
 }
 
 div.title {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  width: 100%;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 4rem;
 
   div.text {
     display: flex;

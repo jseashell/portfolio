@@ -1,9 +1,4 @@
-<div class="hero-bg" [@heroSlide]>
-  <div class="navy-bar"></div>
-  <div class="white-bar"></div>
-</div>
-<app-hero [@heroSlide]></app-hero>
-<section id="skills" [@fade]>
+<section id="skills" [@postHeroFade]>
   <h2 class="mat-headline-large">Skills</h2>
   <ul>
     @for (skill of skills; track $index; let i = $index) {
@@ -15,7 +10,7 @@
     }
   </ul>
 </section>
-<section id="experience" [@fade]>
+<section id="experience" [@postHeroFade]>
   <h2 class="mat-headline-large">Experience</h2>
   <p>
     I make a living with web dev. Initially in my career, I began as a back-end software engineer at a medtech company.

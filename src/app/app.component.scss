@@ -15,6 +15,10 @@ main {
   margin: 0 auto;
 }
 
+main:not(.home) {
+  transform: translateY(-16.5rem);
+}
+
 mat-sidenav-content {
   background-color: var(--app-background);
 }

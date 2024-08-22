@@ -10,26 +10,6 @@
   box-sizing: border-box;
 }
 
-div.hero-bg {
-  position: absolute;
-  height: 19.5rem;
-  width: 100%;
-  background-color: var(--app-foreground);
-}
-
-div.hero-bg div.white-bar {
-  position: absolute;
-  width: 100%;
-  top: 75%;
-  height: 25%;
-  background-color: var(--app-background);
-}
-
-app-hero {
-  width: 90%;
-  max-width: 900px;
-}
-
 section {
   width: 90%;
   max-width: 900px;

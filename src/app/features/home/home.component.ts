@@ -1,15 +1,14 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { AsyncPipe, DatePipe, NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { RouterLink } from '@angular/router';
+import { postHeroFade } from '@app/shared/animations';
 import dayjs from 'dayjs';
+import { HeroComponent } from '../hero/hero.component';
 import { ExperienceAttributes } from './experience.interface';
 import { ExperienceService } from './experience.service';
-import { heroSlide, heroSlideTiming } from './hero/hero-slide';
-import { HeroComponent } from './hero/hero.component';
 import { SkillsDialogComponent } from './skills-dialog/skills-dialog.component';
 import { skills } from './skills.data';
 
@@ -30,16 +29,7 @@ import { skills } from './skills.data';
   providers: [ExperienceService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  animations: [
-    heroSlide,
-    trigger('fade', [
-      transition(':enter', [
-        style({ opacity: '0' }),
-        animate(`${heroSlideTiming}s ${1.5 * heroSlideTiming}s ease-in`, style({ opacity: '1' })),
-      ]),
-      transition(':leave', [style({ opacity: '1' }), animate(`${heroSlideTiming}s ease-out`, style({ opacity: '0' }))]),
-    ]),
-  ],
+  animations: [postHeroFade],
 })
 export class HomeComponent {
   skills = skills;

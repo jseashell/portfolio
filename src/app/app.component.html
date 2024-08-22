@@ -5,7 +5,8 @@
         <mat-icon>menu</mat-icon>
       </button>
     </mat-toolbar>
-    <main>
+    <app-hero [@heroSlide]="heroState"></app-hero>
+    <main [ngClass]="{ home: (isHome$ | async) == true }">
       <router-outlet (activate)="snav.close()"></router-outlet>
     </main>
   </mat-sidenav-content>

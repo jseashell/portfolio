@@ -13,6 +13,10 @@ export const skills = [
     description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My expertise is particularly extensive with AWS Lambda functions, where I've built and optimized numerous serverless applications, integrating them seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to Elastic Container Service, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p>`,
   },
   {
+    name: 'CMS',
+    description: '',
+  },
+  {
     name: 'CSS',
     description: '',
   },
@@ -45,6 +49,10 @@ export const skills = [
       'As an intermediate Linux user, I have a solid understanding of the Linux operating system and its core functionalities. I am comfortable with navigating the command line, using essential commands for file management, process monitoring, and system administration. My experience includes working with various shell environments, such as Bash, and writing basic shell scripts to automate tasks and manage system configurations. I am familiar with package management systems like `apt` and `yum`, and can install, update, and remove software packages effectively. Additionally, I have experience in managing user accounts, configuring permissions, and understanding system logs to troubleshoot common issues. My skills also extend to network configuration, basic system security practices, and understanding the Linux filesystem hierarchy.',
   },
   {
+    name: 'Mobile site',
+    description: '',
+  },
+  {
     name: 'Node.js',
     description:
       'As a senior Node.js programmer, I have extensive experience in building and optimizing scalable and high-performance applications using Node.js. I am highly proficient in leveraging modern JavaScript features, including async/await, to handle asynchronous operations efficiently and improve code readability. My expertise includes working with the fs module to manage file system interactions, enabling seamless file read/write operations and stream handling. In addition, I am adept at using NestJS, a progressive Node.js framework, to build well-structured and modular applications. I employ common design patterns such as routes, guards, controllers, and services to establish clear separation of concerns and enhance code organization. My senior-level experience includes mentoring junior developers, conducting code reviews, and leading complex projects from conception through to deployment, all while adhering to best practices and ensuring high code quality.',
@@ -54,11 +62,15 @@ export const skills = [
     description: '',
   },
   {
+    name: 'SDLC',
+    description: '',
+  },
+  {
     name: 'Serverless',
     description: '',
   },
   {
-    name: 'SSO',
+    name: 'Single Sign-On',
     description:
       'Over the course of my career I have built an in-depth knowledge of implementing and managing secure, seamless authentication across multiple applications. My expertise includes configuring SSO solutions using industry-standard protocols like SAML, OAuth, and OpenID Connect, enabling users to authenticate with a single set of credentials across different platforms. I am proficient in integrating SSO with identity providers such as Okta, Azure AD, and AWS Cognito, ensuring robust and scalable authentication mechanisms. Additionally, I have extensive experience in setting up federated identity systems, managing role-based access controls, and ensuring compliance with security best practices. My skills also include troubleshooting SSO implementations, optimizing user experience, and enhancing security by implementing MFA alongside SSO solutions.',
   },
@@ -68,7 +80,6 @@ export const skills = [
   },
   {
     name: 'Typescript',
-    description:
-      "With a strong background in TypeScript, I have honed my ability to write robust and scalable applications. My extensive experience includes leveraging TypeScript's static typing to catch errors early and improve code quality, as well as utilizing advanced features like generics and type inference to build flexible and maintainable codebases. I've also had some exposure to integrating TypeScript with popular frameworks such as React, Angular, and Node.js, which has enhanced the reliability and scalability of the projects I've worked on. Additionally, I've used TypeScript to streamline complex codebases, making collaboration easier and reducing the likelihood of runtime errors.",
+    description: '',
   },
 ].sort((a, b) => a.name.localeCompare(b.name));

@@ -12,7 +12,7 @@
 
 div.hero-bg {
   position: absolute;
-  height: 20.5rem;
+  height: 19.5rem;
   width: 100%;
   background-color: var(--app-foreground);
 }

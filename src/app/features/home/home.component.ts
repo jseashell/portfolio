@@ -35,12 +35,9 @@ import { skills } from './skills.data';
     trigger('fade', [
       transition(':enter', [
         style({ opacity: '0' }),
-        animate(`${0.8}s ${1.5 * heroSlideTiming}s ease-in`, style({ opacity: '1' })),
+        animate(`${heroSlideTiming}s ${1.5 * heroSlideTiming}s ease-in`, style({ opacity: '1' })),
       ]),
-      transition(':leave', [
-        style({ opacity: '1' }),
-        animate(`${heroSlideTiming}s ease-out`, style({ opacity: '0', transform: 'translateY(1000%)' })),
-      ]),
+      transition(':leave', [style({ opacity: '1' }), animate(`${heroSlideTiming}s ease-out`, style({ opacity: '0' }))]),
     ]),
   ],
 })

@@ -1,85 +1,81 @@
 export const skills = [
   {
     name: 'Accessibility',
-    description: '',
+    description:
+      '<p>I am passionate about creating <b>accessible</b> and <b>inclusive</b> digital experiences. I have a solid track record of building web applications that are not only visually appealing but also compliant with <b>WCAG</b> standards.</p><p>By employing best practices in <b>semantic HTML</b>, <b>ARIA roles</b>, and <b>responsive design</b>, I strive to make the web a more accessible place for everyone.</p>',
   },
   {
     name: 'Angular',
     description:
-      "<p>As a highly skilled Angular developer, I have a profound expertise in creating dynamic, responsive, and high-performance web applications. My skill set includes designing scalable architectures, optimizing component interactions, and applying best practices for maintainable and efficient code.</p><p>I am well-versed in integrating Angular with various backend services and APIs, ensuring seamless data flow and robust functionality across web applications.</p><p>I am adept at utilizing Angular's animation capabilities to build engaging and smooth user interfaces, incorporating both simple and advanced animations to enhance the user experience and provide visual feedback.Additionally, my experience with server-side rendering (SSR) using Angular Universal enables me to improve application load times, SEO, and overall performance.</p><p>",
+      '<p>I have proven expertise in creating dynamic, responsive, and high-performance <b>Angular</b> applications. My skill set includes designing <b>scalable</b> architectures, optimizing <b>component interactions</b>, and applying best practices for <b>maintainable</b> and <b>efficient</b> code.</p><p>I am well-versed in integrating Angular with various backend services and <b>APIs</b>, ensuring seamless data flow and robust functionality with <b>RxJS</b>. My experience with <b>SSR</b> using <b>Angular Universal</b> enables me to improve application <b>load times</b>, <b>SEO</b>, and <b>overall performance</b>.</p>',
   },
   {
     name: 'AWS',
-    description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My expertise is particularly extensive with AWS Lambda functions, where I've built and optimized numerous serverless applications, integrating them seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to Elastic Container Service, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p>`,
+    description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My expertise is particularly extensive with <b>Lambda</b> functions, where I've built and optimized numerous serverless applications by integrating seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to <b>ECS</b>, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p><p>Lastly, I employ the use of <b>Secrets Manager</b>, <b>CloudWatch</b>, and <b>Route 53</b> in every application.`,
   },
   {
     name: 'CMS',
-    description: '',
+    description:
+      "<p>I have practical application experience with both <b>traditional</b> and <b>headless CMS</b> solutions. I've successfully set up and managed numerous <b>WordPress</b> sites, optimizing them for <b>performance</b>, <b>security</b>, and <b>scalability</b>.</p><p>Beyond the traditional setup, I lean toward the modern development practice of creating a <b>content backend</b> while delivering component-driven front-ends through <b>SSR</b> frameworks like <b>Angular Universal</b> and <b>Next.js</b>.",
   },
   {
     name: 'CSS',
-    description: '',
+    description:
+      '<p>I specialize in creating <b>responsive</b>, visually appealing web pages using modern techniques like <b>Flexbox</b> and <b>Grid</b>. I excel at crafting clean, <b>maintainable</b> stylesheets and optimizing them for performance to ensure fast, seamless user experiences.</p>',
   },
   {
     name: 'Git',
     description:
-      'I am highly experienced with Git, As an ex pert in the Serverless Framework for Node.js, I possess a deep mastery of building and deploying serverless applications with efficiency and precision. My extensive experience includes architecting complex, scalable applications by leveraging AWS services such as Lambda, API Gateway, DynamoDB, and S3, all orchestrated through the Serverless Framework. I excel in writing custom plugins, optimizing deployment pipelines, and managing multi-stage environments, ensuring seamless and automated CI/CD processes. Additionally, I am proficient in configuring and managing Infrastructure as Code (IaC) using YAML, allowing me to maintain clean, version-controlled, and reproducible serverless environments. My expertise also extends to integrating serverless applications with monitoring and logging tools, ensuring high reliability and performance in production.',
+      "<p>As a software engineer with thorough experience in <b>Git</b>, I excel at managing codebases and facilitating smooth <b>collaboration</b> within development teams.</p><p>I'm proficient in <b>version control</b>, <b>branching</b> strategies, and <b>resolving merge conflicts</b>, ensuring that projects stay on track and code quality remains high. I have practical experience with both <b>Gitflow</b> and <b>trunk-based</b> development.</p>",
   },
   {
     name: 'Golang',
-    description: '',
+    description:
+      '<p>I have a solid foundation in developing <b>Go</b> code for <b>Lambda-based microservices</b> to ensure highly performant runtimes and <b>fast cold starts</b>.</p><p>I strive to build efficient, scalable backend systems regardless of integrating with a third party service or a database. I find Golang to be elegant for handling <b>asynchronous</b> workflows processing <b>big data</b>.</p>',
   },
   {
     name: 'HTML',
     description:
-      "I have a expert understanding of building and structuring web pages using HTML5. I have extensive experience in creating and styling content, ensuring semantic markup and accessibility standards are met. I also have experience integrating with a headless CMS, enabling content managers to make updates without code changes. Additionally, I've worked with modern frameworks and templating engines to streamline the creation of dynamic HTML content, ensuring efficient and maintainable code.",
+      "<p>I have a expert understanding of building and structuring web pages using <b>HTML5</b>. I have comprehensive experience in creating and styling content, ensuring <b>semantic markup</b> and <b>accessibility</b> standards are met.</p><p>I also have experience integrating with a <b>headless CMS</b>, enabling content managers to make updates without code changes.</p><p>Finally, I've worked with <b>modern frameworks</b> and <b>templating engines</b> to streamline the creation of <b>dynamic</b> HTML content, ensuring efficient and maintainable code.</p>",
   },
   {
-    name: 'Java',
-    description: '',
-  },
-  {
-    name: 'JavaScript',
+    name: 'JS/TS',
     description:
-      "With a comprehensive understanding of JavaScript, I have developed a robust skill set in creating dynamic and interactive web applications. My extensive experience includes working with both ES6+ syntax and older JavaScript standards, allowing me to write clean, efficient, and maintainable code. I've also had some exposure to JavaScript frameworks and libraries such as React and Angular, which have enabled me to build complex user interfaces with ease. Additionally, I have experience with asynchronous programming, using Promises and async/await to handle API requests and other asynchronous tasks efficiently.",
+      "<p>With a comprehensive understanding of <b>JavaScript</b> and <b>Typescript</b>, I have developed a robust skill set in creating <b>dynamic</b> and <b>interactive</b> web applications. My broad experience includes working with both <b>ES6+</b> syntax and older JavaScript standards, allowing me to write <b>clean</b>, <b>efficient</b>, and <b>maintainable</b> code.</p><p>I've also had far-reaching exposure to JavaScript frameworks and libraries such as <b>Angular</b> and <b>React</b>, which have enabled me to build complex user interfaces with ease. Lastly, I have experience with <b>asynchronous</b> and <b>reactive</b> programming patterns, using <b>Promises</b> and <b>async/await</b> to handle <b>API requests</b> and other asynchronous tasks efficiently.</p>",
   },
   {
     name: 'Linux',
     description:
-      'As an intermediate Linux user, I have a solid understanding of the Linux operating system and its core functionalities. I am comfortable with navigating the command line, using essential commands for file management, process monitoring, and system administration. My experience includes working with various shell environments, such as Bash, and writing basic shell scripts to automate tasks and manage system configurations. I am familiar with package management systems like `apt` and `yum`, and can install, update, and remove software packages effectively. Additionally, I have experience in managing user accounts, configuring permissions, and understanding system logs to troubleshoot common issues. My skills also extend to network configuration, basic system security practices, and understanding the Linux filesystem hierarchy.',
+      '<p>As an <b>intermediate Linux user</b>, I have a solid understanding of some distros and the core functionalities of a <b>Unix terminal</b>. My experience includes working with various shell environments, such as <b>Bash</b> and <b>Zsh</b>, and writing shell scripts for <b>CI/CD</b> pipelines to manage server configurations with <b>infra as code</b>.</p><p>I am familiar with <b>package management systems</b> like <b>apt</b> and <b>yum</b>. My skills also extend to basic system security practices, and understanding the <b>Linux filesystem</b> hierarchy.</p>',
   },
   {
-    name: 'Mobile site',
-    description: '',
+    name: 'Mobile',
+    description:
+      "<p>As a software engineer specializing in <b>mobile-first development</b>, I excel at creating <b>responsive</b>, user-friendly websites optimized for <b>all screen sizes</b>. My expertise includes using <b>modern CSS techniques</b>, <b>media queries</b>, and <b>flexible layouts</b> to build sites that adapt beautifully to various devices.</p><p>I'm skilled at balancing aesthetics with performance, ensuring that mobile users get a top-notch <b>experience without compromising</b> on speed.</p>",
   },
   {
     name: 'Node.js',
     description:
-      'As a senior Node.js programmer, I have extensive experience in building and optimizing scalable and high-performance applications using Node.js. I am highly proficient in leveraging modern JavaScript features, including async/await, to handle asynchronous operations efficiently and improve code readability. My expertise includes working with the fs module to manage file system interactions, enabling seamless file read/write operations and stream handling. In addition, I am adept at using NestJS, a progressive Node.js framework, to build well-structured and modular applications. I employ common design patterns such as routes, guards, controllers, and services to establish clear separation of concerns and enhance code organization. My senior-level experience includes mentoring junior developers, conducting code reviews, and leading complex projects from conception through to deployment, all while adhering to best practices and ensuring high code quality.',
+      '<p>As a <b>senior Node.js programmer</b>, I have focused experience in building and optimizing <b>scalable</b> and high-performance, back-end web applications. I am highly proficient in leveraging <b>modern JavaScript features</b>, including <b>async/await</b>, to handle <b>asynchronous</b> operations efficiently and improve code <b>readability</b>.</p><p>In addition, I have some exposure to <b>NestJS</b> to build well-structured and modular applications. I employ common design patterns such as <b>routes</b>, <b>guards</b>, <b>controllers</b>, and <b>services</b> to establish clear <b>separation of concerns</b> and enhance code organization.</p>',
   },
   {
     name: 'React',
-    description: '',
+    description:
+      '<p>Although Angular is my preferred front-end framework, my specialty in building <b>dynamic</b>, <b>highly performant</b> user interfaces relies on <b>versatility</b>. When <b>React</b> is the correct tool for the job, I find myself enjoying its <b>quick development time</b> and vast <b>community</b>. I am comfortable with <b>component splitting</b>, styling with <b>Tailwind</b>, and using <b>hooks</b>.</p>',
   },
   {
     name: 'SDLC',
-    description: '',
+    description:
+      "<p>I have a deep experience in the <b>Software Development Life Cycle (SDLC)</b>. I excel at guiding projects from <b>initial requirements gathering</b> through to <b>deployment and maintenance</b>. I'm skilled in translating <b>business needs</b> into <b>technical specifications</b>, ensuring that each phase — from <b>design and development</b> to <b>testing and deployment</b> — follows a structured, efficient process.</p><p>My expertise includes implementing <b>Agile</b> and <b>Scrum</b> methodologies to manage <b>iterative development</b>, <b>promote collaboration</b>, and ensure <b>timely delivery</b>.</p><p>I'm also highly competent at supportig my team and project through <b>code reviews</b>, <b>continuous integration</b>, and post-launch <b>optimizations</b> to maintain high-quality standards throughout the project lifecycle.</p>",
   },
   {
     name: 'Serverless',
-    description: '',
+    description:
+      "<p>I specialize in designing and deploying <b>scalable</b>, <b>cost-effective</b> solutions using cloud services like <b>AWS Lambda</b>.<p></p>I'm proficient at leveraging <b>serverless frameworks</b> and tooling such as <b>Serverless</b>, <b>Cloudformation</b>, and <b>Terraform</b> to build and manage applications without the need for traditional server infrastructure, focusing on <b>event-driven</b>, <b>microservices-based</b> architectures.</p><p>I'm skilled at managing serverless workflows, monitoring, and troubleshooting to deliver efficient, high-performance solutions.</p>",
   },
   {
     name: 'Single Sign-On',
     description:
-      'Over the course of my career I have built an in-depth knowledge of implementing and managing secure, seamless authentication across multiple applications. My expertise includes configuring SSO solutions using industry-standard protocols like SAML, OAuth, and OpenID Connect, enabling users to authenticate with a single set of credentials across different platforms. I am proficient in integrating SSO with identity providers such as Okta, Azure AD, and AWS Cognito, ensuring robust and scalable authentication mechanisms. Additionally, I have extensive experience in setting up federated identity systems, managing role-based access controls, and ensuring compliance with security best practices. My skills also include troubleshooting SSO implementations, optimizing user experience, and enhancing security by implementing MFA alongside SSO solutions.',
-  },
-  {
-    name: 'Testing',
-    description: '',
-  },
-  {
-    name: 'Typescript',
-    description: '',
+      '<p>I have built an in-depth knowledge of implementing and managing secure, seamless <b>authentication</b> and <b>authorization</b> across multiple applications.</p><p>My expertise includes configuring SSO solutions using industry-standard protocols like <b>SAML</b>, <b>OAuth</b>, and <b>OpenID Connect</b>, enabling users to authenticate with a single set of credentials across different platforms.</p><p>I am proficient in integrating SSO with identity providers such as <b>Okta</b> and <b>Salesforce</b>. I opt to enhance security by implementing <b>MFA</b> alongside SSO solutions.</p>',
   },
 ].sort((a, b) => a.name.localeCompare(b.name));

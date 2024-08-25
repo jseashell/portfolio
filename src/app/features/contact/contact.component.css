@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: flex-start;
   background-color: var(--app-background);
+  margin-top: 3rem;
 }
 
 section {

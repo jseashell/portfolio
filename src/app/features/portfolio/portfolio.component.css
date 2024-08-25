@@ -4,8 +4,13 @@
   align-items: center;
   justify-content: flex-start;
   background-color: var(--app-background);
+  margin-top: 3rem;
 }
 
+p {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
 section {
   width: 90%;
   max-width: 900px;

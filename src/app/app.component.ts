@@ -55,7 +55,7 @@ export class AppComponent {
   isHome$ = this.router.events.pipe(
     filter((e) => e instanceof NavigationEnd),
     map(() => {
-      return this.router.url === '/home';
+      return this.router.url === '/home' || this.router.url === '/';
     }),
     tap((isHome) => {
       if (isHome) this.heroState = 'opened';

@@ -1,46 +1,7 @@
-<mat-sidenav-container>
-  <mat-sidenav-content>
-    <mat-toolbar [ngClass]="{ home: (isHome$ | async) == true }">
-      <button mat-icon-button (click)="snav.toggle()" aria-label="Open side nav">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar>
-    <app-hero [@heroSlide]="heroState"></app-hero>
-    <main [ngClass]="{ home: (isHome$ | async) == true }">
-      <router-outlet (activate)="snav.close()"></router-outlet>
-    </main>
-  </mat-sidenav-content>
-  <mat-sidenav #snav position="end">
-    <mat-toolbar position="end">
-      <button mat-icon-button class="mat-title-large" (click)="snav.toggle()" aria-label="Close side nav">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-toolbar>
-    <mat-nav-list>
-      <mat-list-item>
-        <div class="mat-title-large">
-          <a routerLink="/home">Home</a>
-          <mat-icon>home</mat-icon>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="mat-title-large">
-          <a routerLink="/portfolio">Portfolio</a>
-          <mat-icon>laptop_mac</mat-icon>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="mat-title-large">
-          <a routerLink="/education">Education</a>
-          <mat-icon>school</mat-icon>
-        </div>
-      </mat-list-item>
-      <mat-list-item>
-        <div class="mat-title-large">
-          <a routerLink="/contact">Contact</a>
-          <mat-icon fontSet="material-icons-outlined">mail</mat-icon>
-        </div>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
-</mat-sidenav-container>
+<mat-toolbar [ngClass]="{ home: (isHome$ | async) == true }">
+  <button mat-icon-button (click)="openContactForm()"><mat-icon>mail</mat-icon></button>
+</mat-toolbar>
+<app-hero [@heroSlide]="heroState"></app-hero>
+<main [ngClass]="{ home: (isHome$ | async) == true }">
+  <router-outlet></router-outlet>
+</main>

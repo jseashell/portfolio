@@ -1,26 +1,18 @@
 :host {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: var(--app-background);
-  margin-top: 3rem;
-}
-
-section {
-  width: 90%;
-  max-width: 900px;
+  justify-content: space-between;
 }
 
 mat-card {
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  width: calc(50% - 1rem);
 }
 
 img {
-  width: 13rem;
-  margin: 1rem auto;
+  width: 6rem;
+  object-fit: contain;
 }
 
 span {

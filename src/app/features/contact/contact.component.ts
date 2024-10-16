@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { postHeroFade } from '@app/shared/animations';
@@ -9,7 +10,15 @@ import { postHeroFade } from '@app/shared/animations';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
   animations: [postHeroFade],

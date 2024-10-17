@@ -8,14 +8,16 @@ export class EducationService {
   get data$(): Observable<EducationAttributes[]> {
     return of([
       {
-        title: 'M.S. Engineering Management',
+        title: 'Master of Science',
+        subtitle: 'Engineering Management',
         school: 'University of Dayton',
         location: 'Dayton, OH',
         graduationDate: dayjs('2015-08-01'),
         thumbnail: '/images/dayton2.png',
       },
       {
-        title: 'B.S. Electronic & Computer Engineering Technology',
+        title: 'Bachelor of Science',
+        subtitle: 'Electronic and Computer Engineering Technology',
         school: 'University of Dayton',
         location: 'Dayton, OH',
         graduationDate: dayjs('2014-05-01'),

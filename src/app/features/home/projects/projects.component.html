@@ -1,25 +1,29 @@
 <mat-tab-group dynamicHeight>
-  <mat-tab label="ezmc-cli">
-    <p>A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service.</p>
-    <img src="/images/ezmc.png" />
-    <div class="links">
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/ezmc-cli">
-        Github<mat-icon iconPositionEnd>open_in_new</mat-icon>
-      </a>
-    </div>
-  </mat-tab>
   <mat-tab label="kdot-lyrics">
     <p>
-      Random Kendrick Lamar lyrics at the click of a button. This web app is written with Angular. An offline program
-      seeds AWS DynamoDB with the lyrics. This program calls an API for song information, then utilizes a scraper to
-      gather lyrics.
+      Random Kendrick Lamar lyrics at the click of a button. The web app is written with Angular. An offline program
+      written with Golang seeds AWS DynamoDB with lyrics. It does this by invoking an API for song information, then
+      utilizing a scraper to gather lyrics before persisting to the table.
     </p>
-    <img src="/images/kdot-lyrics.png" />
+    <div class="thumbnail">
+      <img src="/images/kdot-lyrics.png" />
+    </div>
     <div class="links">
       <a mat-button class="mat-title-medium" href="https://kdotlyrics.com">
         Visit<mat-icon iconPositionEnd>open_in_new</mat-icon>
       </a>
       <a mat-button class="mat-title-medium" href="https://github.com/jseashell/kdot-lyrics">
+        Github<mat-icon iconPositionEnd>open_in_new</mat-icon>
+      </a>
+    </div>
+  </mat-tab>
+  <mat-tab label="ezmc-cli">
+    <p>A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service.</p>
+    <div class="thumbnail">
+      <img src="/images/ezmc.png" />
+    </div>
+    <div class="links">
+      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/ezmc-cli">
         Github<mat-icon iconPositionEnd>open_in_new</mat-icon>
       </a>
     </div>
@@ -30,7 +34,9 @@
       light processing to track your actions per minute while coding. It features command palette and settings
       integrations.
     </p>
-    <img src="/images/apm-pulse.gif" />
+    <div class="thumbnail">
+      <img class="apm-pulse" src="/images/apm-pulse.gif" />
+    </div>
     <div class="links">
       <a
         mat-button

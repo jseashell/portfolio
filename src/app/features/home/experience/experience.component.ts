@@ -2,6 +2,7 @@ import { AsyncPipe, DatePipe, NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { postHeroFade } from '@app/shared/animations';
+import { DesktopService } from '@app/shared/services';
 import dayjs from 'dayjs';
 import { ExperienceAttributes } from './experience.interface';
 import { ExperienceService } from './experience.service';
@@ -17,8 +18,8 @@ import { ExperienceService } from './experience.service';
 })
 export class ExperienceComponent {
   isPresent!: boolean;
-  private experienceService = inject(ExperienceService);
-  data$ = this.experienceService.data$;
+  experienceService = inject(ExperienceService);
+  desktopService = inject(DesktopService);
 
   duration(attrs: ExperienceAttributes) {
     const startDayjs = dayjs(attrs.startDate);

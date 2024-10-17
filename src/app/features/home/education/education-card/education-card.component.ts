@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { EducationAttributes } from '../education.interface';
 
 @Component({
   selector: 'app-education-card',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './education-card.component.html',
-  styleUrl: './education-card.component.css'
+  styleUrl: './education-card.component.css',
 })
 export class EducationCardComponent {
-
+  @Input() data!: EducationAttributes;
 }

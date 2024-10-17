@@ -7,6 +7,8 @@ div.thumbnail {
   width: 100%;
   height: auto;
   object-fit: contain;
+  display: flex;
+  justify-content: center;
 }
 
 img {
@@ -14,6 +16,10 @@ img {
   width: calc(100% - 2rem);
   box-sizing: border-box;
   border-radius: 12px;
+}
+
+img.apm-pulse {
+  width: 60%;
 }
 
 h4 {

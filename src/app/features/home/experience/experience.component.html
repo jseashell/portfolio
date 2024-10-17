@@ -1,7 +1,7 @@
-@if (data$ | async; as data) {
+@if (experienceService.data$ | async; as data) {
   <mat-accordion multi>
     @for (attrs of data; track $index; let i = $index) {
-      <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel [expanded]="(desktopService.isDesktop$ | async) === true">
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img [src]="attrs.thumbnail" width="24" height="24" />

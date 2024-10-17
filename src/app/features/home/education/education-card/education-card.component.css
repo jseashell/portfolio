@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+}
+
+mat-card {
+  padding: 1rem;
+}
+
+img {
+  width: 6rem;
+  object-fit: contain;
+}
+
+span {
+  display: flex;
+}
+
+span div.dot {
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+span div.dot::before {
+  content: '•';
+}
+
+mat-panel-title img {
+  margin-right: 0.5rem;
+}
+
+p {
+  margin-top: 1rem;
+}

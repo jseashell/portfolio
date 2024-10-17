@@ -1,30 +1,13 @@
-<mat-card>
-  <mat-card-title-group>
-    <mat-card-title>Bachelor of Science</mat-card-title>
-    <mat-card-subtitle>Electronic & Computer Engineering Technology</mat-card-subtitle>
-    <img mat-card-image src="/images/dayton1.png" alt="University of Dayton logo" />
-  </mat-card-title-group>
-  <mat-card-content>
-    <span class="mat-title-small">University of Dayton</span>
-    <span class="mat-title-small">
-      Dayton, OH
-      <div class="dot"></div>
-      Aug 2014
-    </span>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <mat-card-title-group>
-    <mat-card-title>Master of Science</mat-card-title>
-    <mat-card-subtitle>Engineering Management</mat-card-subtitle>
-    <img mat-card-image src="/images/dayton2.png" alt="University of Dayton School of Engineering logo" />
-  </mat-card-title-group>
-  <mat-card-content>
-    <span class="mat-title-small">University of Dayton</span>
-    <span class="mat-title-small">
-      Dayton, OH
-      <div class="dot"></div>
-      Aug 2015
-    </span>
-  </mat-card-content>
-</mat-card>
+<mat-grid-list
+  [cols]="(desktopService.isDesktop$ | async) === true ? '2' : '1'"
+  rowHeight="2:1"
+  [gutterSize]="(desktopService.isDesktop$ | async) === true ? '32' : '4'"
+>
+  @if (educationService.data$ | async; as data) {
+    @for (attrs of data; track attrs.title) {
+      <mat-grid-tile>
+        <app-education-card [data]="attrs"></app-education-card>
+      </mat-grid-tile>
+    }
+  }
+</mat-grid-list>

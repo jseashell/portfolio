@@ -37,7 +37,7 @@ export class ExperienceService {
         endDate: new Date('2019-09-01'),
         location: 'Carmel, IN',
         description:
-          "I began at Orchard as an entry-level Software Engineer. My daily tasks covered the full stack. I regularly designed and maintained logic for all layers of my team's project, such as the device interfacing engine, REST API, vanilla JavaScript client, SQL database clients, and application security.",
+          "I began at Orchard as an entry-level Software Engineer. My daily tasks covered the full stack. I regularly designed and maintained logic for all layers of my team's project, such as the device interfacing engine, REST API, jQuery client, SQL database clients, and application security.",
       },
     ]);
   }

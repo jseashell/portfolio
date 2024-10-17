@@ -3,6 +3,7 @@ import { AsyncPipe, NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -23,6 +24,7 @@ import { postHeroFade } from './shared';
     HeroComponent,
     MatButtonModule,
     MatDialogModule,
+    MatGridListModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
@@ -36,16 +38,10 @@ import { postHeroFade } from './shared';
   animations: [
     postHeroFade,
     trigger('heroSlide', [
-      // state('closed', style({ transform: 'translateY(-100%)' })),
-      // state('opened', style({ transform: 'translateY(0%)' })),
       transition(':enter', [
         style({ transform: 'translateY(-100%)' }),
         animate(`${heroSlideTiming}s ease-in`, style({ transform: 'translateY(0%)' })),
       ]),
-      // transition('opened -> closed', [
-      //   style({ transform: 'translateY(0%)' }),
-      //   animate(`${heroSlideTiming}s ease-out`, style({ transform: 'translateY(-100%)' })),
-      // ]),
     ]),
   ],
 })
@@ -69,6 +65,8 @@ export class AppComponent {
   dialog = inject(MatDialog);
 
   openContactForm(): void {
-    this.dialog.open(ContactComponent);
+    this.dialog.open(ContactComponent, {
+      width: '70%',
+    });
   }
 }

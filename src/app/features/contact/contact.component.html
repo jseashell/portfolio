@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>How can I help you?</h2>
+<h2 mat-dialog-title class="mat-headline-large">How can I help you?</h2>
 <mat-dialog-content>
   <p>Ask a question, leave a suggestion, or reach out to connect.</p>
   <form [formGroup]="questionForm" (ngSubmit)="submit()">
@@ -12,7 +12,7 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Message</mat-label>
-      <textarea matInput formControlName="body" placeholder="Ex. Hi, I have an opportunity with..."></textarea>
+      <textarea matInput formControlName="body" placeholder="Hi, I have an opportunity with..." rows="10"></textarea>
     </mat-form-field>
   </form>
 </mat-dialog-content>

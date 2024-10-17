@@ -32,7 +32,7 @@ export class ContactComponent {
 
   submit(): void {
     if (this.questionForm.valid) {
-      console.log('submitted a message', this.questionForm);
+      alert('submitted\n' + this.questionForm);
     }
   }
 }

@@ -1,7 +1,21 @@
 <mat-toolbar [ngClass]="{ home: (isHome$ | async) == true }">
-  <button mat-icon-button (click)="openContactForm()"><mat-icon>mail</mat-icon></button>
+  <div>
+    <button mat-icon-button (click)="openContactForm()"><mat-icon>mail</mat-icon></button>
+  </div>
 </mat-toolbar>
 <app-hero [@heroSlide]="heroState"></app-hero>
 <main [ngClass]="{ home: (isHome$ | async) == true }">
   <router-outlet></router-outlet>
 </main>
+<footer>
+  <div>
+    <!-- TODO -->
+    <!-- <a mat-button>Contact</a>
+    <span>Projects</span>
+    <a mat-button href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a>
+    <a mat-button href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a>
+    <a mat-button href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
+      APM Pulse
+    </a> -->
+  </div>
+</footer>

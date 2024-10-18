@@ -4,7 +4,7 @@
       <mat-expansion-panel [expanded]="(desktopService.isDesktop$ | async) === true">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            <img [src]="attrs.thumbnail" width="24" height="24" />
+            <img [src]="attrs.thumbnail" [alt]="attrs.company + ' logo'" width="24" height="24" />
             {{ attrs.title }}
           </mat-panel-title>
         </mat-expansion-panel-header>

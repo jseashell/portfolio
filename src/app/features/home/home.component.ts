@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { postHeroFade } from '@app/shared/animations';
-import { ContactComponent } from '../contact/contact.component';
+import { ContactDialogComponent } from '../contact-dialog/contact-dialog.component';
 import { HeroComponent } from '../hero/hero.component';
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
@@ -12,10 +14,12 @@ import { SkillsComponent } from './skills/skills.component';
   selector: 'app-home',
   standalone: true,
   imports: [
-    ContactComponent,
+    ContactDialogComponent,
     EducationComponent,
     ExperienceComponent,
     HeroComponent,
+    MatButtonModule,
+    MatIconModule,
     PortfolioComponent,
     RouterLink,
     SkillsComponent,

@@ -1,7 +1,7 @@
 <mat-grid-list
   [cols]="(desktopService.isDesktop$ | async) === true ? '2' : '1'"
-  rowHeight="2:1"
-  [gutterSize]="(desktopService.isDesktop$ | async) === true ? '32' : '4'"
+  [rowHeight]="(desktopService.isDesktop$ | async) === true ? '145px' : '170px'"
+  [gutterSize]="(desktopService.isDesktop$ | async) === true ? '16' : '4'"
 >
   @if (educationService.data$ | async; as data) {
     @for (attrs of data; track attrs.title) {

@@ -19,11 +19,11 @@ import { postHeroFade } from '@app/shared/animations';
     MatFormFieldModule,
     MatInputModule,
   ],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
+  templateUrl: './contact-dialog.component.html',
+  styleUrl: './contact-dialog.component.css',
   animations: [postHeroFade],
 })
-export class ContactComponent {
+export class ContactDialogComponent {
   questionForm = new FormGroup({
     subject: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),

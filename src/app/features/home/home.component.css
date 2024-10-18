@@ -13,5 +13,20 @@
 section {
   width: 90%;
   max-width: 900px;
-  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.section-content {
+  padding: 0 0.5rem;
+}
+
+.section-content.desktop {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+mat-icon {
+  font-size: 1em;
+  height: 1rem;
+  width: 1rem;
 }

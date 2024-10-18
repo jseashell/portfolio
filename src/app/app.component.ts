@@ -8,10 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
-import { filter, map, tap } from 'rxjs';
-import { ContactComponent } from './features/contact/contact.component';
+import { ContactDialogComponent } from './features/contact-dialog/contact-dialog.component';
 import { heroSlideTiming } from './features/hero/hero-slide';
 import { HeroComponent } from './features/hero/hero.component';
 import { postHeroFade } from './shared';
@@ -49,23 +48,10 @@ export class AppComponent {
   private desktopService = inject(DesktopService);
   isDesktop$ = this.desktopService.isDesktop$;
 
-  heroState: 'opened' | 'closed' = 'opened';
-  private router = inject(Router);
-  isHome$ = this.router.events.pipe(
-    filter((e) => e instanceof NavigationEnd),
-    map(() => {
-      return this.router.url === '/home' || this.router.url === '/';
-    }),
-    tap((isHome) => {
-      if (isHome) this.heroState = 'opened';
-      else this.heroState = 'closed';
-    }),
-  );
+  private dialog = inject(MatDialog);
 
-  dialog = inject(MatDialog);
-
-  openContactForm(): void {
-    this.dialog.open(ContactComponent, {
+  openContactDialog(): void {
+    this.dialog.open(ContactDialogComponent, {
       width: '70%',
     });
   }

@@ -1,21 +1,37 @@
-<mat-toolbar [ngClass]="{ home: (isHome$ | async) == true }">
-  <div>
-    <button mat-icon-button (click)="openContactForm()"><mat-icon>mail</mat-icon></button>
-  </div>
-</mat-toolbar>
-<app-hero [@heroSlide]="heroState"></app-hero>
-<main [ngClass]="{ home: (isHome$ | async) == true }">
+<header>
+  <mat-toolbar>
+    <div>
+      <button mat-icon-button (click)="openContactDialog()" aria-label="Contact"><mat-icon>mail</mat-icon></button>
+    </div>
+  </mat-toolbar>
+</header>
+<app-hero [@heroSlide]></app-hero>
+<main>
   <router-outlet></router-outlet>
 </main>
 <footer>
   <div>
-    <!-- TODO -->
-    <!-- <a mat-button>Contact</a>
-    <span>Projects</span>
-    <a mat-button href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a>
-    <a mat-button href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a>
-    <a mat-button href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
-      APM Pulse
-    </a> -->
+    <section>
+      <ul>
+        <li><a routerLink="#top">Top</a></li>
+        <li><a routerLink="#skills">Skills</a></li>
+        <li><a routerLink="#experience">Experience</a></li>
+        <li><a routerLink="#education">Education</a></li>
+        <li><a routerLink="#projects">Projects</a></li>
+        <li><a routerLink="#contact">Contact</a></li>
+      </ul>
+    </section>
+    <section>
+      <span>Projects</span>
+      <ul>
+        <li><a mat-button href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a></li>
+        <li><a mat-button href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a></li>
+        <li>
+          <a mat-button href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
+            APM Pulse
+          </a>
+        </li>
+      </ul>
+    </section>
   </div>
 </footer>

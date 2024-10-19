@@ -1,6 +1,13 @@
 p {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   box-sizing: border-box;
+}
+
+.links {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 div.thumbnail {
@@ -24,4 +31,10 @@ img.apm-pulse {
 
 h4 {
   color: var(--app-foreground);
+}
+
+mat-icon {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
 }

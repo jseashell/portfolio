@@ -10,7 +10,7 @@
 div.hero-bg {
   position: absolute;
   z-index: -1;
-  height: 21.5rem;
+  height: 26.5rem;
   width: 100%;
   background-color: var(--app-foreground);
 }
@@ -28,7 +28,7 @@ div.title {
   flex-direction: column;
   width: 90%;
   max-width: 900px;
-  margin-top: 4rem;
+  margin-top: 8rem;
 
   div.text {
     display: flex;

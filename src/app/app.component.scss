@@ -31,16 +31,14 @@ mat-toolbar mat-icon {
   color: var(--app-background);
 }
 
-a:hover {
-  cursor: pointer;
-}
-
 footer {
   width: 100%;
   height: 18rem;
+  padding: 1rem 0;
   display: flex;
-  padding: 2rem 0;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background-color: var(--app-foreground);
   color: var(--app-background);
 }
@@ -54,10 +52,23 @@ footer div {
 footer section {
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 footer ul {
-  padding: 0;
-  margin: 0;
   list-style-type: none;
+}
+
+footer a,
+footer a:active,
+footer a:visited {
+  color: var(--app-background);
+}
+
+footer .contact {
+  font-weight: 700;
+}
+
+footer .copyright {
+  padding-top: 2rem;
 }

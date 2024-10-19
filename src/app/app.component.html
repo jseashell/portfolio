@@ -1,6 +1,12 @@
 <header>
-  <mat-toolbar>
+  <mat-toolbar [@postHeroFade]>
     <div>
+      <a mat-icon-button href="https://github.com/jseashell?tab=repositories" target="_blank" aria-label="Github">
+        <mat-icon svgIcon="github"></mat-icon>
+      </a>
+      <a mat-icon-button href="https://linkedin.com/in/johnschellinger" target="_blank" aria-label="LinkedIn">
+        <mat-icon svgIcon="linkedin"></mat-icon>
+      </a>
       <button mat-icon-button (click)="openContactDialog()" aria-label="Contact"><mat-icon>mail</mat-icon></button>
     </div>
   </mat-toolbar>
@@ -13,25 +19,32 @@
   <div>
     <section>
       <ul>
-        <li><a routerLink="#top">Top</a></li>
+        <li><a routerLink="#contact" class="contact">Contact</a></li>
+      </ul>
+    </section>
+  </div>
+  <div>
+    <section>
+      <ul>
         <li><a routerLink="#skills">Skills</a></li>
         <li><a routerLink="#experience">Experience</a></li>
         <li><a routerLink="#education">Education</a></li>
         <li><a routerLink="#projects">Projects</a></li>
-        <li><a routerLink="#contact">Contact</a></li>
       </ul>
     </section>
     <section>
-      <span>Projects</span>
       <ul>
-        <li><a mat-button href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a></li>
-        <li><a mat-button href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a></li>
+        <li><a href="https://linkedin.com/in/johnschellinger" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/jseashell" target="_blank">Github</a></li>
+        <li><a href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a></li>
+        <li><a href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a></li>
         <li>
-          <a mat-button href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
+          <a href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
             APM Pulse
           </a>
         </li>
       </ul>
     </section>
   </div>
+  <span class="copyright mat-body-small">Copyright © {{ copyright }} John Schellinger</span>
 </footer>

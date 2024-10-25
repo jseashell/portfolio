@@ -16,14 +16,7 @@
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <div>
-    <section>
-      <ul>
-        <li><a routerLink="#contact" class="contact">Contact</a></li>
-      </ul>
-    </section>
-  </div>
-  <div>
+  <div class="container" [ngClass]="{ desktop: isDesktop$ | async }">
     <section>
       <ul>
         <li><a routerLink="#summary">Summary</a></li>
@@ -35,8 +28,17 @@
     </section>
     <section class="right">
       <ul>
-        <li><a href="https://linkedin.com/in/johnschellinger" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/jseashell" target="_blank">Github</a></li>
+        <button (click)="openContactDialog()">Contact<mat-icon iconPositionEnd>mail</mat-icon></button>
+        <li>
+          <a href="https://linkedin.com/in/johnschellinger" target="_blank">
+            LinkedIn<mat-icon svgIcon="linkedin" iconPositionEnd></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/jseashell" target="_blank">
+            Github<mat-icon svgIcon="github" iconPositionEnd></mat-icon>
+          </a>
+        </li>
       </ul>
     </section>
   </div>

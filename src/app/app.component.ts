@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { DesktopService } from '@app/shared/services';
+import { firstValueFrom } from 'rxjs';
 import { ContactDialogComponent } from './features/contact-dialog/contact-dialog.component';
 import { heroSlideTiming } from './features/hero/hero-slide';
 import { HeroComponent } from './features/hero/hero.component';
@@ -71,8 +72,10 @@ export class AppComponent {
   }
 
   openContactDialog(): void {
-    this.dialog.open(ContactDialogComponent, {
-      width: '70%',
+    firstValueFrom(this.desktopService.isDesktop$).then((isDesktop) => {
+      this.dialog.open(ContactDialogComponent, {
+        width: isDesktop ? '70%' : '90%',
+      });
     });
   }
 }

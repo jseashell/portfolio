@@ -1,4 +1,4 @@
-<header>
+<header id="summary">
   <mat-toolbar [@postHeroFade]>
     <div>
       <a mat-icon-button href="https://github.com/jseashell?tab=repositories" target="_blank" aria-label="Github">
@@ -16,31 +16,27 @@
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <div>
+  <div class="container" [ngClass]="{ desktop: isDesktop$ | async }">
     <section>
       <ul>
-        <li><a routerLink="#contact" class="contact">Contact</a></li>
-      </ul>
-    </section>
-  </div>
-  <div>
-    <section>
-      <ul>
+        <li><a routerLink="#summary">Summary</a></li>
         <li><a routerLink="#skills">Skills</a></li>
         <li><a routerLink="#experience">Experience</a></li>
         <li><a routerLink="#education">Education</a></li>
         <li><a routerLink="#projects">Projects</a></li>
       </ul>
     </section>
-    <section>
+    <section class="right">
       <ul>
-        <li><a href="https://linkedin.com/in/johnschellinger" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/jseashell" target="_blank">Github</a></li>
-        <li><a href="https://kdotlyrics.com" target="_blank">kdotlyrics.com</a></li>
-        <li><a href="https://github.com/jseashell/ezmc-cli" target="_blank">EZMC CLI</a></li>
+        <button (click)="openContactDialog()">Contact<mat-icon iconPositionEnd>mail</mat-icon></button>
         <li>
-          <a href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse" target="_blank">
-            APM Pulse
+          <a href="https://linkedin.com/in/johnschellinger" target="_blank">
+            LinkedIn<mat-icon svgIcon="linkedin" iconPositionEnd></mat-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/jseashell" target="_blank">
+            Github<mat-icon svgIcon="github" iconPositionEnd></mat-icon>
           </a>
         </li>
       </ul>

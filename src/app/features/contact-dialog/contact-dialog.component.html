@@ -12,7 +12,12 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Message</mat-label>
-      <textarea matInput formControlName="body" placeholder="Hi, I have an opportunity with..." rows="10"></textarea>
+      <textarea
+        matInput
+        formControlName="body"
+        placeholder="Hi, I have an opportunity with..."
+        [rows]="(desktopService.isDesktop$ | async) === true ? '10' : '4'"
+      ></textarea>
     </mat-form-field>
   </form>
 </mat-dialog-content>

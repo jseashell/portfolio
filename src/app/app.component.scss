@@ -33,7 +33,6 @@ mat-toolbar mat-icon {
 
 footer {
   width: 100%;
-  height: 18rem;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -43,10 +42,14 @@ footer {
   color: var(--app-background);
 }
 
-footer div {
+footer .container {
   width: 100%;
-  max-width: 900px;
   display: flex;
+  max-width: 340px;
+}
+
+footer .container.desktop {
+  max-width: 600px;
 }
 
 footer section {
@@ -55,8 +58,22 @@ footer section {
   width: 50%;
 }
 
-footer ul {
+footer section.right {
+  text-align: right;
+}
+
+footer section.right mat-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+footer section ul {
+  padding: 0;
   list-style-type: none;
+}
+
+footer section ul li {
+  padding: 5px;
 }
 
 footer a,
@@ -65,8 +82,25 @@ footer a:visited {
   color: var(--app-background);
 }
 
-footer .contact {
-  font-weight: 700;
+footer button {
+  color: var(--app-background);
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 5px;
+  font:
+    400 1rem / 1.5rem Roboto,
+    sans-serif;
+}
+
+footer button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer mat-icon:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 footer .copyright {

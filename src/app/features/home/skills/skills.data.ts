@@ -14,6 +14,11 @@ export const skills = [
     description: `<p>I have developed a strong foundation in managing and deploying cloud-based solutions with <b>Amazon Web Services</b>. My experience is particularly extensive with <b>Lambda</b> functions, where I've built and optimized numerous serverless applications by integrating seamlessly with other AWS services like <b>API Gateway</b>, <b>DynamoDB</b>, <b>RDS</b>, and <b>S3</b>.</p><p>I've also had some exposure to <b>ECS</b>, where I've worked on containerizing applications and orchestrating their deployment within a cluster.</p><p>Lastly, I employ the use of <b>Secrets Manager</b>, <b>CloudWatch</b>, and <b>Route 53</b> in every application.`,
   },
   {
+    name: 'CMS',
+    description:
+      '<p>I have experience integrating with <b>Wordpress</b> and <b>headless Content Management Systems</b>, enabling content managers to make updates without code changes. No matter the architecture, I leverage the flexibility of <b>WYSIWYG</b> blocks to enable rich design experiences.</p>',
+  },
+  {
     name: 'Git',
     description:
       "<p>As a software engineer with thorough experience in <b>Git</b>, I excel at managing codebases and facilitating smooth <b>collaboration</b> within development teams.</p><p>I'm proficient in <b>version control</b>, <b>branching</b> strategies, and <b>resolving merge conflicts</b>, ensuring that projects stay on track and code quality remains high. I have practical experience with both <b>Gitflow</b> and <b>trunk-based</b> development.</p>",
@@ -26,12 +31,12 @@ export const skills = [
   {
     name: 'HTML/CSS',
     description:
-      "<p>I have a expert understanding of building and structuring web pages using <b>HTML5</b>. I have comprehensive experience in creating and styling content, ensuring <b>semantic markup</b> and <b>accessibility</b> standards are met.</p><p>I also have experience integrating with a <b>headless CMS</b>, enabling content managers to make updates without code changes.</p><p>Finally, I've worked with <b>modern frameworks</b> and <b>templating engines</b> to streamline the creation of <b>dynamic</b> HTML content, ensuring efficient and maintainable code.</p><p>I specialize in creating <b>responsive</b>, visually appealing web pages using modern techniques like <b>Flexbox</b> and <b>Grid</b>. I excel at crafting clean, <b>maintainable</b> stylesheets and optimizing them for performance to ensure fast, seamless user experiences.</p>",
+      "<p>I have a expert understanding of building and structuring web pages using <b>HTML5</b>. I have comprehensive experience in creating and styling content, ensuring <b>semantic markup</b> and <b>accessibility</b> standards are met.</p><p>I've worked with <b>modern frameworks</b> and <b>templating engines</b> to streamline the creation of <b>dynamic</b> HTML content, ensuring efficient and maintainable code.</p><p>I specialize in creating <b>responsive</b>, visually appealing web pages using modern techniques like <b>Flexbox</b> and <b>Grid</b>. I excel at crafting clean, <b>maintainable</b> stylesheets and optimizing them for performance to ensure fast, seamless user experiences.</p>",
   },
   {
     name: 'Java',
     description:
-      '<p>I have enterprise medtech experience developing a <b>Java-based</b> message broker and <b>ETL</b> service. Although I have not worked with a Java server in some years, my grasp of <b>design patterns</b> and <b>object-oriented programming</b> skills have carried through to my <b>Node.js</b> development. I am comfortable with both <b>inheritance</b> and <b>composition</b>. I have experience implementing the <b>REST</b> standard and <b>SOAP</b> protocol. I utilize  optimization practices like <b>thread-safe locking</b> and <b>singleton</b> architecture.</p>',
+      '<p>I have enterprise medtech experience developing a <b>Java-based</b> message broker and <b>ETL</b> service.</p><p>I am comfortable with both <b>inheritance</b> and <b>composition</b>. I have experience implementing the <b>REST</b> standard and <b>SOAP</b> protocol. I utilize  optimization practices like <b>thread-safe locking</b> and <b>singleton</b> architecture.</p><p>Although I have not worked with a Java server in some years, my grasp of <b>design patterns</b> and <b>object-oriented programming</b> skills have carried through to my <b>Node.js</b> development.</p>',
   },
   {
     name: 'JS/TS',

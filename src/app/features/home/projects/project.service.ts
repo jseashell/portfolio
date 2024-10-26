@@ -17,6 +17,25 @@ export class ProjectService {
   get projects$(): Observable<Project[]> {
     return of([
       {
+        label: 'EZMC CLI',
+        excerpt:
+          'A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service. The server is configured with a free, open-source Cloudformation template.',
+        thumbnail: '/images/ezmc.png',
+        alt: 'Screenshot',
+        buttons: [
+          {
+            href: 'https://jseashell.github.io/ezmc-cli',
+            cta: 'Visit',
+            matIcon: 'open_in_new',
+          },
+          {
+            href: 'https://github.com/jseashell/ezmc-cli',
+            cta: 'Github',
+            svgIcon: 'github',
+          },
+        ],
+      },
+      {
         label: 'KDot Lyrics',
         excerpt:
           'Random Kendrick Lamar lyrics at the click of a button. I built a Golang program to seed an AWS DynamoDB table with lyrics. The web app is written with Angular. The data is fetched through AWS Lambda.',
@@ -41,25 +60,6 @@ export class ProjectService {
           {
             href: 'https://github.com/jseashell/lyrics-db-seeder',
             cta: 'Scraper',
-            svgIcon: 'github',
-          },
-        ],
-      },
-      {
-        label: 'EZMC CLI',
-        excerpt:
-          'A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service. The server is configured with a free, open-source Cloudformation template.',
-        thumbnail: '/images/ezmc.png',
-        alt: 'Screenshot',
-        buttons: [
-          {
-            href: 'https://jseashell.github.io/ezmc-cli',
-            cta: 'Visit',
-            matIcon: 'open_in_new',
-          },
-          {
-            href: 'https://github.com/jseashell/ezmc-cli',
-            cta: 'Github',
             svgIcon: 'github',
           },
         ],

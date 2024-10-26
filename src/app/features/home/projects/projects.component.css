@@ -1,21 +1,32 @@
+:host * {
+  user-select: none;
+}
+
 p {
   padding: 1rem 1rem 0;
   box-sizing: border-box;
 }
 
-.links {
-  margin: 1rem;
+ul {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding-left: 0.8rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
+}
+
+li {
+  padding: 0.25rem;
 }
 
 div.thumbnail {
   width: 100%;
   height: auto;
-  object-fit: contain;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 img {
@@ -23,10 +34,6 @@ img {
   width: calc(100% - 2rem);
   box-sizing: border-box;
   border-radius: 12px;
-}
-
-img.apm-pulse {
-  width: 60%;
 }
 
 h4 {

@@ -1,63 +1,27 @@
-<mat-tab-group dynamicHeight>
-  <mat-tab label="KDot Lyrics">
-    <p>
-      Random Kendrick Lamar lyrics at the click of a button. I built a Golang program to seed a AWS DynamoDB table with
-      lyrics. The web app is written with Angular. The data is fetched through AWS Lambda.
-    </p>
-    <div class="links kdot">
-      <a mat-button class="mat-title-medium" href="https://kdotlyrics.com" target="_blank"
-        >Visit kdotlyrics.com<mat-icon iconPositionEnd>open_in_new</mat-icon>
-      </a>
-    </div>
-    <div class="links">
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/kdot-lyrics-client" target="_blank">
-        Web App<mat-icon iconPositionEnd svgIcon="github"></mat-icon>
-      </a>
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/kdot-lyrics-api" target="_blank">
-        API<mat-icon iconPositionEnd svgIcon="github"></mat-icon>
-      </a>
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/lyrics-db-seeder" target="_blank">
-        Scraper<mat-icon iconPositionEnd svgIcon="github"></mat-icon>
-      </a>
-    </div>
-    <div class="thumbnail">
-      <img src="/images/kdot-lyrics.png" alt="Screenshot" />
-    </div>
-  </mat-tab>
-  <mat-tab label="EZMC CLI">
-    <p
-      >A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service. The server is
-      configured with a free, open-source Cloudformation template.</p
-    >
-    <div class="links">
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/ezmc-cli" target="_blank">
-        Github<mat-icon iconPositionEnd svgIcon="github"></mat-icon>
-      </a>
-    </div>
-    <div class="thumbnail">
-      <img src="/images/ezmc.png" alt="Screenshot" />
-    </div>
-  </mat-tab>
-  <mat-tab label="APM Pulse">
-    <p>
-      Game-style APM counter in your VS Code bottom status bar that track your actions per minute while coding. It
-      features command palette and settings integrations.
-    </p>
-    <div class="links">
-      <a
-        mat-button
-        class="mat-title-medium"
-        href="https://marketplace.visualstudio.com/items?itemName=jseashell.apm-pulse"
-        target="_blank"
-      >
-        Marketplace<mat-icon iconPositionEnd svgIcon="vscode"></mat-icon>
-      </a>
-      <a mat-button class="mat-title-medium" href="https://github.com/jseashell/apm-pulse" target="_blank">
-        Github<mat-icon iconPositionEnd svgIcon="github"></mat-icon>
-      </a>
-    </div>
-    <div class="thumbnail">
-      <img src="/images/apm-pulse.gif" alt="Demo gif" />
-    </div>
-  </mat-tab>
+<mat-tab-group
+  dynamicHeight
+  [selectedIndex]="selected"
+  (swipeleft)="swipe($event.type)"
+  (swiperight)="swipe($event.type)"
+>
+  @for (project of service.projects$ | async; track project.label) {
+    <mat-tab [label]="project.label">
+      <p>
+        {{ project.excerpt }}
+      </p>
+      <div class="thumbnail">
+        <img [src]="project.thumbnail" [alt]="project.alt" class="mat-elevation-z2" />
+      </div>
+      <ul class="links">
+        @for (button of project.buttons; track button.href) {
+          <li>
+            <a mat-raised-button class="mat-title-medium" [href]="button.href" target="_blank">
+              {{ button.cta
+              }}<mat-icon iconPositionEnd [svgIcon]="button.svgIcon ?? ''">{{ button.matIcon ?? '' }}</mat-icon>
+            </a>
+          </li>
+        }
+      </ul>
+    </mat-tab>
+  }
 </mat-tab-group>

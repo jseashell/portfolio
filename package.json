@@ -4,7 +4,7 @@
   "author": "John Schellinger",
   "license": "MIT",
   "scripts": {
-    "postinstall": "cd app && npm install && cd ../cloud && npm install",
+    "postinstall": "cd web && npm install && cd ../api && npm install",
     "test": "echo 1; No tests are defined"
   },
   "devDependencies": {

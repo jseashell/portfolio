@@ -13,9 +13,9 @@ jobs:
       - name: Install project
         run: npm ci --silent
       - name: Building web app
-        run: cd app && npm run build
-      - name: Building cloud backend
-        run: cd app && npx serverless package --stage main --verbose
+        run: cd web && npm run build
+      - name: Building http api
+        run: cd api && npx serverless package --stage main
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -23,4 +23,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Serverless Deploy
-        run: npx serverless deploy --stage main --verbose
+        run: npx serverless deploy --stage main

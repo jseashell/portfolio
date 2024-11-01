@@ -1,5 +1,5 @@
 services:
-  app:
-    path: app
-  cloud:
-    path: cloud
+  api:
+    path: api
+  web:
+    path: web

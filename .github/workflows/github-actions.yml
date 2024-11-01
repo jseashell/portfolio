@@ -12,8 +12,10 @@ jobs:
         uses: actions/setup-node@v4
       - name: Install project
         run: npm ci --silent
-      - name: Build
-        run: npm run build
+      - name: Building web app
+        run: cd app && npm run build
+      - name: Building cloud backend
+        run: cd app && npx serverless package --stage main --verbose
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

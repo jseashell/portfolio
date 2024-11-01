@@ -8,6 +8,7 @@
     "test": "echo 1; No tests are defined"
   },
   "devDependencies": {
+    "serverless": "^3.39.0",
     "serverless-compose": "^2.4.0"
   }
 }

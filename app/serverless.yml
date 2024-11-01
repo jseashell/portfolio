@@ -5,7 +5,7 @@ plugins:
   - serverless-cloudfront-invalidate # add as the last plugin
 
 custom:
-  bucketName: johnschellinger-${self:service}-${sls:stage}
+  bucketName: ${self:service}-${sls:stage}
   domainName: johnschellinger.com
   route53HostedZoneId: Z0412067Z5SFHEXYC0KO
   cloudfrontHostedZoneId: Z2FDTNDATAQYW2

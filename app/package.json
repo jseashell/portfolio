@@ -11,6 +11,9 @@
     "test:watch": "jest --watch",
     "format": "prettier . --write --list-different"
   },
+  "engines": {
+    "node": ">=20.18.0"
+  },
   "dependencies": {
     "@angular/animations": "^18.1.0",
     "@angular/cdk": "^18.1.1",

@@ -1,21 +1,23 @@
 # Portfolio
 
-My [portfolio](https://johnschellinger.com).
+Angular client for my [portfolio](https://johnschellinger.com)
 
-# Services
+## Development server
 
-## /app
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Angular client
+## Code scaffolding
 
-- Angular + Material @ v18
-- AWS S3 + Cloudfront deployment using Serverless
-- Domain provisioning using Cloudformation
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## /cloud
+## Build
 
-AWS Lambda backend
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-- Typescript Lambda functions
-- AWS Lambda + API Gateway deployment using Serverless
-- API key
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## License
+
+This software is distributed under the terms of the [MIT License](/LICENSE).

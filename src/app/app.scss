@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+	--max-width: 1100px;
+	--bg: #0f172a; /* popular dark background */
+	--text: #e6edf3;
+}
+
+html, body, app-root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: var(--bg);
+	color: var(--text);
+}
+
+.content {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+/* Ensure router content is centered and consistent across pages */
+
+/* Small responsive tweaks */
+@media (max-width: 900px) {
+	.projects .project {
+		grid-template-columns: 1fr;
+	}
+}

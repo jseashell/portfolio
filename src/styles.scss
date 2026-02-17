@@ -1,22 +1,37 @@
-@use '@styles/typography.scss' as typography;
-@use '@styles/variables.scss' as vars;
+// Angular Material theming setup with custom primary and tertiary palettes
+@use '@angular/material' as mat;
+// No need for mat-theming with M2 API
+@use './styles/palette.scss' as palette;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+// Optionally import a default font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-html,
-body,
+// Define the theme using the M2 API
+// Define a dark theme using the M2 API and custom palettes
+$theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: palette.$primary-palette,
+      accent: palette.$accent-palette,
+      tertiary: palette.$tertiary-palette,
+    ),
+  )
+);
+
+// Apply the theme to the application
+html {
+  height: 100%;
+  @include mat.core();
+  @include mat.all-component-themes($theme);
+}
+
 body {
   margin: 0;
-  font-family:
-    'Inter',
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial;
-  background: vars.$bg;
-  color: vars.$fg;
+  height: 100%;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background-color: var(--mdc-theme-background);
+  color: var(--mdc-theme-on-background);
+  color-scheme: dark;
 }
 
 app-root {

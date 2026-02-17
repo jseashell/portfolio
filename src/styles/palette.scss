@@ -1,0 +1,111 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+// Custom palette colors
+$primary-500: #869d7a;
+$primary-palette-colors: (
+  50: #eaf1e7,
+  100: #c8d9be,
+  200: #a3c194,
+  300: #8fb87f,
+  400: #7ca86e,
+  500: $primary-500,
+  600: #6e845f,
+  700: #5a6b4c,
+  800: #49573d,
+  900: #2e3a23,
+  A100: #eaf1e7,
+  A200: #a3c194,
+  A400: #7ca86e,
+  A700: #2e3a23,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #fff,
+    A700: #fff,
+  ),
+);
+
+$primary-palette: mat.m2-define-palette($primary-palette-colors, 500, 100, 900);
+
+// Accent palette colors (moved from previous tertiary)
+$accent-500: #71697a;
+$accent-palette-colors: (
+  50: #f0eef2,
+  100: #d6d2de,
+  200: #b9b1c3,
+  300: #a197b0,
+  400: #8a7e9c,
+  500: $accent-500,
+  600: #635c6a,
+  700: #524c57,
+  800: #423d46,
+  900: #2d2930,
+  A100: #e3d8f7,
+  A200: #b9b1c3,
+  A400: #8a7e9c,
+  A700: #2d2930,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #fff,
+    A700: #fff,
+  ),
+);
+$accent-palette: mat.m2-define-palette($accent-palette-colors, 500, 100, 900);
+
+// New tertiary palette (harmonious with primary/accent)
+$tertiary-500: #7a9d96;
+$tertiary-palette-colors: (
+  50: #e6f2ef,
+  100: #bfe0d8,
+  200: #99cec1,
+  300: #7fbfb0,
+  400: #65b09f,
+  500: $tertiary-500,
+  600: #6a8d87,
+  700: #58746f,
+  800: #465b57,
+  900: #2d3937,
+  A100: #e6f2ef,
+  A200: #99cec1,
+  A400: #65b09f,
+  A700: #2d3937,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #fff,
+    A700: #fff,
+  ),
+);
+$tertiary-palette: mat.m2-define-palette($tertiary-palette-colors, 500, 100, 900);

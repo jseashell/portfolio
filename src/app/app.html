@@ -1,33 +1,9 @@
-<header>
-  <nav>
-    <a [routerLink]="['./']" fragment="about">About</a>
-    <a [routerLink]="['./']" fragment="projects">Projects</a>
-    <a [routerLink]="['./']" fragment="contact">Contact</a>
-  </nav>
-</header>
 <main>
-  <div class="hero">
-    <h1>
-      Hi, my name is{{ ' ' }}<br />
-      <span class="name">John Schellinger</span>.
-    </h1>
-    <h2>
-      I am a <span>{{ subtitle$ | async }}</span
-      >.
-    </h2>
-    <p>
-      Software engineering lead with
-      <span>{{ yearsExp }} years</span> industry experience building innovative
-      <span>web apps</span>. Craftsman of <span>accessible</span> and <span>secure</span> user
-      experiences. <span>Committed to quality</span> with a <span>solution-oriented</span> approach
-      where <span>no technology is off-limits</span>.
-    </p>
-  </div>
-
-  <app-about id="about"></app-about>
+  <app-hero></app-hero>
   <app-projects id="projects"></app-projects>
   <app-contact id="contact"></app-contact>
+  <app-design></app-design>
 </main>
 <footer>
-  <p>© {{ year }} John Schellinger</p>
+  <p>© {{ year }} {{ name }}</p>
 </footer>

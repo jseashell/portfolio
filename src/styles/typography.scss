@@ -5,25 +5,45 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a,
-p,
-span {
-  color: vars.$fg;
+h6 {
+  font-family: vars.$font-family;
+  margin: 0;
 }
 
 h1 {
-  font-weight: 200;
-
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 100;
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: 200;
 }
 
 h3 {
+  font-size: clamp(1.1rem, 2vw, 2rem);
   font-weight: 300;
-  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+}
+
+h5 {
+  font-size: clamp(0.95rem, 1vw, 1.2rem);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: clamp(0.9rem, 0.8vw, 1rem);
+  font-weight: 600;
+}
+
+p,
+a {
+  font-family: vars.$font-family;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.2; // little extra space for g, j, p, q, y;
 }

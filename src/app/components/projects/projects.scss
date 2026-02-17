@@ -1,18 +1,14 @@
 @use '@styles/variables.scss' as vars;
 
 section {
-  max-width: vars.$max-width;
+  max-width: vars.$wrapper-width;
   margin: 0 auto;
-  padding: 2rem 1rem;
-
-  h2 {
-    margin-bottom: 1.5rem;
-  }
+  padding: 2vw 1vw;
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 3vw;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,7 +17,7 @@ section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 1.25rem;
+      gap: clamp(1rem, 1.25vw, 1.25rem);
 
       div.thumb {
         width: 512px;

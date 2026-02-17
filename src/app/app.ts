@@ -1,45 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { AboutComponent, ContactComponent, ProjectsComponent } from '@app/features';
-import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
-import { TypewriterService } from './common/services';
+import { Component } from '@angular/core';
+import { ContactComponent, ProjectsComponent } from '@app/components';
+import { NAME } from './common/constants/application-constants';
+import { DesignComponent } from './components/design/design';
+import { HeroComponent } from './components/hero/hero';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AboutComponent, ContactComponent, ProjectsComponent, RouterLink],
+  imports: [CommonModule, ContactComponent, HeroComponent, ProjectsComponent, DesignComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App implements OnInit {
+export class App {
+  readonly name = NAME;
   readonly year = new Date().getFullYear();
-
-  private toolbarSubtitleService = inject(TypewriterService);
-  subtitle$ = new ReplaySubject<string>(1);
-  private subtitles = [
-    'Software Engineer',
-    'System Architect',
-    'Solutions Expert',
-    'Front-end Engineer',
-    'Creative Thinker',
-    'Integration Specialist',
-    'Back-end Engineer',
-    'Code Craftsman',
-    'Fullstack Engineer',
-  ];
-
-  yearsExp = new Date().getFullYear() - 2016;
-
-  ngOnInit(): void {
-    const defaultCssDuration = 600;
-    timer(1.5 * defaultCssDuration)
-      .pipe(
-        switchMap(() => this.toolbarSubtitleService.typewriter$(this.subtitles)),
-        tap((subtitle: string) => {
-          this.subtitle$.next(subtitle);
-        }),
-      )
-      .subscribe();
-  }
 }

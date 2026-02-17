@@ -1,51 +1,33 @@
 @use '@styles/variables.scss' as vars;
 
-header {
-  position: sticky;
-  top: 3rem;
-  max-width: vars.$max-width;
+main {
+  grid-area: main;
+  position: relative;
+  max-width: vars.$wrapper-width;
   margin: 0 auto;
 
-  nav {
-    position: absolute;
-    left: -12rem;
-    display: flex;
-    width: min-content;
-    flex-direction: column;
-    justify-content: center;
-    height: min-content;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    outline: 3px solid vars.$fg;
-    border-radius: 25px;
-    margin: 1rem;
-    box-sizing: border-box;
-
-    a {
-      padding: 1rem 0;
-      text-decoration: none;
+  section {
+    min-height: 100vh;
+    app-hero {
+      max-width: vars.$wrapper-width;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
     }
   }
-}
 
-main {
-  max-width: vars.$max-width;
-  margin: 0 auto;
-
-  .hero {
-    padding: 35% 0 65%;
-    box-sizing: border-box;
-
-    p {
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
+  app-projects,
+  app-contact {
+    display: block;
+    margin-top: 60vh; /* each section scrolls out of view before the next one enters */
   }
 }
 
 footer {
+  width: 100%;
+  height: min-content;
   padding: 1rem;
   text-align: center;
-  background: vars.$fg;
-  color: vars.$bg;
+  background: vars.$foreground;
+  color: vars.$background;
 }

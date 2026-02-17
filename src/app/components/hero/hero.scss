@@ -1,0 +1,52 @@
+@use '@styles/variables.scss' as vars;
+
+$pfpWrapperWidth: clamp(8rem, 30vw, 19rem);
+
+:host {
+  height: 100%;
+  width: 100%;
+}
+
+div.hero {
+  grid-area: header;
+  position: relative;
+  display: grid;
+  grid-template-columns: $pfpWrapperWidth 1fr;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+    'img h1'
+    'img h2'
+    'p p';
+
+  div.pfp {
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    width: $pfpWrapperWidth;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  h1 {
+    grid-area: h1;
+    align-self: center;
+    justify-self: start;
+  }
+
+  h2 {
+    grid-area: h2;
+    align-self: center;
+    justify-self: start;
+  }
+
+  p {
+    grid-area: p;
+    align-self: start;
+    justify-self: start;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid vars.$foreground;
+  }
+}

@@ -2,13 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ContactComponent, ProjectsComponent } from '@app/components';
 import { NAME } from './common/constants/application-constants';
-import { DesignComponent } from './components/design/design';
 import { HeroComponent } from './components/hero/hero';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ContactComponent, HeroComponent, ProjectsComponent, DesignComponent],
+  imports: [CommonModule, ContactComponent, HeroComponent, ProjectsComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

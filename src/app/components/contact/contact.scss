@@ -1,19 +1,24 @@
+@use '@styles/palette.scss' as palette;
 @use '@styles/variables.scss' as vars;
 
 // Snackbar theming
 .snackbar-success {
   background: #388e3c !important;
-  color: #fff !important;
+  color: vars.$foreground !important;
 }
 .snackbar-failure {
   background: #d32f2f !important;
-  color: #fff !important;
+  color: vars.$foreground !important;
 }
 
 section {
+  h2 {
+    color: vars.$background;
+  }
+
   padding: 2rem;
-  background: #fff;
-  color: #000;
+  background-color: vars.$foreground;
+  color: vars.$background;
   border-radius: 16px;
   max-width: vars.$wrapper-width;
   margin: 2rem auto;
@@ -23,6 +28,11 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    // mat-form-field > * {
+    //   background-color: #fff;
+    //   color: #000;
+    // }
 
     label {
       margin-bottom: 0.5rem;
@@ -34,7 +44,6 @@ section {
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 1rem;
-      background: #fff;
       color: #000;
       margin-bottom: 0.25rem;
     }

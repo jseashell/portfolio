@@ -6,20 +6,21 @@ main {
   max-width: vars.$wrapper-width;
   margin: 0 auto;
 
-  section {
+  div.component {
     min-height: 100vh;
-    app-hero {
+    display: flex;
+    align-items: center;
+
+    app-hero,
+    app-projects,
+    app-contact {
       max-width: vars.$wrapper-width;
+      display: block;
       height: 100%;
       width: 100%;
+      justify-content: center;
       margin: 0 auto;
     }
-  }
-
-  app-projects,
-  app-contact {
-    display: block;
-    margin-top: 60vh; /* each section scrolls out of view before the next one enters */
   }
 }
 
@@ -28,6 +29,6 @@ footer {
   height: min-content;
   padding: 1rem;
   text-align: center;
-  background: vars.$foreground;
-  color: vars.$background;
+  background: #{vars.$foreground};
+  color: #{vars.$background};
 }

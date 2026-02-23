@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { NAME } from '@app/common/constants/application-constants';
 import { TypewriterService } from '@app/common/services';
 import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
 
@@ -12,8 +11,6 @@ import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
   styleUrls: ['./hero.scss'],
 })
 export class HeroComponent implements OnInit {
-  name = NAME;
-
   #typewriter = inject(TypewriterService);
   subtitle$ = new ReplaySubject<string>(1);
 

@@ -13,12 +13,11 @@
 
 section {
   h2 {
-    color: vars.$background;
+    margin-bottom: 1rem;
   }
-
   padding: 2rem;
-  background-color: vars.$foreground;
-  color: vars.$background;
+  background-color: palette.$accent-500;
+  color: vars.$foreground;
   border-radius: 16px;
   max-width: vars.$wrapper-width;
   margin: 2rem auto;
@@ -29,11 +28,6 @@ section {
     flex-direction: column;
     gap: 1.5rem;
 
-    // mat-form-field > * {
-    //   background-color: #fff;
-    //   color: #000;
-    // }
-
     label {
       margin-bottom: 0.5rem;
       font-weight: 500;
@@ -42,9 +36,8 @@ section {
     input,
     textarea {
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid palette.$primary-500;
       font-size: 1rem;
-      color: #000;
       margin-bottom: 0.25rem;
     }
 
@@ -52,7 +45,7 @@ section {
       resize: vertical;
       max-width: 100%;
       min-width: 0;
-      font-family: Inter;
+      font-family: vars.$font-family !important;
     }
 
     button[type='submit'] {
@@ -66,15 +59,12 @@ section {
       transition: background 0.2s;
     }
 
-    button[type='submit']:disabled {
-      background: #888;
-      cursor: not-allowed;
+    button[type='submit'] {
+      background: palette.$primary-500;
     }
-
-    div {
-      color: #d00;
-      font-size: 0.9rem;
-      margin-top: 0.25rem;
+    button[type='submit']:disabled {
+      background: palette.$accent-700;
+      cursor: not-allowed;
     }
   }
 }

@@ -21,13 +21,13 @@ div.hero {
     'p p';
 
   @media only screen and (max-width: vars.$bp-mobile) {
-    // grid-template-columns: $pfpWrapperWidth 1fr;
-    // grid-template-rows: repeat(3, min-content);
-    // gap: 2rem;
-    // grid-template-areas:
-    //   'img h1'
-    //   'code code'
-    //   'p p';
+    grid-template-columns: $pfpWrapperWidth 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    grid-template-areas:
+      'img h1'
+      'code code'
+      'p p';
   }
 
   .circle {
@@ -70,6 +70,7 @@ div.hero {
 
     @media only screen and (max-width: vars.$bp-mobile) {
       align-self: center;
+      margin-top: 2rem;
     }
   }
 
@@ -138,6 +139,7 @@ div.hero {
     font-weight: 300;
 
     span {
+      font-size: clamp(1.2rem, 1.4vw, 1.4rem);
       font-weight: 700;
       color: palette.$tertiary-500;
     }

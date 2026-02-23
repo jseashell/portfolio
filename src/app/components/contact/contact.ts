@@ -63,7 +63,7 @@ export class ContactComponent {
             panelClass: ['snackbar-success'],
           });
           this.form.reset();
-          this.form.markAsPristine;
+          this.form.markAsPristine();
         },
         (err) => {
           console.error(err);

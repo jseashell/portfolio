@@ -1,6 +1,7 @@
+@use '@styles/palette.scss' as palette;
 @use '@styles/variables.scss' as vars;
 
-$pfpWrapperWidth: clamp(8rem, 30vw, 19rem);
+$pfpWrapperWidth: clamp(8rem, 30vw, 16rem);
 
 :host {
   height: 100%;
@@ -13,10 +14,32 @@ div.hero {
   display: grid;
   grid-template-columns: $pfpWrapperWidth 1fr;
   grid-template-rows: repeat(3, min-content);
+  gap: 2rem;
   grid-template-areas:
     'img h1'
-    'img h2'
+    'img code'
     'p p';
+
+  .circle {
+    position: absolute;
+    top: 16px; // this will scale with the width/height
+    left: 0;
+    right: 8px;
+    width: calc($pfpWrapperWidth - 26px);
+    height: calc($pfpWrapperWidth - 26px);
+    border-radius: 50%;
+    border: 8px solid palette.$primary-500;
+
+    &.top {
+      z-index: -1;
+      clip-path: inset(0 0 50% 0);
+    }
+
+    &.bottom {
+      z-index: 1;
+      clip-path: inset(50% 0 0 0);
+    }
+  }
 
   div.pfp {
     grid-area: img;
@@ -24,29 +47,80 @@ div.hero {
     justify-self: center;
     display: flex;
     width: $pfpWrapperWidth;
-    aspect-ratio: 1;
     overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 1;
     border-radius: 50%;
   }
 
   h1 {
     grid-area: h1;
-    align-self: center;
+    align-self: end;
     justify-self: start;
   }
 
-  h2 {
-    grid-area: h2;
-    align-self: center;
+  pre {
+    grid-area: code;
+    align-self: start;
     justify-self: start;
+    height: 5.5em;
+    margin: 0;
+    background-color: palette.$accent-700;
+    width: 100%;
+    border-radius: 16px;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    code {
+      span {
+        &.primary-500 {
+          color: palette.$primary-500;
+        }
+
+        &.tertiary-500 {
+          color: palette.$tertiary-500;
+        }
+
+        &.purple {
+          color: rgb(165, 90, 179);
+        }
+
+        &.orange {
+          color: rgb(191, 148, 74);
+        }
+
+        &.blink {
+          border-right: 1px solid vars.$foreground;
+          animation: blink-animation 1s steps(5, start) infinite;
+          -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        }
+      }
+
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+    }
   }
 
-  p {
+  p.summary {
     grid-area: p;
     align-self: start;
     justify-self: start;
-    margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid vars.$foreground;
+    border-top: 2px solid vars.$foreground;
+    box-sizing: border-box;
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+      color: palette.$tertiary-500;
+    }
   }
 }

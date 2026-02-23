@@ -21,9 +21,9 @@ export class TypewriterService {
     return from(subtitles).pipe(
       concatMap((subtitle) =>
         concat(
-          this.type({ subtitle, speed: 50 }),
+          this.type({ subtitle, speed: 70 }),
           of('').pipe(delay(2000), ignoreElements()),
-          this.type({ subtitle, speed: 25, backwards: true }),
+          this.type({ subtitle, speed: 30, backwards: true }),
           of('').pipe(delay(500), ignoreElements()),
         ),
       ),

@@ -40,6 +40,7 @@ $primary-palette: mat.m2-define-palette($primary-palette-colors, 500, 100, 900);
 
 // Accent palette colors (moved from previous tertiary)
 $accent-500: #71697a;
+$accent-700: #524c57;
 $accent-palette-colors: (
   50: #f0eef2,
   100: #d6d2de,
@@ -48,7 +49,7 @@ $accent-palette-colors: (
   400: #8a7e9c,
   500: $accent-500,
   600: #635c6a,
-  700: #524c57,
+  700: $accent-700,
   800: #423d46,
   900: #2d2930,
   A100: #e3d8f7,

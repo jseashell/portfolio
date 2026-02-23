@@ -24,21 +24,20 @@ export class HeroComponent implements OnInit {
    * - a period purposefully exists at the end so that it, too, is included in the {@link #typewriter}.
    * */
   #subtitles = [
-    ' Software Engineer.',
-    ' System Architect.',
-    'n Integration Specialist.',
-    ' Full Stack Engineer.',
-    ' Solutions Expert.',
-    ' Creative Thinker.',
-    ' Design Thinker.',
-    ' Strategic Troubleshooter.',
-    ' Problem Solver',
-    ' Code Craftsman.',
-    'n Interface Specialist.',
-    ' Fullstack Engineer.',
-    ' Tech Professional',
-    'n Experience Builder.',
-    ' Project Leader.',
+    'Software Engineer',
+    'System Architect',
+    'Integration Specialist',
+    'Full Stack Engineer',
+    'Solutions Expert',
+    'Creative Thinker',
+    'Design Thinker',
+    'Strategic Troubleshooter',
+    'Problem Solver',
+    'Code Craftsman',
+    'Interface Specialist',
+    'Technology Professional',
+    'Experience Builder',
+    'Project Leader',
   ];
 
   #firstEmployeedYear = 2016;

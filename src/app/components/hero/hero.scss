@@ -20,6 +20,16 @@ div.hero {
     'img code'
     'p p';
 
+  @media only screen and (max-width: vars.$bp-mobile) {
+    // grid-template-columns: $pfpWrapperWidth 1fr;
+    // grid-template-rows: repeat(3, min-content);
+    // gap: 2rem;
+    // grid-template-areas:
+    //   'img h1'
+    //   'code code'
+    //   'p p';
+  }
+
   .circle {
     position: absolute;
     top: 16px; // this will scale with the width/height
@@ -57,6 +67,10 @@ div.hero {
     grid-area: h1;
     align-self: end;
     justify-self: start;
+
+    @media only screen and (max-width: vars.$bp-mobile) {
+      align-self: center;
+    }
   }
 
   pre {
@@ -79,6 +93,10 @@ div.hero {
 
         &.tertiary-500 {
           color: palette.$tertiary-500;
+        }
+
+        &.accent-500 {
+          color: palette.$accent-500;
         }
 
         &.purple {
@@ -114,6 +132,7 @@ div.hero {
     align-self: start;
     justify-self: start;
     padding-top: 2rem;
+    margin: 0;
     border-top: 2px solid vars.$foreground;
     box-sizing: border-box;
     font-weight: 300;

@@ -1,0 +1,13 @@
+@use '@styles/palette' as palette;
+
+@mixin primary-500 {
+  color: palette.$primary-500;
+}
+
+@mixin tertiary-500 {
+  color: palette.$tertiary-500;
+}
+
+@mixin accent-500 {
+  color: palette.$accent-500;
+}

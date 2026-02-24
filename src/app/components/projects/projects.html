@@ -1,18 +1,24 @@
 <section>
-  <h2>Projects</h2>
   <ul>
-    @for (p of projects; track p.title; let i = $index) {
-      <article>
-        <div class="thumb">
-          <img [src]="p.thumbnail" alt="{{ p.title }}" />
+    @for (project of projects; track $index; let i = $index) {
+      <li>
+        <div
+          class="wrapper"
+          [class.left]="i % 2 > 0"
+          [class.right]="i % 2 == 0"
+          appScrollIntoViewTrigger
+        >
+          <div class="thumb">
+            <img [src]="project?.thumbnail" alt="{{ project?.title }}" />
+          </div>
+          <div class="meta">
+            <h3>{{ project?.title }}</h3>
+            <p>{{ project?.company }} • {{ project?.yoe }}</p>
+            <p>{{ project?.summary }}</p>
+            <p>{{ project?.body }}</p>
+          </div>
         </div>
-        <div class="meta">
-          <h3>{{ p.title }}</h3>
-          <p>{{ p.company }} • {{ p.yoe }}</p>
-          <p>{{ p.summary }}</p>
-          <p>{{ p.body }}</p>
-        </div>
-      </article>
+      </li>
     }
   </ul>
 </section>

@@ -5,10 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import emailjs from '@emailjs/browser';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
-import emailjs from 'emailjs-com';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
@@ -65,7 +65,7 @@ export class ContactComponent {
           this.form.reset();
           this.form.markAsPristine();
         },
-        (err) => {
+        (err: any) => {
           console.error(err);
           this.snackBar.open('Oops! Something happened. Please try again later.', 'Close', {
             duration: 4000,

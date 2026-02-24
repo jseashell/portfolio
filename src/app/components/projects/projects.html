@@ -1,0 +1,18 @@
+<section>
+  <h2>Projects</h2>
+  <ul>
+    @for (p of projects; track p.title; let i = $index) {
+      <article>
+        <div class="thumb">
+          <img [src]="p.thumbnail" alt="{{ p.title }}" />
+        </div>
+        <div class="meta">
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.company }} • {{ p.yoe }}</p>
+          <p>{{ p.summary }}</p>
+          <p>{{ p.body }}</p>
+        </div>
+      </article>
+    }
+  </ul>
+</section>

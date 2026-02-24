@@ -1,28 +1,44 @@
-@import 'material-icons/iconfont/material-icons.css';
+// Angular Material theming setup with custom primary and tertiary palettes
+@use '@angular/material' as mat;
+// No need for mat-theming with M2 API
+@use './styles/palette.scss' as palette;
+// App variables
+@use '@styles/variables.scss' as vars;
+// Typography config
+@use '@styles/typography.scss';
+// Optionally import a default font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+// Define a dark theme using the M2 API and custom palettes
+$theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: palette.$primary-palette,
+      accent: palette.$accent-palette,
+      tertiary: palette.$tertiary-palette,
+    ),
+  )
+);
+
+// Apply the theme to the application
 html {
   height: 100%;
-  --app-background: #f5f5f5;
-  // #dddddd;
-  --app-foreground: #1d1a31;
-  background-color: var(--app-background);
+  @include mat.core();
+  @include mat.all-component-themes($theme);
 }
 
 body {
+  --mdc-theme-background: #{vars.$background};
+  --mdc-theme-on-background: #{vars.$foreground};
+
+  margin: 0;
   height: 100%;
-  background-color: var(--app-background);
-  color: var(--app-foreground);
-  margin: 0 auto;
-  font-family: Inter, Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background-color: var(--mdc-theme-background);
+  color: var(--mdc-theme-on-background);
+  color-scheme: dark;
 }
 
-a,
-a:active,
-a:visited {
-  text-decoration: none;
-  color: var(--mdc-text-button-label-text-color);
-}
-
-a:hover {
-  text-decoration: underline;
+app-root {
+  height: 100%;
 }

@@ -1,19 +1,15 @@
-import { provideHttpClient } from '@angular/common/http';
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
-    provideAnimations(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideBrowserGlobalErrorListeners(),
     provideRouter(
       routes,
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
-        scrollPositionRestoration: 'enabled',
       }),
     ),
   ],

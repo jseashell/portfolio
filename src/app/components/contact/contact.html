@@ -1,0 +1,90 @@
+<section>
+  <h2>Contact</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        id="name"
+        formControlName="name"
+        type="text"
+        placeholder="Your name"
+        maxlength="255"
+        required
+      />
+      @if (form.get('name')?.errors?.['required'] && form.get('name')?.touched) {
+        <mat-error>Required</mat-error>
+      }
+      @if (form.get('name')?.errors?.['maxlength'] && form.get('name')?.touched) {
+        <mat-error>Max 255 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Respond to</mat-label>
+      <input
+        matInput
+        id="respondTo"
+        formControlName="respondTo"
+        type="respondTo"
+        placeholder="Your email"
+        required
+      />
+      @if (form.get('respondTo')?.errors?.['required'] && form.get('respondTo')?.touched) {
+        <mat-error>Required</mat-error>
+      }
+      @if (form.get('respondTo')?.errors?.['respondTo'] && form.get('respondTo')?.touched) {
+        <mat-error>Invalid email address</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Subject</mat-label>
+      <input
+        matInput
+        id="subject"
+        formControlName="subject"
+        type="text"
+        placeholder="Subject"
+        maxlength="255"
+      />
+      @if (form.get('subject')?.errors?.['required'] && form.get('subject')?.touched) {
+        <mat-error>Required</mat-error>
+      }
+      @if (form.get('subject')?.errors?.['maxlength'] && form.get('subject')?.touched) {
+        <mat-error>Max 255 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Company</mat-label>
+      <input
+        matInput
+        id="company"
+        formControlName="company"
+        type="text"
+        placeholder="Your company (optional)"
+        maxlength="255"
+      />
+      @if (form.get('company')?.errors?.['maxlength'] && form.get('company')?.touched) {
+        <mat-error>Max 255 characters</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea
+        matInput
+        id="message"
+        formControlName="message"
+        placeholder="Your message"
+        required
+        rows="5"
+      ></textarea>
+      @if (form.get('message')?.errors?.['required'] && form.get('message')?.touched) {
+        <mat-error>Required</mat-error>
+      }
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Send</button>
+  </form>
+</section>

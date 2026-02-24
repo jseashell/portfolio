@@ -43,6 +43,9 @@
     "@angular/compiler-cli": "^21.1.5",
     "@angular/material": "^21.1.5",
     "jsdom": "^28.1.0",
+    "serverless": "^3.40.0",
+    "serverless-cloudfront-invalidate": "^1.12.2",
+    "serverless-s3-sync": "^3.5.1",
     "typescript": "~5.9.3",
     "vitest": "^4.0.18"
   }

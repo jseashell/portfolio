@@ -1,4 +1,4 @@
-<section appContactScrollTrigger>
+<div appFadeInOnScroll>
   <h2>Contact</h2>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="outline" color="primary">
@@ -87,4 +87,4 @@
     </mat-form-field>
     <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Send</button>
   </form>
-</section>
+</div>

@@ -1,21 +1,57 @@
 <section>
+  <h2 id="experience" appFadeInOnScroll>Professional Experience</h2>
   <ul>
-    @for (project of projects; track $index; let i = $index) {
+    @for (project of proExperience; track $index; let i = $index) {
       <li>
-        <div
-          class="wrapper"
-          [class.left]="i % 2 > 0"
-          [class.right]="i % 2 == 0"
-          appProjectScrollTrigger
-        >
+        <div class="wrapper" [class.left]="i % 2 > 0" [class.right]="i % 2 == 0" appFadeInOnScroll>
           <div class="thumb">
-            <img [src]="project?.thumbnail" alt="{{ project?.title }}" />
+            <img [src]="project?.thumbnail" [alt]="project?.title" />
           </div>
           <div class="meta">
-            <h3>{{ project?.title }}</h3>
+            <div class="title">
+              <h3>{{ project?.title }}</h3>
+              @for (titleLink of project?.titleLinks; track $index) {
+                <a [href]="titleLink.href" target="_blank">
+                  <mat-icon iconPositionEnd [svgIcon]="titleLink.svgIcon ?? ''">
+                    {{ titleLink.matIcon ?? '' }}
+                  </mat-icon>
+                </a>
+              }
+            </div>
             <p>{{ project?.company }} • {{ project?.yoe }}</p>
             <p>{{ project?.summary }}</p>
             <p class="body">{{ project?.body }}</p>
+          </div>
+        </div>
+      </li>
+    }
+  </ul>
+  <h2 id="tools" appFadeInOnScroll>Projects & Tools</h2>
+  <ul>
+    @for (tool of tools; track $index; let i = $index) {
+      <li>
+        <div
+          class="wrapper"
+          [class.left]="proExperience.length % 2 > 0 ? i % 2 > 0 : i % 2 == 0"
+          [class.right]="proExperience.length % 2 > 0 ? i % 2 == 0 : i % 2 > 0"
+          appFadeInOnScroll
+        >
+          <div class="thumb">
+            <img [src]="tool?.thumbnail" [alt]="tool?.title" />
+          </div>
+          <div class="meta">
+            <div class="title">
+              <h3>{{ tool?.title }}</h3>
+              @for (titleLink of tool?.titleLinks; track $index) {
+                <a [href]="titleLink.href" target="_blank">
+                  <mat-icon iconPositionEnd [svgIcon]="titleLink.svgIcon ?? ''">
+                    {{ titleLink.matIcon ?? '' }}
+                  </mat-icon>
+                </a>
+              }
+            </div>
+            <p>{{ tool?.summary }}</p>
+            <p class="body">{{ tool?.body }}</p>
           </div>
         </div>
       </li>

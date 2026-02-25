@@ -1,17 +1,30 @@
+@use '@styles/palette.scss' as palette;
 @use '@styles/typography.scss' as typography;
 @use '@styles/variables.scss' as vars;
+
+$projects-padding: 8rem;
 
 section {
   max-width: vars.$wrapper-width;
   margin: 0 auto;
 
+  h2 {
+    opacity: 0;
+    transform: opacity 1.5s ease;
+    padding: 0 0 $projects-padding;
+
+    &.in-view {
+      opacity: 1;
+    }
+  }
+
   ul {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: $projects-padding;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 $projects-padding;
 
     li {
       position: relative;
@@ -68,8 +81,20 @@ section {
           }
         }
 
-        p.body {
-          @include typography.body-small();
+        div.meta {
+          div.title {
+            display: flex;
+            align-items: end;
+            gap: 1rem;
+
+            a:hover {
+              color: palette.$primary-500;
+            }
+          }
+
+          p.body {
+            @include typography.body-small();
+          }
         }
       }
     }

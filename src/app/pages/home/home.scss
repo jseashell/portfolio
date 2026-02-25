@@ -1,0 +1,33 @@
+@use '@styles/variables.scss' as vars;
+
+:host {
+  position: relative;
+
+  div.component {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    app-hero,
+    app-projects,
+    app-contact {
+      max-width: vars.$wrapper-width;
+      display: block;
+      height: 100%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    app-hero {
+      display: flex;
+      width: 900px;
+      max-width: 900px;
+    }
+
+    app-projects,
+    app-contact {
+      width: 100%;
+      max-width: vars.$wrapper-width;
+    }
+  }
+}

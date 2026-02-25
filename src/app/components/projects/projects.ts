@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Project } from '@app/common/types/components/projects/projects';
-import { ScrollIntoViewTriggerDirective } from './scroll-into-view-trigger.directive';
+import { ProjectScrollTriggerDirective } from './project-scroll-trigger.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ScrollIntoViewTriggerDirective],
+  imports: [CommonModule, ProjectScrollTriggerDirective],
   templateUrl: './projects.html',
   styleUrls: ['./projects.scss'],
 })
@@ -25,7 +25,7 @@ export class ProjectsComponent {
       company: 'Genesys Cloud Services, Inc.',
       yoe: '2021 to 2023',
       thumbnail: 'images/gkn.png',
-      summary: 'Single pane of glass resource web app',
+      summary: 'Customer success single-pane-of-glass',
       body: 'The Genesys Knowledge Network was the all-in-one access point for Genesys resources. Enables users to browse the library of resources for Genesys Cloud®, AppFoundry®, education, community forums, and resources for flagship features and other legacy products.',
     },
     {
@@ -49,7 +49,7 @@ export class ProjectsComponent {
       company: 'Orchard Software',
       yoe: '2016 to 2021',
       thumbnail: 'images/lims-workflow.webp',
-      summary: 'Message broker and extract-transorm-load (ETL) web service',
+      summary: 'Message broker and ETL web service',
       body: 'The Orchard® Device Engine™ was a proprietary message broker and Extract Transform Load (ETL) tool developed by Orchard Software. It facilitated seamless integration between Orchard Trellis and over 150 laboratory instruments, enabling efficient data exchange, improved workflow automation, and enhanced overall laboratory operations.',
     },
   ];

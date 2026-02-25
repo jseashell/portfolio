@@ -12,16 +12,24 @@
 }
 
 section {
-  h2 {
-    margin-bottom: 1rem;
-  }
   padding: 2rem;
-  background-color: palette.$accent-500;
+  background-color: palette.$accent-700;
   color: vars.$foreground;
   border-radius: 16px;
   max-width: vars.$wrapper-width;
   margin: 2rem auto;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+
+  &.in-view {
+    opacity: 1;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
 
   form {
     display: flex;
@@ -33,21 +41,6 @@ section {
       font-weight: 500;
     }
 
-    input,
-    textarea {
-      border-radius: 8px;
-      border: 1px solid palette.$primary-500;
-      font-size: 1rem;
-      margin-bottom: 0.25rem;
-    }
-
-    textarea {
-      resize: vertical;
-      max-width: 100%;
-      min-width: 0;
-      font-family: vars.$font-family !important;
-    }
-
     button[type='submit'] {
       border-radius: 8px;
       color: #fff;
@@ -55,15 +48,13 @@ section {
       font-size: 1rem;
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    button[type='submit'] {
+      transition: background 0.3s ease;
       background: palette.$primary-500;
-    }
-    button[type='submit']:disabled {
-      background: palette.$accent-700;
-      cursor: not-allowed;
+
+      &:disabled {
+        background: palette.$accent-500;
+        cursor: not-allowed;
+      }
     }
   }
 }

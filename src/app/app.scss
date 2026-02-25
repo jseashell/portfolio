@@ -13,6 +13,16 @@ main {
     display: flex;
     align-items: center;
 
+    app-hero,
+    app-projects,
+    app-contact {
+      max-width: vars.$wrapper-width;
+      display: block;
+      height: 100%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
     app-hero {
       display: flex;
       width: 900px;
@@ -23,16 +33,7 @@ main {
     app-contact {
       width: 100%;
       max-width: vars.$wrapper-width;
-    }
-
-    app-hero,
-    app-projects,
-    app-contact {
-      max-width: vars.$wrapper-width;
-      display: block;
-      height: 100%;
-      justify-content: center;
-      margin: 0 auto;
+      padding: 10rem 0 4rem;
     }
   }
 }

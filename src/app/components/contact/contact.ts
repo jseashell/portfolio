@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import { ContactScrollTriggerDirective } from './contact-scroll-trigger.directive';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
@@ -17,11 +18,12 @@ dayjs.extend(timezone);
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule,
+    ContactScrollTriggerDirective,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss'],

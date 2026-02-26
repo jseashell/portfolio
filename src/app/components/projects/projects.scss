@@ -2,7 +2,7 @@
 @use '@styles/typography.scss' as typography;
 @use '@styles/variables.scss' as vars;
 
-$projects-padding: 8rem;
+$projects-padding: 4rem;
 
 :host {
   width: 100%;
@@ -16,7 +16,7 @@ section {
   h2 {
     opacity: 0;
     transform: opacity 1.5s ease;
-    padding: 0 0 3rem;
+    padding: 0 0 $projects-padding;
 
     // On tablet and below, use smaller translateX for fade-in so animation is visible
     @media only screen and (max-width: vars.$bp-tablet) {

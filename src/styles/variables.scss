@@ -1,4 +1,7 @@
-$wrapper-width: 1200px;
+$desktop-max-width: 1200px;
+$desktop-wrapper-width: 900px; // intentionally smaller than $bp-tablet
+$bp-tablet: 950px;
+$bp-mobile: 620px;
 
 $background: #0f172a;
 $foreground: #e6edf3;
@@ -12,6 +15,3 @@ $font-family:
   'Helvetica Neue',
   Arial,
   sans-serif;
-
-$bp-mobile: 620px;
-$bp-tablet: 950px;

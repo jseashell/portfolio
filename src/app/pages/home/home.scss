@@ -11,7 +11,6 @@
     app-hero,
     app-projects,
     app-contact {
-      max-width: vars.$wrapper-width;
       display: block;
       height: 100%;
       justify-content: center;
@@ -20,14 +19,14 @@
 
     app-hero {
       display: flex;
-      width: 900px;
-      max-width: 900px;
+      width: vars.$desktop-wrapper-width;
+      max-width: vars.$desktop-wrapper-width;
     }
 
     app-projects,
     app-contact {
       width: 100%;
-      max-width: vars.$wrapper-width;
+      max-width: vars.$desktop-max-width;
     }
   }
 }

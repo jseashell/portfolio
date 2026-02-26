@@ -4,14 +4,24 @@
 
 $projects-padding: 8rem;
 
+:host {
+  width: 100%;
+  height: 100%;
+}
+
 section {
-  max-width: vars.$wrapper-width;
+  width: 100%;
   margin: 0 auto;
 
   h2 {
     opacity: 0;
     transform: opacity 1.5s ease;
     padding: 0 0 $projects-padding;
+
+    // On tablet and below, use smaller translateX for fade-in so animation is visible
+    @media only screen and (max-width: vars.$bp-tablet) {
+      padding: 0 0 calc($projects-padding / 2);
+    }
 
     &.in-view {
       opacity: 1;
@@ -26,6 +36,11 @@ section {
     margin: 0;
     padding: 0 0 $projects-padding;
 
+    // On tablet and below, use smaller translateX for fade-in so animation is visible
+    @media only screen and (max-width: vars.$bp-tablet) {
+      padding: 0 0 calc($projects-padding / 2);
+    }
+
     li {
       position: relative;
       width: 100%;
@@ -38,14 +53,29 @@ section {
         gap: clamp(1rem, 1.25vw, 1.25rem);
         padding: 2rem 0;
 
+        // On tablet and below, use smaller translateX for fade-in so animation is visible
+        @media only screen and (max-width: vars.$bp-tablet) {
+          padding: 1rem 0;
+        }
+
         position: relative;
 
         &.left {
-          transform: translateX(-900px);
+          transform: translateX(calc(-1 * vars.$desktop-wrapper-width));
         }
 
         &.right {
-          transform: translateX(900px);
+          transform: translateX(vars.$desktop-wrapper-width);
+        }
+
+        // On tablet and below, use smaller translateX for fade-in so animation is visible
+        @media only screen and (max-width: vars.$bp-tablet) {
+          &.left {
+            transform: translateX(-40vw);
+          }
+          &.right {
+            transform: translateX(40vw);
+          }
         }
 
         opacity: 0;
@@ -53,6 +83,13 @@ section {
         transition:
           transform 1.5s ease,
           opacity 1.5s ease;
+
+        // On tablet and below, use smaller translateX for fade-in so animation is visible
+        @media only screen and (max-width: vars.$bp-tablet) {
+          transition:
+            transform 0.8s ease,
+            opacity 0.8s ease;
+        }
 
         &.in-view {
           transform: translateX(0);

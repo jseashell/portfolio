@@ -61,6 +61,12 @@ div.hero {
     box-sizing: border-box;
     aspect-ratio: 1;
     border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   h1 {

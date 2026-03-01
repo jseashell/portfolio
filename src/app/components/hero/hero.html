@@ -1,18 +1,23 @@
 <div class="hero">
-  <div class="circle top"></div>
-  <div class="pfp">
+  <div class="circle top" appFadeInOnScroll></div>
+  <div class="pfp" appFadeInOnScroll>
     <img src="images/pfp_alpha.png" />
   </div>
-  <div class="circle bottom"></div>
-  <h1 id="top">Hi, my name is John.</h1>
-  <pre><code><span class="accent-500">1</span>  <span class="purple"><b>const</b></span> <i>skill</i> <span class="primary-500">=</span> <span class="orange">&#123;</span>
+  <div class="circle bottom" appFadeInOnScroll></div>
+  <h1 id="top" appFadeInOnScroll>Hi, my name is John.</h1>
+  <pre
+    appFadeInOnScroll
+  ><code><span class="accent-500">1</span>  <span class="purple"><b>const</b></span> <i>skill</i> <span class="primary-500">=</span> <span class="orange">&#123;</span>
 <span class="accent-500">2</span>    label<span class="primary-500">:</span> <span class="primary-500">'<span>{{ subtitle$ | async }}</span></span><span class="blink" aria-hidden></span><span class="primary-500">'</span>
 <span class="accent-500">3</span>  <span class="orange">&#125;</span><span class="accent-500">;</span></code>
 </pre>
-  <p class="summary">
-    I'm a software engineering lead with <span>{{ yearsExp }} years</span> of industry experience
-    building innovative web apps. I strive to create <span>accessible and secure</span> user
-    experiences with a craftsman's attention to detail. I'm committed to quality and pair it with a
-    <span>solution-oriented</span> approach where no technology is off-limits.
-  </p>
+  <div class="summary">
+    <hr appFadeInOnScroll />
+    <p appFadeInOnScroll>
+      I'm a software engineering lead with <span>{{ yearsExp }} years</span> of industry experience
+      building innovative web apps. I strive to create <span>accessible and secure</span> user
+      experiences with a craftsman's attention to detail. I'm committed to quality and pair it with
+      a <span>solution-oriented</span> approach where no technology is off-limits.
+    </p>
+  </div>
 </div>

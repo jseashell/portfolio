@@ -49,6 +49,13 @@ div.hero {
       z-index: 1;
       clip-path: inset(50% 0 0 0);
     }
+
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    &.in-view {
+      opacity: 1;
+    }
   }
 
   div.pfp {
@@ -61,6 +68,12 @@ div.hero {
     box-sizing: border-box;
     aspect-ratio: 1;
     border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    &.in-view {
+      opacity: 1;
+    }
 
     img {
       width: 100%;
@@ -73,6 +86,12 @@ div.hero {
     grid-area: h1;
     align-self: end;
     justify-self: start;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    &.in-view {
+      opacity: 1;
+    }
 
     @media only screen and (max-width: vars.$bp-mobile) {
       align-self: center;
@@ -91,6 +110,12 @@ div.hero {
     border-radius: 16px;
     padding: 1rem;
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.6s;
+
+    &.in-view {
+      opacity: 1;
+    }
 
     code {
       span {
@@ -134,20 +159,42 @@ div.hero {
     }
   }
 
-  p.summary {
+  div.summary {
+    width: 100%;
     grid-area: p;
     align-self: start;
     justify-self: start;
-    padding-top: 2rem;
     margin: 0;
-    border-top: 2px solid vars.$foreground;
-    box-sizing: border-box;
-    font-weight: 300;
 
-    span {
-      // font-size: clamp(1.2rem, 1.4vw, 1.4rem);
-      font-weight: 700;
-      color: palette.$primary-500;
+    hr {
+      height: 1px;
+      color: #fff;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease 1.2s;
+
+      &.in-view {
+        opacity: 1;
+      }
+    }
+
+    p {
+      // border-top: 2px solid vars.$foreground;
+      box-sizing: border-box;
+      padding-top: 1rem;
+      font-weight: 300;
+      opacity: 0;
+      transition: opacity 0.8s ease 1.8s;
+
+      &.in-view {
+        opacity: 1;
+      }
+
+      span {
+        // font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+        font-weight: 700;
+        color: palette.$primary-500;
+      }
     }
   }
 }

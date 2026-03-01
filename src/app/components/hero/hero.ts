@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { TypewriterService } from '@app/common/services';
 import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
+import { FadeInOnScrollDirective } from '@app/common/directives';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FadeInOnScrollDirective],
   templateUrl: './hero.html',
   styleUrls: ['./hero.scss'],
 })

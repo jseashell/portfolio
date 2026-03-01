@@ -43,7 +43,7 @@ export class HeroComponent implements OnInit {
   /**
    * Detects if the current device is a mobile device using the user agent string.
    */
-  private isMobileDevice(): boolean {
+  isMobileDevice(): boolean {
     if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent,

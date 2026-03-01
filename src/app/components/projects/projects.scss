@@ -15,7 +15,7 @@ section {
 
   h2 {
     opacity: 0;
-    transform: opacity 1.5s ease;
+    transition: opacity 2s ease;
     padding: 0 0 $projects-padding;
 
     // On tablet and below, use smaller translateX for fade-in so animation is visible
@@ -32,19 +32,22 @@ section {
     display: flex;
     flex-direction: column;
     gap: $projects-padding;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0 0 $projects-padding;
 
     // On tablet and below, use smaller translateX for fade-in so animation is visible
     @media only screen and (max-width: vars.$bp-tablet) {
       padding: 0 0 calc($projects-padding / 2);
+      gap: 2rem;
     }
 
     li {
       position: relative;
       width: 100%;
       overflow: hidden;
+      padding: 1rem;
+      box-sizing: border-box;
 
       div.wrapper {
         display: grid;
@@ -52,6 +55,7 @@ section {
         align-items: center;
         gap: clamp(1rem, 1.25vw, 1.25rem);
         padding: 2rem 0;
+        box-sizing: border-box;
 
         // On tablet and below, use smaller translateX for fade-in so animation is visible
         @media only screen and (max-width: vars.$bp-tablet) {
@@ -81,7 +85,7 @@ section {
         opacity: 0;
         // don't apply this transition to transform until after left/right hve applied their transform.
         transition:
-          transform 1.5s ease,
+          transform 0.8s ease,
           opacity 1.5s ease;
 
         // On tablet and below, use smaller translateX for fade-in so animation is visible
@@ -105,13 +109,16 @@ section {
           width: clamp(350px, 40vw, 512px);
           aspect-ratio: 16 / 9;
           border-radius: 25px;
-          box-shadow: 0 8px 24px rgba(255, 255, 255, 0.6); // rgba(2, 6, 23, 0.6);
+          box-shadow: 0 0 1rem rgba(255, 255, 255, 0.4); // rgba(2, 6, 23, 0.6);
+          box-sizing: border-box;
+          object-fit: cover;
 
           @media only screen and (max-width: vars.$bp-tablet) {
             width: 100%;
           }
 
           img {
+            display: block;
             border-radius: 25px;
             width: 100%;
             height: 100%;

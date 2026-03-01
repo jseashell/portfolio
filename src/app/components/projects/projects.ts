@@ -31,7 +31,7 @@ export class ProjectsComponent {
     {
       title: 'Genesys Knowledge Network',
       company: 'Genesys Cloud Services, Inc.',
-      yoe: '2021 to 2023',
+      yoe: '2021 to 2025',
       thumbnail: 'images/gkn.png',
       summary: 'Customer success single-pane-of-glass (offline)',
       body: 'The Genesys Knowledge Network was the all-in-one access point for Genesys resources. Enables users to browse the library of resources for Genesys Cloud®, AppFoundry®, education, community forums, and resources for flagship features and other legacy products.',
@@ -110,7 +110,7 @@ export class ProjectsComponent {
       ],
       summary: 'VS Code extension',
       thumbnail: 'images/apm-pulse.gif',
-      body: 'Game-style APM counter in your VS Code bottom status bar that track your actions per minute while coding. It features command palette and settings integrations.',
+      body: 'A game-style APM counter in your VS Code status bar that tracks your actions per minute while coding. This extension features command palette and settings integrations.',
     },
   ];
 }

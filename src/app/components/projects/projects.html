@@ -4,9 +4,11 @@
     @for (project of proExperience; track $index; let i = $index) {
       <li>
         <div class="wrapper" [class.left]="i % 2 > 0" [class.right]="i % 2 == 0" appFadeInOnScroll>
-          <div class="thumb">
-            <img [src]="project?.thumbnail" [alt]="project?.title" />
-          </div>
+          @if (i % 2 > 0) {
+            <div class="thumb">
+              <img [src]="project?.thumbnail" [alt]="project?.title" />
+            </div>
+          }
           <div class="meta">
             <div class="title">
               <h3>{{ project?.title }}</h3>
@@ -22,6 +24,11 @@
             <p>{{ project?.summary }}</p>
             <p class="body">{{ project?.body }}</p>
           </div>
+          @if (i % 2 == 0) {
+            <div class="thumb">
+              <img [src]="project?.thumbnail" [alt]="project?.title" />
+            </div>
+          }
         </div>
       </li>
     }

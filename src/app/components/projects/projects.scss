@@ -2,7 +2,7 @@
 @use '@styles/typography.scss' as typography;
 @use '@styles/variables.scss' as vars;
 
-$projects-padding: 4rem;
+$projects-padding: 2rem;
 
 :host {
   width: 100%;
@@ -54,8 +54,8 @@ section {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: clamp(1rem, 1.25vw, 1.25rem);
-        padding: 2rem 0;
-        box-sizing: border-box;
+        // padding: 2rem 0;
+        // box-sizing: border-box;
 
         // On tablet and below, use smaller translateX for fade-in so animation is visible
         @media only screen and (max-width: vars.$bp-tablet) {

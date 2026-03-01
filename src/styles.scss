@@ -1,7 +1,5 @@
 // Angular Material theming setup with custom primary and tertiary palettes
 @use '@angular/material' as mat;
-// App animations
-@use '@styles/animation.scss';
 // App theme. No need for mat-theming with M2 API. Material is minimally used.
 @use '@styles/palette.scss' as palette;
 // App variables

@@ -12,8 +12,6 @@ export class FadeInOnScrollDirective implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.el.nativeElement.classList.add('out-of-view');
-
     this.zone.runOutsideAngular(() => {
       const cb: IntersectionObserverCallback = (entries) => {
         entries.forEach((entry) => {
@@ -27,7 +25,7 @@ export class FadeInOnScrollDirective implements OnInit, OnDestroy {
 
       this.observer = new IntersectionObserver(cb, {
         // trigger the callback when at least 10% of the project is visible
-        threshold: 10 / 100,
+        threshold: 5 / 100,
       });
 
       this.observer.observe(this.el.nativeElement);

@@ -1,14 +1,17 @@
 <section>
   <h2 id="experience" appFadeInOnScroll>Professional Experience</h2>
-  <ul>
+  <ul class="pro-exp">
     @for (project of proExperience; track $index; let i = $index) {
       <li>
         <div class="wrapper" [class.left]="i % 2 > 0" [class.right]="i % 2 == 0" appFadeInOnScroll>
-          @if (i % 2 > 0) {
-            <div class="thumb">
+          @if (i % 2 == 0) {
+            <div class="thumb desktop">
               <img [src]="project?.thumbnail" [alt]="project?.title" />
             </div>
           }
+          <div class="thumb mobile">
+            <img [src]="project?.thumbnail" [alt]="project?.title" />
+          </div>
           <div class="meta">
             <div class="title">
               <h3>{{ project?.title }}</h3>
@@ -24,8 +27,8 @@
             <p>{{ project?.summary }}</p>
             <p class="body">{{ project?.body }}</p>
           </div>
-          @if (i % 2 == 0) {
-            <div class="thumb">
+          @if (i % 2 > 0) {
+            <div class="thumb desktop">
               <img [src]="project?.thumbnail" [alt]="project?.title" />
             </div>
           }
@@ -34,21 +37,13 @@
     }
   </ul>
   <h2 id="tools" appFadeInOnScroll>Projects & Tools</h2>
-  <ul>
+  <ul class="tools">
     @for (tool of tools; track $index; let i = $index) {
       <li>
-        <div
-          class="wrapper"
-          [class.left]="proExperience.length % 2 > 0 ? i % 2 == 0 : i % 2 > 0"
-          [class.right]="proExperience.length % 2 > 0 ? i % 2 > 0 : i % 2 == 0"
-          appFadeInOnScroll
-        >
-          <div class="thumb">
-            <img [src]="tool?.thumbnail" [alt]="tool?.title" />
-          </div>
-          <div class="meta">
-            <div class="title">
-              <h3>{{ tool?.title }}</h3>
+        <mat-card appearannce="outline" appFadeInOnScroll>
+          <header mat-card-title>
+            <h4>{{ tool?.title }}</h4>
+            <div>
               @for (titleLink of tool?.titleLinks; track $index) {
                 <a [href]="titleLink.href" target="_blank">
                   <mat-icon iconPositionEnd [svgIcon]="titleLink.svgIcon ?? ''">
@@ -57,10 +52,12 @@
                 </a>
               }
             </div>
+          </header>
+          <mat-card-content>
             <p>{{ tool?.summary }}</p>
             <p class="body">{{ tool?.body }}</p>
-          </div>
-        </div>
+          </mat-card-content>
+        </mat-card>
       </li>
     }
   </ul>

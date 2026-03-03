@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { FadeInOnScrollDirective } from '@app/common/directives';
 import { Project } from '@app/common/types/components/projects/projects';
@@ -7,7 +8,7 @@ import { Project } from '@app/common/types/components/projects/projects';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, MatIconModule, FadeInOnScrollDirective],
+  imports: [CommonModule, MatCardModule, MatIconModule, FadeInOnScrollDirective],
   templateUrl: './projects.html',
   styleUrls: ['./projects.scss'],
 })

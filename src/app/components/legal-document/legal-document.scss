@@ -1,0 +1,42 @@
+@use '@styles/typography.scss' as typography;
+
+:host {
+  display: block;
+  margin: 3rem 0;
+}
+
+::ng-deep h1 {
+  @include typography.h2;
+}
+
+::ng-deep h2 {
+  @include typography.h3;
+}
+
+::ng-deep section {
+  &.summary {
+    padding-left: 2rem;
+    box-sizing: border-box;
+  }
+}
+
+::ng-deep ol {
+  padding: 0;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  @include typography.h4;
+}
+
+::ng-deep ul {
+  list-style-image: 'circle';
+  padding: 0;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  @include typography.body-small;
+}
+
+::ng-deep p,
+::ng-deep a {
+  margin: 4px 0;
+  @include typography.body-small;
+}

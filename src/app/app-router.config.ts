@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { HomeComponent, PrivacyComponent, TermsComponent } from '@app/pages';
+import { AppsComponent, HomeComponent, PrivacyComponent, TermsComponent } from '@app/pages';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'apps',
+    component: AppsComponent,
   },
   {
     path: 'privacy',

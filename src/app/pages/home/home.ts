@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ContactComponent, ProjectsComponent } from '@app/components';
-import { HeroComponent } from '@app/components/hero/hero';
 import { FadeInOnScrollDirective } from '@app/common/directives';
+import { ContactComponent, WorkExpComponent } from '@app/components';
+import { HeroComponent } from '@app/components/hero/hero';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +10,9 @@ import { FadeInOnScrollDirective } from '@app/common/directives';
   imports: [
     CommonModule,
     ContactComponent,
-    HeroComponent,
-    ProjectsComponent,
     FadeInOnScrollDirective,
+    HeroComponent,
+    WorkExpComponent,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

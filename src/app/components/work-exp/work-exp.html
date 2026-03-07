@@ -36,29 +36,4 @@
       </li>
     }
   </ul>
-  <h2 id="tools" appFadeInOnScroll>Projects & Tools</h2>
-  <ul class="tools">
-    @for (tool of tools; track $index; let i = $index) {
-      <li>
-        <mat-card appearannce="outline" appFadeInOnScroll>
-          <header mat-card-title>
-            <h4>{{ tool?.title }}</h4>
-            <div>
-              @for (titleLink of tool?.titleLinks; track $index) {
-                <a [href]="titleLink.href" target="_blank">
-                  <mat-icon iconPositionEnd [svgIcon]="titleLink.svgIcon ?? ''">
-                    {{ titleLink.matIcon ?? '' }}
-                  </mat-icon>
-                </a>
-              }
-            </div>
-          </header>
-          <mat-card-content>
-            <p>{{ tool?.summary }}</p>
-            <p class="body">{{ tool?.body }}</p>
-          </mat-card-content>
-        </mat-card>
-      </li>
-    }
-  </ul>
 </section>

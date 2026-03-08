@@ -5,18 +5,7 @@
 $projects-padding: 2rem;
 
 h2 {
-  opacity: 0;
-  transition: opacity 2s ease;
-  padding: 0 0 $projects-padding;
-
-  // On tablet and below, use smaller translateX for fade-in so animation is visible
-  @media only screen and (max-width: vars.$bp-tablet) {
-    padding: 0 0 calc($projects-padding / 2);
-  }
-
-  &.in-view {
-    opacity: 1;
-  }
+  @include typography.h3;
 }
 
 ul {
@@ -31,24 +20,28 @@ ul {
 
   // Mosaic effect: allow li to span multiple rows/columns for visual interest
   li:nth-child(1) {
-    grid-row: span 3;
+    grid-row: span 1;
     grid-column: span 1;
   }
   li:nth-child(2) {
-    grid-row: span 2;
+    grid-row: span 3;
     grid-column: span 1;
   }
   li:nth-child(3) {
-    grid-row: span 4;
-    grid-column: span 1;
-  }
-  li:nth-child(4) {
     grid-row: span 2;
     grid-column: span 1;
   }
-  li:nth-child(5) {
+  li:nth-child(4) {
     grid-row: span 3;
     grid-column: span 1;
+  }
+  li:nth-child(5) {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+  li:nth-child(6) {
+    // grid-row: span 1;
+    // grid-column: span 1;
   }
   // Add more nth-child rules for additional mosaic patterns as needed
 
@@ -63,115 +56,6 @@ ul {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-
-    div.wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: clamp(2rem, 2.25vw, 2.25rem);
-      margin: 2rem;
-
-      @media only screen and (max-width: vars.$bp-tablet) {
-        padding: 1rem 0;
-        margin: 1rem;
-      }
-
-      position: relative;
-
-      &.left {
-        transform: translateX(calc(-1 * vars.$desktop-wrapper-width));
-      }
-
-      &.right {
-        transform: translateX(vars.$desktop-wrapper-width);
-      }
-
-      // On tablet and below, use smaller translateX for fade-in so animation is visible
-      @media only screen and (max-width: vars.$bp-tablet) {
-        &.left {
-          transform: translateX(-40vw);
-        }
-        &.right {
-          transform: translateX(40vw);
-        }
-      }
-
-      // initially out of view
-      // but don't apply this transition until after .left and .right have applied the initial position.
-      opacity: 0;
-      transition:
-        transform 1s ease,
-        opacity 2s ease;
-
-      // On tablet and below, use smaller translateX for fade-in so animation is visible
-      @media only screen and (max-width: vars.$bp-tablet) {
-        transition:
-          transform 0.8s ease,
-          opacity 0.8s ease;
-      }
-
-      &.in-view {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      @media only screen and (max-width: vars.$bp-tablet) {
-        grid-template-columns: 1fr;
-        gap: clamp(1rem, 5vw, 7rem);
-      }
-
-      div.thumb {
-        width: clamp(350px, 40vw, 512px);
-        aspect-ratio: 16 / 9;
-        border-radius: 25px;
-        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.4); // rgba(2, 6, 23, 0.6);
-        box-sizing: border-box;
-
-        &.desktop {
-          display: block;
-        }
-
-        &.mobile {
-          display: none;
-        }
-
-        @media only screen and (max-width: vars.$bp-tablet) {
-          width: 100%;
-
-          &.desktop {
-            display: none;
-          }
-
-          &.mobile {
-            display: block;
-          }
-        }
-
-        img {
-          display: block;
-          border-radius: 25px;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      div.meta {
-        div.title {
-          display: flex;
-          align-items: end;
-          gap: 1rem;
-
-          a:hover {
-            color: palette.$primary-500;
-          }
-        }
-
-        p.body {
-          @include typography.body-small();
-        }
-      }
-    }
 
     mat-card {
       background-color: palette.$accent-700;
@@ -188,6 +72,8 @@ ul {
       header {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
 
         div {
           display: flex;
@@ -199,8 +85,59 @@ ul {
         }
       }
 
-      p.body {
-        @include typography.body-small();
+      div.thumb {
+        display: inline;
+        width: 100%;
+        border-radius: 25px;
+        box-sizing: border-box;
+
+        :hover {
+          cursor: zoom-in;
+        }
+
+        img {
+          display: block;
+          border-radius: 15px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      mat-card-content {
+        div.title {
+          display: flex;
+          align-items: end;
+          gap: 1rem;
+
+          a:hover {
+            color: palette.$primary-500;
+          }
+        }
+
+        div.body {
+          @include typography.body-small();
+          padding: 0 8px;
+
+          ::ng-deep p {
+            @include typography.body-small();
+          }
+
+          ::ng-deep ul {
+            padding: 0 1rem;
+            margin: 8px 0;
+
+            li {
+              line-height: 2em;
+
+              code {
+                @include typography.body-smaller();
+                background-color: palette.$accent-500;
+                padding: 4px;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
       }
     }
   }

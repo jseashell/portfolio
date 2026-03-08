@@ -22,7 +22,11 @@
         }
         <mat-card-content>
           <p>{{ app.summary }}</p>
-          <div class="body" [innerHTML]="app.body"></div>
+          @if (mobile) {
+            <div class="body" [innerHTML]="app.body_mobile"></div>
+          } @else {
+            <div class="body" [innerHTML]="app.body"></div>
+          }
         </mat-card-content>
       </mat-card>
     </li>

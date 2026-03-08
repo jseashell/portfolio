@@ -12,4 +12,5 @@ export type Project = {
   thumbnail: string;
   summary: string;
   body: string;
+  body_mobile?: string;
 };

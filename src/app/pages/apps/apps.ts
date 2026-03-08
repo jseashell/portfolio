@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
@@ -17,18 +18,20 @@ import { AppsDialog } from './apps-dialog/apps-dialog';
 export class AppsComponent {
   apps: Project[] = [
     {
-      title: 'Lyrics DB Seeder',
+      title: 'Cloud Chat Service',
       status: 'demo',
       titleLinks: [
         {
-          href: 'https://github.com/jseashell/lyrics-db-seeder',
+          href: 'https://github.com/jseashell/serverless-ws-chat-api',
           tooltip: 'Visit Github repository',
           svgIcon: 'github',
         },
       ],
-      summary: 'Genius.com scraper with cloud storage',
+      summary: 'A chat service for broadcasting messages to all connected users.',
       thumbnail: '',
-      body: '<p>A Golang program that scrapes lyrics from Genius.com and seeds an AWS DynamoDB table.</p><p>It uses goroutines to scrape and seed concurrently, reducing the time it takes to get the data into the database.</p>',
+      body: '<p>A serverless websocket service built on AWS API Gateway v2, Lambda, and DynamoDB.</p><p>This service allows for real-time communication between clients and the Lambda backend using websockets.</p><p>DynamoDB caches clients in order to broadcast any message from one client to all other clients.</p>',
+      body_mobile:
+        '<p>This service allows for real-time communication between clients and the Lambda backend using websockets.</p>',
     },
     {
       title: 'EZMC CLI',
@@ -48,20 +51,8 @@ export class AppsComponent {
       summary: 'Minecraft infra-as-code tool',
       thumbnail: 'images/ezmc.png',
       body: '<p>A server management CLI for self-hosting Minecraft Java Edition in AWS Elastic Container Service.</p>The server is configured with a free, open-source Cloudformation template.<p>Available commands include</p><ul><li><code>new</code> Creates a new server with AWS Cloudformation.</li><li><code>ls</code> List your servers by IP address.</li><li><code>start</code>/<code>stop</code> Start/stop a server by IP address.</li><li><code>params</code> Get/set server parameters like OP list, difficulty, and most anything else available via <code>server.properties</code></li></ul>',
-    },
-    {
-      title: 'Group Chat Cloud Service',
-      status: 'demo',
-      titleLinks: [
-        {
-          href: 'https://github.com/jseashell/serverless-ws-chat-api',
-          tooltip: 'Visit Github repository',
-          svgIcon: 'github',
-        },
-      ],
-      summary: 'A chat service for broadcasting messages to all connected users.',
-      thumbnail: '',
-      body: '<p>A serverless websocket service built on AWS API Gateway v2, Lambda, and DynamoDB.</p><p>This service allows for real-time communication between clients and the Lambda backend using websockets.</p><p>DynamoDB caches clients in order to broadcast any message from one client to all other clients.</p>',
+      body_mobile:
+        '<p>A server management CLI for self-hosting Minecraft] in AWS Elastic Container Service.</p>The server is configured with a free, open-source Cloudformation template.</p>',
     },
     {
       title: 'APM Pulse',
@@ -81,6 +72,24 @@ export class AppsComponent {
       summary: 'VS Code extension',
       thumbnail: 'images/apm-pulse.gif',
       body: '<p>A game-style APM counter in your VS Code status bar that tracks your actions per minute while coding.</p><p>This extension features command palette and settings integrations.</p>',
+      body_mobile:
+        '<p>A game-style APM counter in your VS Code status bar that tracks your actions per minute while coding.</p><p>This extension features command palette and settings integrations.</p>',
+    },
+    {
+      title: 'Lyrics DB Seeder',
+      status: 'demo',
+      titleLinks: [
+        {
+          href: 'https://github.com/jseashell/lyrics-db-seeder',
+          tooltip: 'Visit Github repository',
+          svgIcon: 'github',
+        },
+      ],
+      summary: 'Genius.com scraper with cloud storage',
+      thumbnail: '',
+      body: '<p>A Golang program that scrapes lyrics from Genius.com and seeds an AWS DynamoDB table.</p><p>It uses goroutines to scrape and seed concurrently, reducing the time it takes to get the data into the database.</p>',
+      body_mobile:
+        '<p>A Golang program that scrapes lyrics from Genius.com and seeds an AWS DynamoDB table.</p><p>It uses goroutines to scrape and seed concurrently, reducing the time it takes to get the data into the database.</p>',
     },
     {
       title: 'K-Dot Lyrics',
@@ -95,11 +104,21 @@ export class AppsComponent {
       summary: 'Random Kendrick Lamar lyrics at the click of a button',
       thumbnail: 'images/kdot-lyrics.png',
       body: "<p>A webapp using the dataset created from Lyrics DB Seeder when given Kendrick Lamar and many associated feature artists.</p><p>Each lyric features the related song title and album artwork.</p><p>There are informational pages showcasing Kendrick Lamar's discography and publicly available platforms.</p>",
+      body_mobile:
+        '<p>A webapp using the dataset created from Lyrics DB Seeder when given Kendrick Lamar and many associated feature artists.</p><p>Each lyric features the related song title and album artwork.</p>',
     },
   ];
 
-  constructor(private dialog: MatDialog) {}
+  mobile!: boolean;
 
+  constructor(
+    private bo: BreakpointObserver,
+    private dialog: MatDialog,
+  ) {}
+
+  ngOnInit() {
+    this.mobile = this.bo.isMatched('(max-width: 950px');
+  }
   openThumbnail(path: string) {
     this.dialog.open(AppsDialog, {
       data: path,

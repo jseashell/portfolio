@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { RouterLink } from '@angular/router';
 import { FadeInOnScrollDirective } from '@app/common/directives';
-import { ContactComponent, WorkExpComponent } from '@app/components';
-import { HeroComponent } from '@app/components/hero/hero';
+import { ContactComponent } from '@app/components';
+import { HeroComponent } from '@app/pages/home/hero/hero';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,8 @@ import { HeroComponent } from '@app/components/hero/hero';
     ContactComponent,
     FadeInOnScrollDirective,
     HeroComponent,
-    WorkExpComponent,
+    MatCardModule,
+    RouterLink,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

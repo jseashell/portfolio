@@ -55,6 +55,22 @@ export class AppsComponent {
         '<p>A server management CLI for self-hosting Minecraft] in AWS Elastic Container Service.</p>The server is configured with a free, open-source Cloudformation template.</p>',
     },
     {
+      title: 'DevTok',
+      status: 'demo',
+      titleLinks: [
+        {
+          href: 'https://github.com/jseashell/devtok',
+          tooltip: 'Visit Github repository',
+          svgIcon: 'github',
+        },
+      ],
+      summary: 'Social media app for devs',
+      thumbnail: 'images/devtok.jpg',
+      body: '<p>A social media app that presents short form text content aimed at developer in a vertically scrolling, full-screen feed.</p><p>It includes a fixed composer bar for adding a new post, snap-style wheel navigation between posts, and per-post like state stored in the browser.</p>',
+      body_mobile:
+        '<p>A social media app that presents short form text content aimed at developer in a vertically scrolling, full-screen feed.</p><p>It includes a fixed composer bar for adding a new post, snap-style wheel navigation between posts, and per-post like state stored in the browser.</p>',
+    },
+    {
       title: 'APM Pulse',
       status: 'live',
       titleLinks: [

@@ -6,13 +6,13 @@ import { FadeInOnScrollDirective } from '@app/common/directives';
 import { Project } from '@app/common/types/components/projects/projects';
 
 @Component({
-  selector: 'app-work-exp',
+  selector: 'app-experience',
   standalone: true,
   imports: [CommonModule, MatCardModule, MatIconModule, FadeInOnScrollDirective],
-  templateUrl: './work-exp.html',
-  styleUrls: ['./work-exp.scss'],
+  templateUrl: './experience.html',
+  styleUrls: ['./experience.scss'],
 })
-export class WorkExpComponent {
+export class ExperienceComponent {
   proExperience: Project[] = [
     {
       title: 'Genesys Orchestrators',

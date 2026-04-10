@@ -1,8 +1,17 @@
 <div id="top" class="component">
   <app-hero appFadeInOnScroll></app-hero>
 </div>
-<div class="component">
-  <app-work-exp></app-work-exp>
+<div class="component card-wrapper">
+  <mat-card>
+    <mat-card-content>
+      <a routerLink="/experience">Professional Experience</a>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <a routerLink="/apps">My Apps</a>
+    </mat-card-content>
+  </mat-card>
 </div>
 <div class="component">
   <app-contact></app-contact>

@@ -2,16 +2,19 @@
   <app-hero appFadeInOnScroll></app-hero>
 </div>
 <div class="component card-wrapper">
-  <mat-card>
-    <mat-card-content>
-      <a routerLink="/experience">Professional Experience</a>
-    </mat-card-content>
-  </mat-card>
-  <mat-card>
-    <mat-card-content>
-      <a routerLink="/apps">My Apps</a>
-    </mat-card-content>
-  </mat-card>
+  @for (card of cards; track $index) {
+    <a [routerLink]="card.routerLink">
+      <mat-card>
+        <div class="thumbnail">
+          <img [src]="card.thumbnail" />
+        </div>
+        <mat-card-content>
+          <h2>{{ card.title }}</h2>
+          <div [innerHTML]="card.body"></div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  }
 </div>
 <div class="component">
   <app-contact></app-contact>

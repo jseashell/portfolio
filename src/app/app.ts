@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
+import { filter, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class App {
   readonly year = new Date().getFullYear();
+  isHome = signal(false);
 
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
+    private router: Router,
   ) {
     this.matIconRegistry.addSvgIcon(
       'github',
@@ -30,5 +33,16 @@ export class App {
       'vscode',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../icons/vscode.svg'),
     );
+
+    this.router.events
+      .pipe(
+        filter((e): e is NavigationEnd => e instanceof NavigationEnd),
+        tap((e) => {
+          const url = e.urlAfterRedirects.split('#')[0];
+          this.isHome.set(url === '/' || url.includes('/home'));
+          console.debug('NavigationEnd', { home: this.isHome() });
+        }),
+      )
+      .subscribe();
   }
 }

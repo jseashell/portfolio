@@ -6,17 +6,17 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FadeInOnScrollDirective } from '@app/common/directives';
 import { Project } from '@app/common/types';
-import { AppsDialog } from './apps-dialog/apps-dialog';
+import { AppsDialog } from './portfolio-dialog/portfolio-dialog';
 
 @Component({
-  selector: 'app-apps',
+  selector: 'app-portfolio',
   standalone: true,
   imports: [CommonModule, FadeInOnScrollDirective, MatCardModule, MatDialogModule, MatIconModule],
-  templateUrl: './apps.html',
-  styleUrls: ['./apps.scss'],
+  templateUrl: './portfolio.html',
+  styleUrls: ['./portfolio.scss'],
 })
-export class AppsComponent {
-  apps: Project[] = [
+export class PortfolioComponent {
+  projects: Project[] = [
     {
       title: 'Cloud Chat Service',
       status: 'demo',

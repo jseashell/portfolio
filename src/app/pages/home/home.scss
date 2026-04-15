@@ -12,6 +12,11 @@ div.component {
     display: flex;
     width: vars.$desktop-wrapper-width;
     max-width: vars.$desktop-wrapper-width;
+
+    /* on mobile, move the hero up slightly. the line wrap gives the appearance that the hero is not vertically centered even though flex box is used */
+    @media only screen and (max-width: vars.$bp-mobile) {
+      transform: translateY(-10%);
+    }
   }
 
   app-contact {

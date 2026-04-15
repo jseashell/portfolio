@@ -1,12 +1,12 @@
-<h1 appFadeInOnScroll>Portfolio</h1>
+<h1 appFadeInOnScroll>Apps</h1>
 <ul class="apps">
-  @for (app of apps; track $index; let i = $index) {
+  @for (p of projects; track $index; let i = $index) {
     <li>
       <mat-card appFadeInOnScroll>
         <header>
-          <h2>{{ app.title }}</h2>
+          <h2>{{ p.title }}</h2>
           <div>
-            @for (titleLink of app.titleLinks; track $index) {
+            @for (titleLink of p.titleLinks; track $index) {
               <a [href]="titleLink.href" target="_blank">
                 <mat-icon iconPositionEnd [svgIcon]="titleLink.svgIcon ?? ''">
                   {{ titleLink.matIcon ?? '' }}
@@ -15,17 +15,17 @@
             }
           </div>
         </header>
-        @if (app.thumbnail) {
-          <div class="thumb" (click)="openThumbnail(app.thumbnail)">
-            <img [src]="app.thumbnail" />
+        @if (p.thumbnail) {
+          <div class="thumb" (click)="openThumbnail(p.thumbnail)">
+            <img [src]="p.thumbnail" />
           </div>
         }
         <mat-card-content>
-          <p>{{ app.summary }}</p>
+          <p>{{ p.summary }}</p>
           @if (mobile) {
-            <div class="body" [innerHTML]="app.body_mobile"></div>
+            <div class="body" [innerHTML]="p.body_mobile"></div>
           } @else {
-            <div class="body" [innerHTML]="app.body"></div>
+            <div class="body" [innerHTML]="p.body"></div>
           }
         </mat-card-content>
       </mat-card>

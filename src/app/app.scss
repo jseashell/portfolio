@@ -1,5 +1,50 @@
+@use '@styles/palette.scss' as palette;
 @use '@styles/typography.scss' as typography;
 @use '@styles/variables.scss' as vars;
+
+header {
+  width: 100%;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    max-width: vars.$desktop-max-width;
+    gap: clamp(12px, 3vw, 4rem);
+    margin: 0 auto;
+    padding: 36px;
+    box-sizing: border-box;
+    // background-color: palette.$primary-900;
+    border-radius: 0 0 2rem 2rem;
+    // background-color: palette.$accent-500;
+    // background-color: palette.$accent-200;
+    background-color: palette.$accent-500;
+
+    opacity: 1;
+    max-height: 160px;
+    overflow: hidden;
+    transition:
+      opacity 0.5s ease,
+      max-height 0.5s ease,
+      padding 0.5s ease;
+
+    &.hide {
+      opacity: 0;
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    a {
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
 
 main {
   max-width: vars.$desktop-max-width;

@@ -42,7 +42,8 @@ body {
 app-root {
   height: 100%;
 }
-s pre,
+
+pre,
 code {
   font-family: monospace;
   font-size: clamp(1rem, 1.2vw, 1.2rem);

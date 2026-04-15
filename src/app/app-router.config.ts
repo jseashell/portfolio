@@ -1,20 +1,20 @@
 import { Routes } from '@angular/router';
-import { AppsComponent, HomeComponent, PrivacyComponent, TermsComponent } from '@app/pages';
+import { HomeComponent, PortfolioComponent, PrivacyComponent, TermsComponent } from '@app/pages';
 import { ExperienceComponent } from './components';
 import { ServicesComponent } from './pages/services/services';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
-  },
-  {
-    path: 'apps',
-    component: AppsComponent,
   },
   {
     path: 'experience',
     component: ExperienceComponent,
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
   },
   {
     path: 'privacy',

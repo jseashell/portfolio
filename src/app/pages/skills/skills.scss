@@ -1,0 +1,45 @@
+@use '@styles/palette.scss' as palette;
+@use '@styles/variables.scss' as vars;
+
+:host {
+  display: block;
+  margin: 3rem 0;
+  @media only screen and (max-width: vars.$bp-tablet) {
+    margin: 1rem 0;
+  }
+}
+
+section {
+  margin: 7rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+h2 {
+  justify-self: flex-end;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  margin-top: 16px;
+  gap: 16px;
+  max-width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    background-color: palette.$primary-500;
+    padding: 4px 8px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      margin: 0;
+    }
+  }
+}

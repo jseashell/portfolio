@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
+import { FadeInOnScrollDirective } from '@app/common/directives';
 import { TypewriterService } from '@app/common/services';
 import { ReplaySubject, switchMap, tap, timer } from 'rxjs';
-import { FadeInOnScrollDirective } from '@app/common/directives';
 
 @Component({
   selector: 'app-hero',
@@ -12,7 +12,7 @@ import { FadeInOnScrollDirective } from '@app/common/directives';
   styleUrls: ['./hero.scss'],
 })
 export class HeroComponent implements OnInit {
-  #typewriter = inject(TypewriterService);
+  private readonly typewriter = inject(TypewriterService);
   subtitle$ = new ReplaySubject<string>(1);
 
   /**
@@ -21,7 +21,7 @@ export class HeroComponent implements OnInit {
    * - spacing here accounts for "an".
    * - a period purposefully exists at the end so that it, too, is included in the {@link #typewriter}.
    * */
-  #subtitles = [
+  private readonly subtitles = [
     { label: 'Software Engineer', allowMobile: true },
     { label: 'System Architect', allowMobile: true },
     { label: 'Integration Specialist', allowMobile: false },
@@ -38,8 +38,11 @@ export class HeroComponent implements OnInit {
     { label: 'Project Leader', allowMobile: true },
   ];
 
-  #firstEmployeedYear = 2016;
-  yearsExp = new Date().getFullYear() - this.#firstEmployeedYear;
+  private readonly firstEmployedYear = 2016;
+
+  get yearsExp(): number {
+    return new Date().getFullYear() - this.firstEmployedYear;
+  }
 
   /**
    * Detects if the current device is a mobile device using the user agent string.
@@ -57,10 +60,10 @@ export class HeroComponent implements OnInit {
       .pipe(
         switchMap(() => {
           const isMobile = this.isMobileDevice();
-          const subList = this.#subtitles
+          const subList = this.subtitles
             .filter((s) => (isMobile ? s.allowMobile : true))
             .map((s) => s.label);
-          return this.#typewriter.typewriter$(subList);
+          return this.typewriter.typewriter$(subList);
         }),
         tap((subtitle: string) => {
           this.subtitle$.next(subtitle);

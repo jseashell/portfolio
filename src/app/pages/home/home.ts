@@ -26,19 +26,19 @@ export class HomeComponent {
       title: 'Experience',
       thumbnail: 'images/cards/experience.jpeg',
       routerLink: '/experience',
-      body: 'My professional journey building scalable, reliable software across different domains',
+      body: 'See my professional journey building scalable, reliable software across different domains',
     },
     {
-      title: 'Services',
-      thumbnail: 'images/cards/services.jpeg',
-      routerLink: '/services',
-      body: 'Offerings that can bring your ideas to life, whether you need an app built or improved',
+      title: 'Skills',
+      thumbnail: 'images/cards/skills.jpeg',
+      routerLink: '/skills',
+      body: 'Check out the technical skills that I bring to the table.',
     },
-    {
-      title: 'Apps',
-      thumbnail: 'images/cards/apps.jpeg',
-      routerLink: '/apps',
-      body: 'My curated set of public projects that demonstrate how I turn ideas into polished, working apps',
-    },
+    // {
+    //   title: 'Apps',
+    //   thumbnail: 'images/cards/apps.jpeg',
+    //   routerLink: '/apps',
+    //   body: 'My curated set of public projects that demonstrate how I turn ideas into polished, working apps',
+    // },
   ];
 }

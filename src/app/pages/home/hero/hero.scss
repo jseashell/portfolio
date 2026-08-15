@@ -33,16 +33,16 @@ div.hero {
 
   .circle {
     position: absolute;
-    top: 16px; // this will scale with the width/height
+    // top: 16px; // this will scale with the width/height
     left: 0;
-    right: 8px;
-    width: calc($pfpWrapperWidth - 26px);
-    height: calc($pfpWrapperWidth - 26px);
+    // right: 8px;
+    width: calc(clamp(8rem, 30vw, 16rem) - 16px);
+    height: calc(clamp(8rem, 30vw, 16rem) - 16px);
     border-radius: 50%;
     border: 8px solid palette.$primary-500;
 
     &.top {
-      z-index: -1;
+      z-index: 1;
       clip-path: inset(0 0 50% 0);
     }
 
